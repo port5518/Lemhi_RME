@@ -1,26 +1,26 @@
 ---
 title: "DSR versus NRR Survival Analysis"
 author:
-- Kevin E. See:
-    email: Kevin.See@dfw.wa.gov
-    institute: [wdfw]
-    correspondence: false
-- Michael W. Ackerman:
-    email: mike.ackerman@mthoodenvironmental.com
-    institute: [mhe_mccall]
-    correspondence: true
-- Nick Porter:
-    email: Nicholas.Porter@merck.com
-    institute: [biomark]
-    correspondence: true
-- Mike Hall:
-    email: Mike.Hall1@merck.com
-    institute: [biomark]
-    correspondence: false
-- Richie Carmichael
-    email: Richard.Carmichael@merck.com
-    institute: [biomark]
-    correspondence: false
+  - Kevin E. See:
+      email: Kevin.See@dfw.wa.gov
+      institute: [wdfw]
+      correspondence: false
+  - Michael W. Ackerman:
+      email: mike.ackerman@mthoodenvironmental.com
+      institute: [mhe_mccall]
+      correspondence: true
+  - Nick Porter:
+      email: Nicholas.Porter@merck.com
+      institute: [biomark]
+      correspondence: true
+  - Mike Hall:
+      email: Mike.Hall1@merck.com
+      institute: [biomark]
+      correspondence: false
+  - Richie Carmichael:
+      email: Richard.Carmichael@merck.com
+      institute: [biomark]
+      correspondence: false
 institute:
   - wdfw: Washington Department of Fish and Wildife, Fish Program, Science Division, 1111 Washington Street NE, Olympia, Washington, 98501, USA
   - mhe_mccall: Mount Hood Environmental, PO Box 4282, McCall, Idaho, 83638, USA
@@ -44,4 +44,33 @@ bibliography:
   - AckermanLibrary.bib
 ---
 
+```{r setup, echo = FALSE, message = F, warning = F}
+library(here)
+library(knitr)
+library(kableExtra)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  comment = "#>",
+  fig.path = here("analysis/figures/"),
+  dpi = 300
+)
+```
+
+```{r}
+# load packages
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(PITcleanr)
+library(magrittr)
+library(rstan)
+
+theme_set(theme_bw())
+```
+
+Text
   
