@@ -42,6 +42,7 @@ output:
 csl: "../templates/american-fisheries-society.csl"
 bibliography:
   - AckermanLibrary.bib
+always_allow_html: yes
 ---
 
 ```{r setup, echo = FALSE, message = F, warning = F}
@@ -55,9 +56,10 @@ knitr::opts_chunk$set(
   message = FALSE,
   echo = FALSE,
   comment = "#>",
-  fig.path = here("analysis/figures/"),
+  fig.path = here("analysis/figures//"),
   dpi = 300
 )
+
 ```
 
 ```{r packages}
@@ -154,7 +156,7 @@ Recently, the DSR life history has dominated within the Lemhi River population i
 
 ## Data
 
-We compiled a list of all PIT tags deployed within the Lemhi River using two PTAGIS queries. The first was a "Tagging Details" query, with filters set such that the mark subbasin is Lemhi, capture method is screw trap, species is Chinook, and mark year is 1986-2020. We filtered these results further to focus on fish tagged at the lower Lemhi RST, which are assumed to be emigrating out of the Lemhi River, by focuing on mark site codes "LEMHIR" or "LLRTP" (the former was used prior to *xxxx*) and filtering out any tags released at LEMHIW (the upper Lemhi RST). The second was a "Recapture Details" query, with similar filters set: mark subbasin is Lemhi, capture method is screw trap, species is Chinook, and recap year is 1986-2020. Again, we further refined these results by filtering for recapture site code of "LEMHIR" or "LLRTP", and recapture released that were not released at LEMHIW.
+We compiled a list of all PIT tags deployed within the Lemhi River using two PTAGIS queries. The first was a "Tagging Details" query, with filters set such that the mark subbasin is Lemhi, capture method is screw trap, species is Chinook, and mark year is 1986-2020. We filtered these results further to focus on fish tagged at the lower Lemhi RST, which are assumed to be emigrating out of the Lemhi River, by focuing on mark site codes "LEMHIR" or "LLRTP" (the former was used prior to 2016) and filtering out any tags released at LEMHIW (the upper Lemhi RST). The second was a "Recapture Details" query, with similar filters set: mark subbasin is Lemhi, capture method is screw trap, species is Chinook, and recap year is 1986-2020. Again, we further refined these results by filtering for recapture site code of "LEMHIR" or "LLRTP", and recapture released that were not released at LEMHIW.
 
 These two queries often resulted in tags showing up in both the mark and recapture lists. For tags recaptured within a week of marking, we used the mark date as the starting point, but for fish recaptured more than a week after marking (sometimes months later) we used the maximum recapture date to indicate when we believe that fish left the Lemhi River. Tags that left after Aug 31 were considered DSR and tags that left prior to July 1 were considered NRR. To date, we have excluded tags that left between July 1 and Aug 31, so as to avoid any confusion as to which brood year to assign them. DSR fish were assigned a brood year on year prior to their emigration date in the fall, and NRR fish were assigned a brood year two years prior. The number of tags assigned to each brood year and life-history are shown in Table \@ref(tab:lh-tags-tab).
 
