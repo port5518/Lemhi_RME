@@ -1,9 +1,10 @@
 # Author: Kevin See
 # Purpose: Survival from LLRTP to LGR
 # Created: 6/14/21
-# Last Modified: April 25, 2022
+# Last Modified: 4/25/22
 # Notes: Reviewed by Mike A in April 2022
 
+# clear environment
 rm(list = ls())
 
 #-----------------------------------------------------------------
