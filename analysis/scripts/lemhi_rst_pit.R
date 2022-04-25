@@ -217,7 +217,6 @@ lem_tags_fix %>%
 
 identical(n_distinct(lem_tags_all$tag_code), n_distinct(lem_tags_fix$tag_code))
 
-
 # grab all tag codes and save as a .txt file to upload to PTAGIS
 # lem_tags_all %>%
 #   select(tag_code, brood_year) %>%
@@ -230,9 +229,6 @@ identical(n_distinct(lem_tags_all$tag_code), n_distinct(lem_tags_fix$tag_code))
 #   mutate(id = 1:n()) %>%
 #   ungroup() %>%
 #   arrange(tag_code, id)
-#
-#
-#
 #
 # lem_tags_all %>%
 #   select(tag_code, brood_year) %>%
@@ -247,7 +243,6 @@ identical(n_distinct(lem_tags_all$tag_code), n_distinct(lem_tags_fix$tag_code))
 #   pivot_wider(names_from = brood_year,
 #               values_from = date,
 #               names_sort = T)
-
 
 # split by life-stage
 lem_tags_fix %>%
