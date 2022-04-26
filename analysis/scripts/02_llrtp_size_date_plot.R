@@ -31,10 +31,9 @@ lem_df = lem_rst_tags %>%
          date,
          length,
          emig_stage,
-         strategy) %>%
-  filter(length < 200 & length > 30)
+         strategy)
 
-tabyl(lem_df$strategy) # I have some NAs in here. Need to remedy.
+tabyl(lem_df, strategy, emig_stage)
 
 #-------------------
 # plot by strategy (DSR, NRR)
@@ -84,17 +83,17 @@ ls_p = lem_df %>%
   theme_classic() +
   labs(x = "Date Tagged",
        y = "Fork Length (mm)") +
-  theme(axis.title.x = element_text(size = 20,
+  theme(axis.title.x = element_text(size = 11,
                                     color = "black"),
-        axis.title.y = element_text(size = 20,
+        axis.title.y = element_text(size = 11,
                                     color = "black"),
-        axis.text.x = element_text(size = 20,
+        axis.text.x = element_text(size = 11,
                                    color = "black"),
-        axis.text.y = element_text(size = 20,
+        axis.text.y = element_text(size = 11,
                                    color = "black"),
-        legend.title = element_text(size = 20,
+        legend.title = element_text(size = 11,
                                     color = "black"),
-        legend.text = element_text(size = 20,
+        legend.text = element_text(size = 11,
                                    color = "black"),
         legend.position = "top")
 ls_p
