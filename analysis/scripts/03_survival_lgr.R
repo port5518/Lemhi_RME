@@ -2,7 +2,7 @@
 # Purpose: Survival from LLRTP to LGR
 # Created: 6/14/21
 # Last Modified: 4/25/22
-# Notes: Reviewed by Mike A in April 2022
+# Notes: Re-ran by Mike A in April 2022 w/ cleaned tag lists
 
 # clear environment
 rm(list = ls())
@@ -605,3 +605,4 @@ model_df %>%
               values_fill = 0,
               names_sort = T)
 
+# END SCRIPT

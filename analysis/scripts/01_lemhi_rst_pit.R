@@ -197,3 +197,5 @@ write_rds(lem_tags_all,
           file = here('analysis/data/derived_data/lemhi_rst_tags.rds'))
 write_rds(lem_tags_fix,
           file = here('analysis/data/derived_data/lemhi_rst_tags_cleaned.rds'))
+
+# END SCRIPT
