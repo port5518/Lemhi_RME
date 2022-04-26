@@ -69,16 +69,21 @@ lem_tags_all = lem_mrk_tags %>%
   ) %>%
   # make some corrections based on size & date cutoffs
   mutate(
-    emig_stage = if_else(yday(date) >  105 & yday(date) <= 120 & length <= 75,  "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 121 & yday(date) <= 135 & length <= 85,  "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 136 & yday(date) <= 151 & length <= 90,  "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 152 & yday(date) <= 158 & length <= 95,  "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 159 & yday(date) <= 166 & length <= 105, "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 167 & yday(date) <= 182 & length <= 115, "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >  105 & yday(date) < 121 & length <= 75, "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 121 & yday(date) < 130 & length <= 83, "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 130 & yday(date) < 143 & length <= 87, "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 143 & yday(date) < 150 & length <= 92, "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 150 & yday(date) < 159 & length <= 96, "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 159 & yday(date) < 163 & length <= 105,"Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 163 & yday(date) < 167 & length <= 110,"Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 167 & yday(date) < 174 & length <= 112,"Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 174 & yday(date) < 183 & length <= 116,"Parr", emig_stage),
   ) %>%
+  # assign brood year
   mutate(brood_year = if_else(emig_stage == "Smolt",
                               year(date) - 2,
                               year(date) - 1)) %>%
+  # assign life history strategy based on emigration stage
   mutate(strategy = case_when(emig_stage == "Smolt" ~ "NRR",
                               emig_stage == "Parr" ~ "DSR",
                               emig_stage == "Presmolt" ~ "DSR"))
