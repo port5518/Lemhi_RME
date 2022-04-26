@@ -13,7 +13,6 @@ library(tidyverse)
 library(here)
 library(janitor)
 library(lubridate)
-library(ggpubr)
 
 #------------------------
 # read in tagging details
@@ -60,6 +59,8 @@ lem_tags_all = lem_mrk_tags %>%
               distinct() %>%
               mutate(source = "recap_details")) %>%
   arrange(tag_code, date) %>%
+  # filter out lengths = 0 and unreasonable lengths
+  filter(length > 25 & length < 250) %>%
   # assign juveniles to a life stage, standard classification
   mutate(
     emig_stage = "nada",
@@ -69,15 +70,15 @@ lem_tags_all = lem_mrk_tags %>%
   ) %>%
   # make some corrections based on size & date cutoffs
   mutate(
-    emig_stage = if_else(yday(date) >  105 & yday(date) < 121 & length <= 75, "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 121 & yday(date) < 130 & length <= 83, "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 130 & yday(date) < 143 & length <= 87, "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 143 & yday(date) < 150 & length <= 92, "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 150 & yday(date) < 159 & length <= 96, "Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 159 & yday(date) < 163 & length <= 105,"Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 163 & yday(date) < 167 & length <= 110,"Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 167 & yday(date) < 174 & length <= 112,"Parr", emig_stage),
-    emig_stage = if_else(yday(date) >= 174 & yday(date) < 183 & length <= 116,"Parr", emig_stage),
+    emig_stage = if_else(yday(date) >  105 & yday(date) < 121 & length <= 75  & !is.na(length), "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 121 & yday(date) < 130 & length <= 83  & !is.na(length), "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 130 & yday(date) < 143 & length <= 87  & !is.na(length), "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 143 & yday(date) < 150 & length <= 92  & !is.na(length), "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 150 & yday(date) < 159 & length <= 96  & !is.na(length), "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 159 & yday(date) < 163 & length <= 105 & !is.na(length), "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 163 & yday(date) < 167 & length <= 110 & !is.na(length), "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 167 & yday(date) < 174 & length <= 112 & !is.na(length), "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 174 & yday(date) < 183 & length <= 116 & !is.na(length), "Parr", emig_stage),
   ) %>%
   # assign brood year
   mutate(brood_year = if_else(emig_stage == "Smolt",
