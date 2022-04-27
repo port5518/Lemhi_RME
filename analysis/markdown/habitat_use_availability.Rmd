@@ -69,8 +69,57 @@ knitr::opts_chunk$set(
 
 ```{r packages}
 # load packages
-
+library(tidyverse)
+library(here)
+library(magrittr)
+library(janitor)
 
 theme_set(theme_bw())
+
 ```
 
+```{r load-data}
+load(here("analysis/data/derived_data/habitat_available.rda"))
+load(here("analysis/data/derived_data/habitat_use.rda"))
+
+```
+
+```{r clean-data}
+xs_all = xs_use %>%
+  mutate(source = "use") %>%
+  bind_rows(xs_avail %>%
+              mutate(source = "avail")) %>%
+  clean_names() %>%
+  # improve some column names
+  rename(release_loc = location,
+         release_date = release,
+         xs_name = name,
+         stream_name = stream_nam,
+         sin_cat = category,
+         frazil_ice = frazel_ice) %>%
+  # correct the code for small side channels
+  mutate(channel_unit_type = recode(channel_unit_type,
+                                    `SC` = "SSC")) %>%
+  # round distance to cover to nearest 0.1m and rename
+  mutate(distance_to_cover = round(distance_to_cover_round_to_nearest_0_1m, 1)) %>%
+  select(-distance_to_cover_round_to_nearest_0_1m) %>%
+  # fix some names within dominant substrate and reorder levels
+  mutate(dominant_substrate_1mx1m = fct_recode(dominant_substrate_1mx1m,
+                                               Boulder = "boulder",
+                                               Cobble = "cobble",
+                                               Fines = "silt_fines",
+                                               Sand = "sand",
+                                               Gravel = "gravel"),
+         dominant_substrate_1mx1m = fct_relevel(dominant_substrate_1mx1m,
+                                                "Gravel",
+                                                after = 2),
+         dominant_substrate_1mx1m = fct_relevel(dominant_substrate_1mx1m,
+                                                "Sand",
+                                                after = 3)) %>%
+  # add a variable of wehtere there's any cover present within 1.5m
+  mutate(has_cover = if_else(dominant_cover_type_1_5m_radius %in% c("No Cover", "Unknown") | is.na(dominant_cover_type_1_5m_radius),
+                             "No", "Yes"))
+  
+  
+
+```
