@@ -73,11 +73,11 @@ library(tidyverse)
 library(here)
 library(magrittr)
 library(janitor)
+library(sf)
 
 theme_set(theme_bw())
 
 ```
-
 ```{r load-data}
 load(here("analysis/data/derived_data/habitat_available.rda"))
 load(here("analysis/data/derived_data/habitat_use.rda"))
@@ -119,7 +119,199 @@ xs_all = xs_use %>%
   # add a variable of wehtere there's any cover present within 1.5m
   mutate(has_cover = if_else(dominant_cover_type_1_5m_radius %in% c("No Cover", "Unknown") | is.na(dominant_cover_type_1_5m_radius),
                              "No", "Yes"))
-  
-  
+
+xs_summary = xs_all %>%
+  filter(source == "avail") %>%
+  group_by(xs_name, sin_cat) %>%
+  summarise(n_pts = n_distinct(xs_point_number))
 
 ```
+
+# Background
+
+Degradation of tributary habitat has been implicated as a major factor contributing to declines of Pacific salmon *Oncorhynchus* spp. Tributary habitat rehabilitation actions are necessary towards stemming population declines. However, habitat use information for juvenile salmonids, particularly during winter months, is somewhat lacking. 
+
+<!-- The following was largely plagarized from Favrot et al. 2018. At some point, I worth be worth wordsmithing to make our own. --> Fish habitat is composed of physical and biological components that are necessary to complete a fish's life history [@Newcomb2007]. Habitat availability is the accessibility and procurability of those physical and biological resources by a fish [@Johnson1980]. Alternatively, habitat use is the way a fish uses the physical and biological resources available to them. Habitat suitability is a measure of the capacity of a specific available habitat to support a fish, with those habitats being most suitable being optimal [@Bovee1986]. Available habitats can be hierarchically characterized employing a spectrum ranging from least suitable (i.e., avoided) to most suitable (i.e., optimal). Habitat selection is the process of choosing a physical or biological component from a suite of available habitats [@Johnson1980]. In general, habitat use is considered random (i.e., no preference) if habitat use is proportionally equivalent to habitat availability. However, preferred habitat refers to a specific physical or biological component that is preferentially selected under equal availabilities (e.g., laboratory experiment: @Johnson1980). Lastly, critical habitat areas exhibit characteristics important to sensitive life stages (e.g., early life history: @Pitlo1989, @Newcomb2007).
+
+
+## Objectives
+
+The goal of this study was to characterize microhabitat use and preference for juvenile Chinook salmon *O. tshawytscha* in the lower Lemhi River during winter months. Habitat availability data and use data were collected in the lower Lemhi River using methods similar to those described by @Favrot2018 and implemented in Catherine Creek, Oregon. The habitat availability and use information will be used to describe habitat preference of juvenile Chinook salmon overwintering in the lower Lemhi River, which can in turn be used to describe target habitat conditions to be used in habitat restoration planning and designs.
+
+
+# Methods
+
+## Habitat Availability
+
+```{r hab-avail-data}
+center_pts_all = st_read("S:/main/data/habitat/lemhi_telemetry/availability/raw/Centerline_XS_Intersects.shp",
+                         quiet = T) %>%
+  st_zm() %>%
+  mutate(Category = factor(Category,
+                           levels = c("Low",
+                                      "Med",
+                                      "High")))
+
+```
+
+Microhabitat availability data were collected in the lower Lemhi River using line-transect survey techniques similar to those described by @Favrot2018. Line-transect techniques can minimize measurement error and are more repeatable than visual techniques [@McMahon1996; @Stanfield1998]. Microhabitat availability data were collected during base-flow conditions in August 2019 and variables measured at each transect point corresponded to microhabitat use variables (described below). Points were placed each 1 m along a linear network of the lower Lemhi River from its confluence with Hayden Creek downstream to its confluence with the Salmon River, resulting in `r prettyNum(nrow(center_pts_all), big.mark = ",")` points in total. Each point was then categorized as occurring within a low, medium, or high sinuosity reach (calculated at the 500m reach scale) of the lower Lemhi River (Table \@ref(tab:sin-table)).
+
+```{r sin-table}
+sin_tbl = tibble(
+  Category = c("Low", "Med", "High"),
+  Minimum = c(
+    min(center_pts_all$Sinuosity[center_pts_all$Category == "Low"]),
+    min(center_pts_all$Sinuosity[center_pts_all$Category == "Med"]),
+    min(center_pts_all$Sinuosity[center_pts_all$Category == "High"])
+  ),
+  Maximum = c(
+    max(center_pts_all$Sinuosity[center_pts_all$Category == "Low"]),
+    max(center_pts_all$Sinuosity[center_pts_all$Category == "Med"]),
+    max(center_pts_all$Sinuosity[center_pts_all$Category == "High"])
+  ),
+  `Length (m)` = c(
+    nrow(center_pts_all[center_pts_all$Category == "Low", ]),
+    nrow(center_pts_all[center_pts_all$Category == "Med", ]),
+    nrow(center_pts_all[center_pts_all$Category == "High", ])
+  )
+) %>%
+  kbl(caption = "The number of points within each sinousity category including the minimum and maximum sinuosity values for reach category.",
+      format.args = list(digits = 4,
+                         big.mark = ",")) %>%
+  kable_styling(position = "center", full_width = F)
+sin_tbl
+
+```
+
+We then randomly sampled an approximately equal number of points within each sinuosity category (Table \@ref(tab:xs-table)) and transects were placed at a right angle to the flow at each of the sampled points. At each transect, we then started at the wetted width midpoint (`xs_point_number = 0`) of the river and sampled every 1m to river right and river left (facing downstream), including the midpoint, to the wetted margin. Points to river right were designated positive (+) and points towards river left were designated negative (-) and habitat availability measurements were taken at each point.<!-- Need to verify those previous statements. Did we sample each meter and was river right (facing downstream) designated positive?--> Habitat availability measurements were taken at each point describing channel unit type, bank condition, dominant substrate, availability of substrate concealment, presence of adjacent side channels, dominant cover type, and distance to cover. In addition, depth and velocity estimates for each point were available from LiDAR-derived 2D numerical models. In total, habitat measurements were collected from `r nrow(xs_summary)` transects and `r prettyNum(sum(xs_summary$n_pts), big.mark = ",")` points, resulting in an average of `r round(sum(xs_summary$n_pts) / nrow(xs_summary), 1)` points per transect.
+
+```{r xs-table}
+xs_tbl = tibble(
+  Category = c("Low", "Med", "High"),
+  `n Transects` = c(
+    nrow(xs_summary[xs_summary$sin_cat == "Low", ]),
+    nrow(xs_summary[xs_summary$sin_cat == "Med", ]),
+    nrow(xs_summary[xs_summary$sin_cat == "High", ])
+  ),
+  `n Transect Points` = c(
+    sum(xs_summary$n_pts[xs_summary$sin_cat == "Low"]),
+    sum(xs_summary$n_pts[xs_summary$sin_cat == "Med"]),
+    sum(xs_summary$n_pts[xs_summary$sin_cat == "High"])
+  )
+) %>%
+  mutate(`Avg. Points per Transect` = round(`n Transect Points` / `n Transects`, 1)) %>%
+  kbl(caption = "The number of points within each sinousity category including the minimum and maximum sinuosity values for reach category.",
+      format.args = list(digits = 4,
+                         big.mark = ",")) %>%
+  kable_styling(position = "center", full_width = F)
+xs_tbl
+
+```
+
+## Habitat Use
+
+Microhabitat use data were collected from radio-tagged juvenile Chinook salmon in the lower Lemhi River and during winter months. <!-- Need to describe radio telemetry and the collection of use measurements -->
+
+
+## Habitat Availability Power Analysis
+
+```{r read_dv_data}
+# read in depth and velocities from the habitat availability transects
+xs_raster = crossing(metric = c("depth", "velocity"),
+                     sin_class = c("Low", "Med", "High")) %>%
+  mutate(sample_xs = map2(metric,
+                          sin_class,
+                          .f = function(x, y) {
+                            st_read(paste0("S:/main/data/habitat/lemhi_telemetry/availability/raw/cross_sections/DV_extract/", y, "_", str_sub(x, 0 ,1), ".shp"),
+                            quiet = T) %>%
+                              dplyr::select(Name:Sinuosity, 
+                                            Category,
+                                            raster_val = RASTERVALU) %>%
+                              mutate_at(vars(raster_val),
+                                        list(~ if_else(. == -9999,
+                                                       NA_real_,
+                                                       .))) %>%
+                              mutate(metric = x)
+                            }))
+
+# depth & velocity cross section values - sf object
+dv_sf = xs_raster %>%
+  select(-metric) %>%
+  unnest(cols = sample_xs) %>%
+  st_as_sf()
+
+# depth & velocity cross section values - data frame
+dv_df = dv_sf %>%
+  st_drop_geometry() %>%
+  as_tibble()
+
+# get all available depths & velocities from the complete rasters
+load("S:/main/data/habitat/lemhi_telemetry/availability/prepped/d_v_avail_sin.rda") # d_v_avail_sin
+
+# compose a data frame for comparison
+comp_df = dv_df %>%
+  select(metric,
+         sin_class,
+         raster_val) %>%
+  mutate(source = "sampled") %>%
+  bind_rows(d_v_avail_sin %>%
+              as_tibble() %>%
+              select(-ID) %>%
+              rename(raster_val = value) %>%
+              mutate(source = "all")) %>%
+  mutate(sin_class = factor(sin_class,
+                            levels = c("Low", "Med", "High")),
+         metric = str_to_title(metric))
+
+```
+
+First, we wanted to assess whether the habitat availability data collected in August 2019 was sufficient to capture the overall distribution of available habitat throughout the lower Lemhi River, or whether addition habitat availablity data were needed. Again, in August 2019, a total of `r nrow(xs_summary)` transects (cross-sections) were sampled, based on a stratified sample where strata were defined by low, medium, and high sinuosity (Tables \@ref(tab:sin-table) & \@ref(tab:xs-table)). We started by examining the depth and velocity values available from raster build on 2D numerical models for the entire lower Lemhi. We then extracted depth and velocity values from points along the sampled transects, and compared those distributions with the distributions of depth and velocity for the entire available raster. Our hypothesis is that if the distributions are similar between the enitre raster and the sampled transects, then the sample has done an adequate job of capturing the distribution of available habitat.
+
+
+# Results
+
+## Habitat Availability
+
+Habitat availability text...
+
+
+## Habitat Use
+
+Habitat use text...
+
+
+## Habitat Availability Power Analysis
+
+Results of the habitat availability power analysis are shown in Figure \@ref(fig:dist-fig). 
+
+```{r dist-fig, fig.cap = "Density plots of depth and velocity, colored by whether taken from the entire raster (All) or the sampled transects (Sampled), faceted by sinuosity category."}
+comp_df %>%
+  ggplot(aes(x = raster_val,
+             color = source,
+             fill = source)) +
+  geom_density(alpha = 0.3) +
+  scale_color_brewer(palette = 'Set1',
+                     name = 'Source') +
+  scale_fill_brewer(palette = 'Set1',
+                     name = 'Source') +
+  facet_grid(sin_class ~ metric,
+             scales = 'free') +
+  # facet_wrap(~ metric + sin_class, 
+  #            scales = 'free',
+  #            nrow = 2) +
+  theme(legend.position = "bottom") +
+  labs(x = 'Raster Value')
+
+```
+
+
+# Discussion
+
+## Habitat Availability Power Analysis
+
+The distributions of the sampled transects and the overall rasters are nearly identical in each sinuosity class, for both depth and velocity. This suggests that the sampled transects are capturing the distribution of available habitat well, and do not need to be supplemented with additional data.
+
+Certainly we are interested in habitat metrics other than depth and velocity, but without somehow simulating the true distributions of those metrics (e.g. substrate class percentage, percentage fish cover type, etc.), it would be difficult to conduct a worthwhile power analysis to evaluate whether our current dataset is sufficient to capture those distributions. Depth and velocity were proxies for everything else, because we had model outputs for them across the entire Lemhi which we treated as the "truth". 
+
+
+# Literature Cited
