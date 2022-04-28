@@ -43,6 +43,17 @@ output:
     pandoc_args:
     - --lua-filter=../templates/scholarly-metadata.lua
     - --lua-filter=../templates/author-info-blocks.lua
+    - --lua-filter=../templates/pagebreak.lua
+  bookdown::word_document2:
+    fig_caption: yes
+    reference_docx: "../templates/template.docx"
+    number_sections: FALSE
+    toc: no
+    always_allow_html: true
+    fig_width: 6
+    pandoc_args:
+    - --lua-filter=../templates/scholarly-metadata.lua
+    - --lua-filter=../templates/author-info-blocks.lua
     - --lua-filter=../templates/pagebreak.lua  
 csl: "../templates/american-fisheries-society.csl"
 bibliography:
@@ -131,7 +142,7 @@ xs_summary = xs_all %>%
 
 Degradation of tributary habitat has been implicated as a major factor contributing to declines of Pacific salmon *Oncorhynchus* spp. Tributary habitat rehabilitation actions are necessary towards stemming population declines. However, habitat use information for juvenile salmonids, particularly during winter months, is somewhat lacking. 
 
-<!-- The following was largely plagarized from Favrot et al. 2018. At some point, I worth be worth wordsmithing to make our own. --> Fish habitat is composed of physical and biological components that are necessary to complete a fish's life history [@Newcomb2007]. Habitat availability is the accessibility and procurability of those physical and biological resources by a fish [@Johnson1980]. Alternatively, habitat use is the way a fish uses the physical and biological resources available to them. Habitat suitability is a measure of the capacity of a specific available habitat to support a fish, with those habitats being most suitable being optimal [@Bovee1986]. Available habitats can be hierarchically characterized employing a spectrum ranging from least suitable (i.e., avoided) to most suitable (i.e., optimal). Habitat selection is the process of choosing a physical or biological component from a suite of available habitats [@Johnson1980]. In general, habitat use is considered random (i.e., no preference) if habitat use is proportionally equivalent to habitat availability. However, preferred habitat refers to a specific physical or biological component that is preferentially selected under equal availabilities (e.g., laboratory experiment: @Johnson1980). Lastly, critical habitat areas exhibit characteristics important to sensitive life stages (e.g., early life history: @Pitlo1989, @Newcomb2007).
+<!-- The following was largely plagarized from Favrot et al. 2018. At some point, it would be worth wordsmithing to make our own. --> Fish habitat is composed of physical and biological components that are necessary to complete a fish's life history [@Newcomb2007]. Habitat availability is the accessibility and procurability of those physical and biological resources by a fish [@Johnson1980]. Alternatively, habitat use is the way a fish uses the physical and biological resources available to them. Habitat suitability is a measure of the capacity of a specific available habitat to support a fish, with those habitats being most suitable being optimal [@Bovee1986]. Available habitats can be hierarchically characterized employing a spectrum ranging from least suitable (i.e., avoided) to most suitable (i.e., optimal). Habitat selection is the process of choosing a physical or biological component from a suite of available habitats [@Johnson1980]. In general, habitat use is considered random (i.e., no preference) if habitat use is proportionally equivalent to habitat availability. However, preferred habitat refers to a specific physical or biological component that is preferentially selected under equal availabilities (e.g., laboratory experiment: @Johnson1980). Lastly, critical habitat areas exhibit characteristics important to sensitive life stages (e.g., early life history: @Pitlo1989, @Newcomb2007).
 
 
 ## Objectives
