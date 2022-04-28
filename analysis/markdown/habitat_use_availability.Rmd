@@ -435,6 +435,7 @@ cu_prop_test = xs_all %>%
 ```
 
 ```{r cu-tab}
+# channel unit table
 cu_tab = cu_prop_test %>%
   select(sin_cat,
          mn_p_value,
@@ -453,6 +454,118 @@ There are statistically significant differences in the distribution of channel u
 
 
 ### Concealment
+
+```{r conceal-fig, fig.cap = "Percent of spots where concealment is available in the entire Lemhi compared with percent of where fish had selected, faceted by low, medium and high sinuosity classes."}
+# concealment figure
+conceal_fig = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  filter(substrate_concealment %in% c("N", "Y")) %>%
+  ggplot(aes(x = source,
+             fill = substrate_concealment)) +
+  geom_bar(position = position_fill()) +
+  scale_fill_brewer(palette = "Set2",
+                    name = "Concealment") +
+  facet_wrap(~ sin_cat) +
+  labs(x = "Data Set",
+       y = "Percentage")
+conceal_fig
+
+```
+
+```{r conceal-test}
+conceal_test = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  filter(substrate_concealment %in% c("N", "Y")) %>%
+  mutate(across(substrate_concealment,
+                fct_drop)) %>%
+  group_by(sin_cat,
+           source,
+           substrate_concealment) %>%
+  summarize(n_found = n(),
+            .groups = "drop") %>%
+  # fill in missing categories w/ NA
+  full_join(tidyr::expand(.,
+                          sin_cat,
+                          source,
+                          substrate_concealment),
+            by = c("sin_cat",
+                   "source",
+                   "substrate_concealment")) %>%
+  # fill in NAs
+  mutate(across(n_found,
+                replace_na,
+                0)) %>%
+  group_by(sin_cat, source) %>%
+  mutate(prop = n_found / sum(n_found)) %>%
+  ungroup() %>%
+  arrange(sin_cat,
+          source,
+          substrate_concealment) %>%
+  nest(data = -sin_cat) %>%
+  mutate(mn_test = map(data,
+                    .f = purrr::quietly(function(x) {
+                      obs_n = x %>%
+                        filter(source == "use") %>%
+                        pull(n_found)
+                      exp_prop = x %>%
+                        filter(source == "avail") %>%
+                        pull(prop)
+                      set.seed(6)
+                      mn_test = EMT::multinomial.test(observed = obs_n,
+                                                      prob = exp_prop,
+                                                      useChisq = F,
+                                                      MonteCarlo = T,
+                                                      ntrial = 1e5)
+                      return(mn_test)
+                    })),
+         mn_test = map(mn_test,
+                       "result"),
+         mn_test_stat = map_chr(mn_test, 
+                                "stat"),
+         mn_p_value = map_dbl(mn_test,
+                              "p.value")) %>%
+  mutate(g_test = map(data,
+                      .f = function(x) {
+                        # obs_n = x %>%
+                        #   filter(source == "Use") %>%
+                        #   pull(n_found)
+                        # exp_prop = x %>%
+                        #   filter(source == "Avail.") %>%
+                        #   pull(prop)
+                        # g_test = DescTools::GTest(x = obs_n, 
+                        #                           p = exp_prop,
+                        #                           correct = "williams")
+                        g_test = x %>%
+                          select(-prop) %>%
+                          pivot_wider(names_from = source,
+                                      values_from = n_found) %>%
+                          select(avail, use) %>%
+                          as.matrix() %>%
+                          DescTools::GTest(correct = "yates")
+                        return(g_test)
+                      }),
+         g_test_stat = map_chr(g_test,
+                               "method"),
+         g_p_value = map_dbl(g_test,
+                             "p.value")) %>%
+  mutate(chi2_test = map(data,
+                         .f = function(x) {
+                           obs_n = x %>%
+                             filter(source == "use") %>%
+                             pull(n_found)
+                           exp_prop = x %>%
+                             filter(source == "avail") %>%
+                             pull(prop)
+                           chi_test = stats::chisq.test(x = obs_n, 
+                                                        p = exp_prop)
+                           return(chi_test)
+                         }),
+         chi2_test_stat = map_chr(chi2_test,
+                                  "method"),
+         chi2_p_value = map_dbl(chi2_test,
+                                "p.value"))
+
+```
 
 ### Cover
 
