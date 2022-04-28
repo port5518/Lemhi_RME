@@ -320,9 +320,7 @@ comp_df %>%
 
 ## Habitat Availability Power Analysis
 
-The distributions of the sampled transects and the overall rasters are nearly identical in each sinuosity class, for both depth and velocity. This suggests that the sampled transects are capturing the distribution of available habitat well, and do not need to be supplemented with additional data.
-
-Certainly we are interested in habitat metrics other than depth and velocity, but without somehow simulating the true distributions of those metrics (e.g. substrate class percentage, percentage fish cover type, etc.), it would be difficult to conduct a worthwhile power analysis to evaluate whether our current dataset is sufficient to capture those distributions. Depth and velocity were proxies for everything else, because we had model outputs for them across the entire Lemhi which we treated as the "truth". 
+The distributions of the depths and velocities from the sampled transects and the rasters covering the entirety of the lower Lemhi River are nearly identical within each sinuosity class. This suggest that the sampled transects are capturing the distribution of available habitat well, and did not need to be supplemented with additional transects. Certainly, we are interested in habitat metrics other than depth and velocity, but without somehow simulating the true distributions of those metrics (e.g., substrate class, fish cover, etc.)) it would be diffucult to conduct a worthwhile power analysis to evaluate whether our current dataset is sufficient to capture those distributions. Depth and velocity were used as proxies for everything elese, because we had model outputs for them across the entire Lemhi River, which we treated as the "truth". We feel that the habitat availability dataset available from line transects in the lower Lemhi River is sufficient to capture the true available habitat.
 
 
 # Literature Cited
