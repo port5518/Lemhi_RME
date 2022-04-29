@@ -346,7 +346,7 @@ comp_df %>%
 
 ### Channel Unit Types
 
-```{r cu-fig}
+```{r cu-fig, fig.cap = "Percent of channel unit types available in the entire Lemhi compared with percent where fish were using them, faceted by low, medium and high sinuosity classes."}
 # channel unit bar plot by sinuosity category
 cu_fig = xs_all %>%
   filter(source == "avail" | habitat_selected == "Selected") %>%
@@ -450,7 +450,7 @@ cu_tab
 
 ```
 
-There are statistically significant differences in the distribution of channel units selected by radio-tagged juvenile Chinook salmon during winter months and what is available in the lower Lemhi River, across all three sinuosity categories (Table \@ref(tab:cu-tab)). It appears that juvenile Chinook salmn tend to use pools and off-channel areas at a higher frequency than their availability, and riffles at a lower frequency compared to what is available (Figure \@ref(fig:cu-fig)).
+There are statistically significant differences in the distribution of channel units selected by radio-tagged juvenile Chinook salmon during winter months and what is available in the lower Lemhi River, across all three sinuosity categories (Table \@ref(tab:cu-tab)). It appears that juvenile Chinook salmon tend to use pools and off-channel areas at a higher frequency than their availability, and riffles at a lower frequency compared to what is available (Figure \@ref(fig:cu-fig)).
 
 
 ### Concealment
@@ -583,7 +583,128 @@ conceal_tab
 
 ```
 
+There appears to be very little difference in the substrate concealment between what is available and what is selected by juvenile Chinook salmon for both the medium and high sinuosity categories. There is a difference in the little sinuosity category (Table \@ref(tab:conceal-tab); however, Figure \@ref(fig:conceal-fig) indicates that in low sinuosity reaches, fish are more likely to select habitat that does not contain substrate concealment, contrary to our suspicions.
+
+
 ### Cover
+
+```{r cover-fig, fig.cap = "Percentage of points where cover is available in the entire lower Lemhi River compared to the percent where fish had selected, faceted by low, medium, and high sinuosity categories."}
+cover_fig = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  ggplot(aes(x = source,
+             fill = has_cover)) +
+  geom_bar(position = position_fill()) +
+  scale_fill_brewer(palette = "Set2",
+                    name = "Cover") +
+  facet_wrap(~ sin_cat) +
+  labs(x = "Data Set",
+       y = "Percentage")
+cover_fig
+   
+```
+
+```{r cover-test}
+cover_test = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  group_by(sin_cat,
+           source,
+           has_cover) %>%
+  summarize(n_found = n(),
+            .groups = "drop") %>%
+  # add missing categories
+  full_join(tidyr::expand(.,
+                          sin_cat,
+                          source,
+                          has_cover),
+            by = c("sin_cat",
+                   "source",
+                   "has_cover")) %>%
+  # fill in NAs with 0
+  mutate(across(n_found,
+                replace_na,
+                0)) %>%
+  group_by(sin_cat, source) %>%
+  mutate(prop = n_found / sum(n_found)) %>%
+  ungroup() %>%
+  arrange(sin_cat,
+          source,
+          has_cover) %>%
+  nest(data = -sin_cat) %>%
+  mutate(mn_test = map(data,
+                       .f = purrr::quietly(function(x) {
+                         obs_n = x %>%
+                           filter(source == "use") %>%
+                           pull(n_found)
+                         exp_prop = x %>%
+                           filter(source == "avail") %>%
+                           pull(prop)
+                         set.seed(6)
+                         mn_test = EMT::multinomial.test(observed = obs_n,
+                                                         prob = exp_prop,
+                                                         useChisq = F,
+                                                         MonteCarlo = T,
+                                                         ntrial = 1e5)
+                         return(mn_test)
+                         })),
+           mn_test = map(mn_test,
+                         "result"),
+           mn_test_stat = map_chr(mn_test, 
+                                  "stat"),
+           mn_p_value = map_dbl(mn_test,
+                                "p.value")) %>%
+  mutate(g_test = map(data,
+                      .f = function(x) {
+                        g_test = x %>%
+                          select(-prop) %>%
+                          pivot_wider(names_from = source,
+                                      values_from = n_found) %>%
+                          select(avail, use) %>%
+                          as.matrix() %>%
+                          DescTools::GTest(correct = "yates")
+                        
+                        return(g_test)
+                      }),
+         g_test_stat = map_chr(g_test,
+                               "method"),
+         g_p_value = map_dbl(g_test,
+                             "p.value")) %>%
+  mutate(chi2_test = map(data,
+                         .f = function(x) {
+                           obs_n = x %>%
+                             filter(source == "use") %>%
+                             pull(n_found)
+                           exp_prop = x %>%
+                             filter(source == "avail") %>%
+                             pull(prop)
+                           chi_test = stats::chisq.test(x = obs_n,
+                                                        p = exp_prop)
+                           return(chi_test)
+                           }),
+         chi2_test_stat = map_chr(chi2_test,
+                                  "method"),
+         chi2_p_value = map_dbl(chi2_test,
+                                "p.value"))
+
+  
+```
+
+```{r cover-tab}
+cover_tab = cover_test %>%
+  select(sin_cat,
+         g_p_value,
+         chi2_p_value) %>%
+  rename(`Sinuosity Category` = sin_cat,
+         `G-test p-value` = g_p_value,
+         `Chi Squared p-value` = chi2_p_value) %>%
+  kable(digits = 5,
+        caption = "P-values of G- and Chi-squared tests for differences in availability of cover within 1.5 m radius between available and selected habitat.") %>%
+  kable_styling(position = "center", 
+                full_width = F)
+cover_tab
+
+```
+
+Unlike concealment, it does appear that radio-tagged juvenile Chinook salmon are more likely to select habitat where some form of cover is available (within a 1.5 m radius), compared to what is available, across all three sinuosity categories (Table \@ref(tab:cover-tab), Figure \@ref(fig:cover-fig)).
 
 # Discussion
 
