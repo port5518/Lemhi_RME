@@ -567,6 +567,22 @@ conceal_test = xs_all %>%
 
 ```
 
+```{r conceal-tab}
+conceal_tab = conceal_test %>%
+  select(sin_cat,
+         g_p_value,
+         chi2_p_value) %>%
+  rename(`Sinuosity Category` = sin_cat,
+         `G-test p-value` = g_p_value,
+         `Chi Squared p-value` = chi2_p_value) %>%
+  kable(digits = 5,
+        caption = "P-values of G- and Chi-squared tests for differences in availability of concealment between available and selected habitat.") %>%
+  kable_styling(position = "center", 
+                full_width = F)
+conceal_tab
+
+```
+
 ### Cover
 
 # Discussion
