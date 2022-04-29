@@ -1,0 +1,1612 @@
+"ID","Date","Diverters","Adjusted Trap","CFS","RPM","Operation","Sill Depth","Temp(°c)","L3AO Diversion","Upstream Release Location","Notes"
+1,"2013-03-09 00:00:00","N","N",263,8,1,,,,"R-Just downstream of diversion",
+2,"2013-03-10 00:00:00","N","N",260,6,1,,,,"R-Just downstream of diversion",
+3,"2013-03-11 00:00:00","N","N",277,6,1,,,,"R-Just downstream of diversion",
+4,"2013-03-12 00:00:00","N","N",283,5.5,1,,,,"R-Just downstream of diversion",
+5,"2013-03-13 00:00:00","N","N",291,5,1,,,,"R-Just downstream of diversion",
+6,"2013-03-14 00:00:00","N","N",311,5,1,,,,"R-Just downstream of diversion","Derbris drum jammed and water spilling out back of trapbox, probably lost fish"
+7,"2013-03-15 00:00:00","N","N",342,4.5,1,,,,"R-Just downstream of diversion","Derbris drum jammed and water spilling out back of trapbox, probably lost fish"
+8,"2013-03-16 00:00:00","N","N",359,0,0.5,,,,"R-Just downstream of diversion","Cone not turning due to log; last checked running the previous day at 22:00"
+9,"2013-03-17 00:00:00","N","N",334,7,1,,,,"R-Upstream of diversion~50 m",
+10,"2013-03-18 00:00:00","N","N",291,7,1,,,,"R-Upstream of diversion~50 m",
+11,"2013-03-19 00:00:00","N","N",276,6.5,1,,,,"R-Upstream of diversion~50 m",
+12,"2013-03-20 00:00:00","N","N",291,6,1,,,,"R-Upstream of diversion~50 m",
+13,"2013-03-21 00:00:00","N","N",306,6,1,,,,"R-Upstream of diversion~50 m",
+14,"2013-03-22 00:00:00","N","N",279,6,1,,,,"R-Upstream of diversion~50 m",
+15,"2013-03-23 00:00:00","N","N",261,6,1,,,,"R-Upstream of diversion~50 m",
+16,"2013-03-24 00:00:00","N","N",252,6,1,,,,"R-Upstream of diversion~50 m",
+17,"2013-03-25 00:00:00","N","N",254,6,1,,,,"R-Just downstream of diversion",
+18,"2013-03-26 00:00:00","N","N",275,6,1,,,,"R-Just downstream of diversion",
+19,"2013-03-27 00:00:00","N","N",276,6.5,1,,,,"R-Just downstream of diversion",
+20,"2013-03-28 00:00:00","N","N",286,6.5,1,88,,,"L-Upstream of diversion~50 m",
+21,"2013-03-29 00:00:00","N","N",296,6.5,1,90,,,"L-Upstream of diversion~50 m",
+22,"2013-03-30 00:00:00","N","N",298,6,1,90,,,"L-Upstream of diversion~50 m",
+23,"2013-03-31 00:00:00","N","N",301,6.5,1,90,,,"L-Upstream of diversion~50 m",
+24,"2013-04-01 00:00:00","N","N",302,6,1,90,,,"L-Upstream of diversion~50 m",
+25,"2013-04-02 00:00:00","N","N",294,8,1,89,,,"L-Upstream of diversion~50 m",
+26,"2013-04-03 00:00:00","N","N",290,6,1,89,,,"L-Upstream of diversion~50 m",
+27,"2013-04-04 00:00:00","N","N",280,6,1,89,,,"L-Upstream of diversion~50 m",
+28,"2013-04-05 00:00:00","N","N",275,6,1,87,,,"L-Upstream of diversion~50 m",
+29,"2013-04-06 00:00:00","N","N",275,5,1,88,,,"L-Upstream of diversion~150 m",
+30,"2013-04-07 00:00:00","N","N",263,6,1,86,,,"L-Upstream of diversion~150 m",
+31,"2013-04-08 00:00:00","N","N",255,5,1,86,,,"L-Upstream of diversion~150 m",
+32,"2013-04-09 00:00:00","N","N",234,6,1,84,,,"L-Upstream of diversion~150 m",
+33,"2013-04-10 00:00:00","N","N",232,6,1,83,,,"L-Upstream of diversion~150 m",
+34,"2013-04-11 00:00:00","N","N",226,6,1,82,,,"L-Upstream of diversion~150 m",
+35,"2013-04-12 00:00:00","N","N",206,5,1,80,,,"L-Upstream of diversion~150 m",
+36,"2013-04-13 00:00:00","N","N",204,5,1,79,,,"L-Upstream of diversion~150 m",
+37,"2013-04-14 00:00:00","N","N",199,5,1,80,,,"L-Upstream of diversion~150 m","Tire flat debris drum not turning; trapbox full of debris; raised cone for 45 mins to replace tire"
+38,"2013-04-15 00:00:00","N","N",198,5,1,79,,,"L-Upstream of diversion~150 m",
+39,"2013-04-16 00:00:00","N","N",186,5,1,78,,,"L-Upstream of diversion~150 m",
+40,"2013-04-17 00:00:00","N","N",178,5,1,77,,,"L-Upstream of diversion~150 m",
+41,"2013-04-18 00:00:00","N","N",174,4.5,1,77,,,"L-Upstream of diversion~150 m",
+42,"2013-04-19 00:00:00","N","N",181,4.5,1,78,,,"L-Upstream of diversion~150 m",
+43,"2013-04-20 00:00:00","N","N",176,5.5,1,78,,,"L-Upstream of diversion~150 m",
+44,"2013-04-21 00:00:00","N","N",162,4.5,1,75,,,"L-Upstream of diversion~150 m",
+45,"2013-04-22 00:00:00","N","N",157,4,1,75,,,"L-Upstream of diversion~150 m",
+46,"2013-04-23 00:00:00","N","N",146,4.5,1,75,,,"L-Upstream of diversion~150 m",
+47,"2013-04-24 00:00:00","N","N",132,4,1,75,,,"L-Upstream of diversion~150 m",
+48,"2013-04-25 00:00:00","N","Y",113,2.5,1,67,,,"R-Just downstream of diversion","Raised cone ~3 inches to fish overnight-Moved to river right 1-2 feet"
+49,"2013-04-26 00:00:00","Y","N",89,3.5,1,67,,,"Mid-river downstream of diversion","2-8' plywood diverters added to river right and 3-8' plywood diverters to the river left side of trap to divert water and turn cone."
+50,"2013-04-27 00:00:00","Y","Y",53,3,1,60,,,"Mid-river downstream of diversion","Moved trap river right and downstream ~2'"
+51,"2013-04-28 00:00:00","Y","N",34,1,1,51,,,"Mid-river downstream of diversion",
+52,"2013-04-29 00:00:00","Y","N",27,0,0,50,,,"Mid-river downstream of diversion","River flow too low to turn cone"
+53,"2013-04-30 00:00:00","Y","N",25,0,0,,,,,"Diversion boards added at 10:00; 1-8' plywood board to river left and 1-8' baord on river right. Trap fishing again; RPM 1.5 after boards installed. No fish to release"
+54,"2013-05-01 00:00:00","Y","N",27,1.5,1,51,,,"Mid-river downstream of diversion",
+55,"2013-05-02 00:00:00","Y","N",27,2,1,53,,,"Mid-river downstream of diversion",
+56,"2013-05-03 00:00:00","Y","N",28,2,1,53,,,"Mid-river downstream of diversion",
+57,"2013-05-04 00:00:00","Y","N",28,2,1,54,,,"Mid-river downstream of diversion",
+58,"2013-05-05 00:00:00","Y","N",28,2,1,54,,,"Mid-river downstream of diversion",
+59,"2013-05-06 00:00:00","Y","N",26,1.5,1,52,,,"Mid-river downstream of diversion",
+60,"2013-05-07 00:00:00","Y","Y",27,2,1,53,,,"Mid-river downstream of diversion","moved trap upstream ~2-3'"
+61,"2013-05-08 00:00:00","Y","N",26,2,1,52,,,"Mid-river downstream of diversion",
+62,"2013-05-09 00:00:00","Y","N",27,2,1,51,,,"Mid-river downstream of diversion",
+63,"2013-05-10 00:00:00","Y","N",26,2,1,51,,,"Mid-river downstream of diversion",
+64,"2013-05-11 00:00:00","Y","N",26,1.75,1,50,,,"Mid-river downstream of diversion",
+65,"2013-05-12 00:00:00","Y","N",27,1.5,1,50,,,"Mid-river downstream of diversion",
+66,"2013-05-13 00:00:00","Y","N",44,2,1,53,,,"Mid-river downstream of diversion",
+67,"2013-05-14 00:00:00","N","N",109,2.5,1,63,,,"Mid-river downstream of diversion","Pulled diverters at 12:00"
+68,"2013-05-15 00:00:00","N","N",113,4,1,66,,,"Mid-river downstream of diversion",
+69,"2013-05-16 00:00:00","N","N",97,4,1,66,,,"Mid-river downstream of diversion",
+70,"2013-05-17 00:00:00","N","N",124,4,1,67,,,"Mid-river downstream of diversion",
+71,"2013-05-18 00:00:00","N","N",152,3,1,75,,,"Mid-river downstream of diversion",
+72,"2013-05-19 00:00:00","N","N",140,4.5,1,71,,,"Mid-river downstream of diversion",
+73,"2013-05-20 00:00:00","N","N",116,4,1,69,,,"Mid-river downstream of diversion",
+74,"2013-05-21 00:00:00","N","Y",105,4,1,68,,,"Mid-river downstream of diversion","winched trap over to river right as far as possible with winch moved trap ~1 foot over."
+75,"2013-05-22 00:00:00","N","N",107,4,1,68,,,"Mid-river downstream of diversion",
+76,"2013-05-23 00:00:00","N","N",112,4,1,68,,,"Mid-river downstream of diversion",
+77,"2013-05-24 00:00:00","N","Y",126,4,1,71,,,"Mid-river downstream of diversion","Moved trap to river right bank with ropes"
+78,"2013-05-25 00:00:00","N","N",117,4,1,70,,,"Mid-river downstream of diversion",
+79,"2013-05-26 00:00:00","N","N",115,4,1,69,,,"Mid-river downstream of diversion",
+80,"2013-05-27 00:00:00","N","N",123,4,1,72,,,"Mid-river downstream of diversion",
+81,"2013-05-28 00:00:00","N","N",139,4,1,72,,,"Mid-river downstream of diversion",
+82,"2013-05-29 00:00:00","N","Y",134,3.5,1,72,,,"Mid-river downstream of diversion","moved front end of trap to river right side"
+83,"2013-05-30 00:00:00","N","N",125,4,1,72,,,"Mid-river downstream of diversion",
+84,"2013-05-31 00:00:00","N","N",114,4,1,70,,,"Mid-river downstream of diversion",
+85,"2013-06-01 00:00:00","N","N",102,3.5,1,69,,,"Mid-river downstream of diversion",
+86,"2013-06-02 00:00:00","N","N",92,3,1,66,,,"Mid-river downstream of diversion",
+87,"2013-06-03 00:00:00","Y","N",101,3,1,67,,,"Mid-river downstream of diversion","Intalled 2-8' plywood diverter boards on river left and one on river right. RPMs went from 3 to 6"
+88,"2013-06-04 00:00:00","Y","N",91,4,1,70,,,"Mid-river downstream of diversion",
+89,"2013-06-05 00:00:00","Y","N",83,6,1,69,,,"Mid-river downstream of diversion",
+90,"2013-06-06 00:00:00","Y","N",69,4.5,1,66,,,"Mid-river downstream of diversion",
+91,"2013-06-07 00:00:00","Y","N",85,5,1,68,,,"Mid-river downstream of diversion",
+92,"2013-06-08 00:00:00","Y","N",122,6,1,74,,,"Mid-river downstream of diversion",
+93,"2013-06-09 00:00:00","N","N",149,5.5,1,80,,,"Mid-river downstream of diversion","Removed all diverters as water came up"
+94,"2013-06-10 00:00:00","N","Y",190,5,1,76,,,"Mid-river downstream of diversion","moved front of trap out (river left)into river ~1-2' to catch more of thalweg"
+95,"2013-06-11 00:00:00","N","N",281,7,0.5,89,,,"Mid-river downstream of diversion","Log in trap; trap not sipinning"
+96,"2013-06-12 00:00:00","N","N",248,6.5,1,87,,,"Mid-river downstream of diversion",
+97,"2013-06-13 00:00:00","N","N",213,6,1,81,,,"Mid-river downstream of diversion","Released fish upstream before raising cone to change tire ~20 mins"
+98,"2013-06-14 00:00:00","N","N",236,6,1,82,,,"Mid-river downstream of diversion",
+99,"2013-06-15 00:00:00","N","N",210,6,1,82,,,"Mid-river downstream of diversion",
+100,"2013-06-16 00:00:00","N","N",170,6,1,77,,,"Mid-river downstream of diversion",
+101,"2013-06-17 00:00:00","Y","N",140,5.5,1,75,,,"Mid-river downstream of diversion","Installed 3-8' plywood diverters on river left"
+102,"2013-06-18 00:00:00","Y","N",114,5,1,73,,,"Mid-river downstream of diversion",
+103,"2013-06-19 00:00:00","Y","N",157,5,1,70,,,"Mid-river downstream of diversion","Removed all diverters on river left at 21:45 river up to 86 after raining all day"
+104,"2013-06-20 00:00:00","N","N",250,8,1,87,,,"Mid-river downstream of diversion",
+105,"2013-06-21 00:00:00","N","N",206,6,1,83,,,"Mid-river downstream of diversion",
+106,"2013-06-22 00:00:00","N","N",305,6,1,81,,,"Mid-river downstream of diversion","at 18:30 trap jammed with big log and debris unable to raise cone or remove log, so trap was ferried to river left, cone raised for night, no fish to release"
+107,"2013-06-23 00:00:00","N","Y",253,7,0,86,,,,"After log jam mainline cable was stretched and trap moved downstream ~2'. No fish to release"
+108,"2013-06-24 00:00:00","N","N",214,6,1,82,,,"Mid-river downstream of diversion",
+109,"2013-06-25 00:00:00","N","N",205,6,1,81,,,"Mid-river downstream of diversion",
+110,"2013-06-26 00:00:00","N","Y",237,6,1,81,,,,"Moved trap upstream ~1.5-2' and out (river left) ~1'"
+111,"2013-06-27 00:00:00","N","N",252,6.5,1,87,,,"Mid-river downstream of diversion",
+112,"2013-06-28 00:00:00","N","N",214,6,1,82,,,"Mid-river downstream of diversion",
+113,"2013-06-29 00:00:00","N","N",189,6,1,80,,,,
+114,"2013-06-30 00:00:00","N","N",198,6,1,82,,,"Mid-river downstream of diversion","water very muddy"
+115,"2013-07-01 00:00:00","N","N",185,5.5,1,81,,,"Mid-river downstream of diversion",
+116,"2013-07-02 00:00:00","N","N",161,5,1,75,,,"Mid-river downstream of diversion",
+117,"2013-07-03 00:00:00","N","Y",161,4.5,1,76,,,,"Raised cone at 08:45 to help with mega sampling on upper Lemhi"
+118,"2013-07-04 00:00:00","N","N",159,,0,,,,,
+119,"2013-07-05 00:00:00","N","N",156,,0,,,,,
+120,"2013-07-06 00:00:00","N","N",150,,0,,,,,
+121,"2013-07-07 00:00:00","N","N",127,,0,,,,,
+122,"2013-07-08 00:00:00","N","N",105,,0,,,,,
+123,"2013-07-09 00:00:00","N","N",71,,0,,,,,
+124,"2013-07-10 00:00:00","N","N",45,,0,,,,,
+125,"2013-07-11 00:00:00","N","N",33,,0,,,,,"Dropped cone back in ???? What time???"
+126,"2013-07-12 00:00:00","Y","N",31,2.25,1,58,,,"Mid-river downstream of diversion","Put in 4-8' plywood diverters on river left and 2 on river right"
+127,"2013-07-13 00:00:00","Y","N",28,3,1,57,,,"Mid-river downstream of diversion",
+128,"2013-07-14 00:00:00","Y","N",28,3,1,56,,,"Mid-river downstream of diversion",
+129,"2013-07-15 00:00:00","Y","N",29,3,1,57,,,"Mid-river downstream of diversion",
+130,"2013-07-16 00:00:00","Y","N",28,3,1,55,,,"Mid-river downstream of diversion","put in 1 more 8' diverter on river right"
+131,"2013-07-17 00:00:00","Y","N",29,3,1,56,,,"Mid-river downstream of diversion",
+132,"2013-07-18 00:00:00","Y","N",27,3,1,55,,,"Mid-river downstream of diversion",
+133,"2013-07-19 00:00:00","Y","N",26,3,1,55,,,"Mid-river downstream of diversion",
+134,"2013-07-20 00:00:00","Y","N",26,3,1,56,,,"Mid-river downstream of diversion",
+135,"2013-07-21 00:00:00","Y","N",26,3,1,56,,,,
+136,"2013-07-22 00:00:00","Y","N",25,3,1,55,,,,"antenna not working so could not tag fish"
+137,"2013-07-23 00:00:00","Y","N",26,3,1,55,,,,"no targets captured; cleared trap at 16:00 and water temp was 22 degrees C in trap and stream, so may pull trap during day tomorrow."
+138,"2013-07-24 00:00:00","Y","N",26,2.5,1,54,,,,"only captured one target (mort); raised cone at 09:00 to avoid high water temps."
+139,"2013-07-25 00:00:00","Y","N",26,3,1,55,,,,"trap dropped at 20:30 (temp 19*)"
+140,"2013-07-26 00:00:00","Y","N",26,3,1,55,,,,"trap dropped at 23:00 (temp 19*)"
+141,"2013-07-27 00:00:00","Y","N",26,2,1,53.5,,,,"Trap lifted at 8:00 (temp 18*)"
+142,"2013-07-28 00:00:00","Y","N",26,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+143,"2013-07-29 00:00:00","Y","N",26,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+144,"2013-07-30 00:00:00","Y","N",26,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+145,"2013-07-31 00:00:00","Y","N",26,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+146,"2013-08-01 00:00:00","Y","N",27,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+147,"2013-08-02 00:00:00","Y","N",27,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+148,"2013-08-03 00:00:00","Y","N",26,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+149,"2013-08-04 00:00:00","Y","N",26,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+150,"2013-08-05 00:00:00","Y","N",26,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+151,"2013-08-06 00:00:00","Y","N",26,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+152,"2013-08-07 00:00:00","Y","N",26,,0,,,,,"Trap not in operation due to temps and low fish numbers"
+153,"2013-08-08 00:00:00","Y","N",26,2,1,52,,,,
+154,"2013-08-09 00:00:00","Y","N",27,2,1,53,,,,"Cone lowered at 23:00"
+155,"2013-08-10 00:00:00","Y","N",27,2,1,53,,,"Mid-river downstream of diversion","Cone left in water due to cooler temps"
+156,"2013-08-11 00:00:00","Y","N",27,2,1,53,,,"Mid-river downstream of diversion",
+157,"2013-08-12 00:00:00","Y","N",27,2,1,53,,,"Mid-river downstream of diversion","**Forgot to release fish"
+158,"2013-08-13 00:00:00","Y","Y",27,2,1,52,,,"Mid-river downstream of diversion","Trap moved upstream ~18"" to top of pool at 14:45"
+159,"2013-08-14 00:00:00","Y","N",26,2,1,53,,,"Mid-river downstream of diversion","**Fish from 8/13 Released"
+160,"2013-08-15 00:00:00","Y","N",26,2,1,53,,,"Mid-river downstream of diversion","**Forgot to release fish"
+161,"2013-08-16 00:00:00","Y","N",26,2,1,53,,,"Mid-river downstream of diversion","**Fish from 8/15 released"
+162,"2013-08-17 00:00:00","Y","N",26,2,1,50,,,"Mid-river downstream of diversion",
+163,"2013-08-18 00:00:00","Y","N",26,2,1,50,,,,
+164,"2013-08-19 00:00:00","Y","N",26,1.25,1,50,,,,
+165,"2013-08-20 00:00:00","Y","N",26,1.25,1,48,,,"Mid-river downstream of diversion",
+166,"2013-08-21 00:00:00","Y","N",27,2,1,50,,,,
+167,"2013-08-22 00:00:00","Y","N",27,2,1,50,,,"Mid-river downstream of diversion",
+168,"2013-08-23 00:00:00","Y","N",28,2,1,50,,,,
+169,"2013-08-24 00:00:00","Y","N",27,2,1,52,,,,
+170,"2013-08-25 00:00:00","Y","N",27,2,1,53,,,"Mid-river downstream of diversion",
+171,"2013-08-26 00:00:00","Y","N",26,2,1,53,,,"Mid-river downstream of diversion",
+172,"2013-08-27 00:00:00","Y","N",26,2,1,53,,,"Mid-river downstream of diversion",
+173,"2013-08-28 00:00:00","Y","Y",26,2,1,51,,,"Mid-river downstream of diversion","Moved trap up 12"""
+174,"2013-08-29 00:00:00","Y","N",25,2,1,52,,,"Mid-river downstream of diversion",
+175,"2013-08-30 00:00:00","Y","N",25,2,1,52,,,"Mid-river downstream of diversion",
+176,"2013-08-31 00:00:00","Y","N",25,2,1,52,,,"Mid-river downstream of diversion",
+177,"2013-09-01 00:00:00","Y","N",25,2,1,53,,,"Mid-river downstream of diversion",
+178,"2013-09-02 00:00:00","Y","N",25,2,1,53,,,"Mid-river downstream of diversion",
+179,"2013-09-03 00:00:00","Y","N",26,2,1,52,,,"Mid-river downstream of diversion",
+180,"2013-09-04 00:00:00","Y","N",27,2,1,54,,,"Mid-river downstream of diversion",
+181,"2013-09-05 00:00:00","Y","N",25,2,1,54,,,"Mid-river downstream of diversion","1 Mort from tagging"
+182,"2013-09-06 00:00:00","Y","N",27,2,1,55,,,"Mid-river downstream of diversion","SHED TAG"
+183,"2013-09-07 00:00:00","Y","N",25,2,1,54,,,"Mid-river downstream of diversion",
+184,"2013-09-08 00:00:00","Y","N",25,2,1,54,,,"Mid-river downstream of diversion",
+185,"2013-09-09 00:00:00","Y","N",25,2,1,55,,,"Mid-river downstream of diversion","SHED TAG"
+186,"2013-09-10 00:00:00","Y","N",25,2,1,52,,,"Mid-river downstream of diversion","2 Morts"
+187,"2013-09-11 00:00:00","Y","N",25,2,1,53,,,"Mid-river downstream of diversion","2 shed tags"
+188,"2013-09-12 00:00:00","Y","N",25,2,1,51,,,"Mid-river downstream of diversion",
+189,"2013-09-13 00:00:00","Y","N",25,2,1,50,,,"Mid-river downstream of diversion",
+190,"2013-09-14 00:00:00","Y","N",26,2,1,52,,,"Mid-river downstream of diversion",
+191,"2013-09-15 00:00:00","Y","N",25,2,1,53,,,"Mid-river downstream of diversion",
+192,"2013-09-16 00:00:00","Y","N",26,2,1,54,,,"Mid-river downstream of diversion",
+193,"2013-09-17 00:00:00","Y","N",25,2,1,53,,,"Mid-river downstream of diversion",
+194,"2013-09-18 00:00:00","Y","N",25,2,1,54,,,"Mid-river downstream of diversion",
+195,"2013-09-19 00:00:00","Y","N",25,2,1,55,,,"Mid-river downstream of diversion",
+196,"2013-09-20 00:00:00","Y","N",25,2,1,55,,,"Mid-river downstream of diversion",
+197,"2013-09-21 00:00:00","Y","N",25,2,1,55,,,"Mid-river downstream of diversion",
+198,"2013-09-22 00:00:00","Y","N",25,2,1,55,,,"Mid-river downstream of diversion",
+199,"2013-09-23 00:00:00","Y","N",25,2,1,55,,,"Mid-river downstream of diversion",
+200,"2013-09-24 00:00:00","Y","N",27,2.5,1,56,,,"Mid-river downstream of diversion",
+201,"2013-09-25 00:00:00","Y","N",38,2.5,1,56,,,"Mid-river downstream of diversion",
+202,"2013-09-26 00:00:00","N","N",62,0,0.5,61,,,"Mid-river downstream of diversion","Diverter broke and jammed in cone, trap not spinning – all diverters pulled"
+203,"2013-09-27 00:00:00","N","N",63,2.5,1,60,,,"Mid-river downstream of diversion",
+204,"2013-09-28 00:00:00","N","N",71,2.5,1,62,,,"Mid-river downstream of diversion",
+205,"2013-09-29 00:00:00","N","N",72,2.75,1,64,,,"Mid-river downstream of diversion",
+206,"2013-09-30 00:00:00","N","Y",160,4,1,75,,,"Mid-river downstream of diversion","Trap moved forward 2'"
+207,"2013-10-01 00:00:00","N","N",194,4,1,82,,,"Mid-river downstream of diversion",
+208,"2013-10-02 00:00:00","N","N",169,5,1,76,,,"Mid-river downstream of diversion",
+209,"2013-10-03 00:00:00","N","N",210,4,1,82,,,"Mid-river downstream of diversion",
+210,"2013-10-04 00:00:00","N","N",227,6,1,82,,,"Mid-river downstream of diversion",
+211,"2013-10-05 00:00:00","N","N",223,4,1,82,,,"Mid-river downstream of diversion",
+212,"2013-10-06 00:00:00","N","N",223,5,1,81,,,"Mid-river downstream of diversion",
+213,"2013-10-07 00:00:00","N","N",238,6,1,82,,,"Mid-river downstream of diversion",
+214,"2013-10-08 00:00:00","N","N",231,6,1,83,,,"Mid-river downstream of diversion",
+215,"2013-10-09 00:00:00","N","N",220,6,1,82,,,"Mid-river downstream of diversion",
+216,"2013-10-10 00:00:00","N","N",242,6,1,83,,,"Mid-river downstream of diversion",
+217,"2013-10-11 00:00:00","N","N",245,5.5,1,83,,,"Mid-river downstream of diversion",
+218,"2013-10-12 00:00:00","N","N",243,6.5,1,84,,,"Mid-river downstream of diversion",
+219,"2013-10-13 00:00:00","N","N",239,6.5,1,83,,,"Mid-river downstream of diversion","lots of debris"
+220,"2013-10-14 00:00:00","N","N",231,4,1,83,,,"Mid-river downstream of diversion","cleaning drum jammed, leaves and water overflowing, fish likely lost"
+221,"2013-10-15 00:00:00","N","N",233,7,1,82,,,"Mid-river downstream of diversion",
+222,"2013-10-16 00:00:00","N","N",233,6,1,82,,,"L-Upstream of diversion~150 m",
+223,"2013-10-17 00:00:00","N","N",250,7,1,84,,,"L-Upstream of diversion~150 m",
+224,"2013-10-18 00:00:00","N","N",260,7,1,85,,,"L-Upstream of diversion~150 m",
+225,"2013-10-19 00:00:00","N","N",259,6,1,85,,,"L-Upstream of diversion~150 m",
+226,"2013-10-20 00:00:00","N","N",257,6,1,86,,,"L-Upstream of diversion~150 m",
+227,"2013-10-21 00:00:00","N","N",262,6.5,1,86,,,"L-Upstream of diversion~150 m",
+228,"2013-10-22 00:00:00","N","N",262,6.5,1,85,,,"L-Upstream of diversion~150 m",
+229,"2013-10-23 00:00:00","N","N",265,7,1,85,,,"L-Upstream of diversion~150 m",
+230,"2013-10-24 00:00:00","N","N",261,7,1,85,,,"L-Upstream of diversion~150 m","Beginning of heavy leaf litter"
+231,"2013-10-25 00:00:00","N","N",254,6,1,85,,,"L-Upstream of diversion~150 m","Flat tire noticed in evening"
+232,"2013-10-26 00:00:00","N","N",254,4,1,85,,,"L-Upstream of diversion~150 m","flat tire replaced, cone lifted for 10 min"
+233,"2013-10-27 00:00:00","N","N",250,6,1,83,,,"L-Upstream of diversion~150 m",
+234,"2013-10-28 00:00:00","N","N",253,6,1,84,,,"L-Upstream of diversion~150 m",
+235,"2013-10-29 00:00:00","N","N",250,6,1,89,,,"L-Upstream of diversion~150 m",
+236,"2013-10-30 00:00:00","N","N",255,6.5,1,85,,,"L-Upstream of diversion~150 m",
+237,"2013-10-31 00:00:00","N","N",261,6.5,1,85,,,"L-Upstream of diversion~150 m",
+238,"2013-11-01 00:00:00","N","N",264,6.5,1,88,,,"L-Upstream of diversion~150 m",
+239,"2013-11-02 00:00:00","N","N",256,5.4,1,85,,,"L-Upstream of diversion~150 m",
+240,"2013-11-03 00:00:00","N","N",255,5.5,1,85,,,"L-Upstream of diversion~150 m",
+241,"2013-11-04 00:00:00","N","N",249,7,1,85,,,"L-Upstream of diversion~150 m",
+242,"2013-11-05 00:00:00","N","N",237,7,1,86,,,"L-Upstream of diversion~150 m",
+243,"2013-11-06 00:00:00","N","N",256,6,1,84,,,"L-Upstream of diversion~150 m",
+244,"2013-11-07 00:00:00","N","N",269,7,1,85,,,"L-Upstream of diversion~150 m",
+245,"2013-11-08 00:00:00","N","N",286,4.5,1,87,,,"L-Upstream of diversion~150 m",
+246,"2013-11-09 00:00:00","N","N",287,5.5,1,88,,,"L-Upstream of diversion~150 m",
+247,"2013-11-10 00:00:00","N","N",283,7,1,88,,,"L-Upstream of diversion~150 m","Leaf litter tapering off"
+248,"2013-11-11 00:00:00","N","N",280,7,1,87,,,"L-Upstream of diversion~150 m",
+249,"2013-11-12 00:00:00","N","N",278,6.5,1,87,,,"L-Upstream of diversion~150 m",
+250,"2013-11-13 00:00:00","N","N",287,7,1,88,,,"L-Upstream of diversion~150 m",
+251,"2013-11-14 00:00:00","N","N",304,6.5,1,88,,,"L-Upstream of diversion~150 m",
+252,"2013-11-15 00:00:00","N","N",304,7,1,88,,,"L-Upstream of diversion~150 m",
+253,"2013-11-16 00:00:00","N","N",306,6,0.5,88,,,"L-Upstream of diversion~150 m","Cone jammed and water overflowing from box"
+254,"2013-11-17 00:00:00","N","N",297,6.5,1,87,,,"L-Upstream of diversion~150 m",
+255,"2013-11-18 00:00:00","N","N",289,7,1,88,,,"L-Upstream of diversion~150 m",
+256,"2013-11-19 00:00:00","N","N",300,7,1,87,,,"L-Upstream of diversion~150 m",
+257,"2013-11-20 00:00:00","N","N",310,7,1,87,,,"L-Upstream of diversion~150 m",
+258,"2013-11-21 00:00:00","N","N",276,5,1,86,,,"R-Bend downstream of trap","cleaning drum jammed, leaves and water overflowing, Pulling the trap tomorrow!!"
+259,"2014-03-11 00:00:00","N","Y",449,,0,,,"N",,"Assembled and installed screw trap. Beagn fishing. Trap Operated by Fish and Game from beginning of season until QCI's permit is acquired."
+260,"2014-03-12 00:00:00","N","N",369,6,1,98,10,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+261,"2014-03-13 00:00:00","N","N",344,5,1,95,1,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+262,"2014-03-14 00:00:00","N","N",341,6,1,90,2,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+263,"2014-03-15 00:00:00","N","Y",331,0,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game. Pulled cone due to debris clogging the trap."
+264,"2014-03-16 00:00:00","N","N",328,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+265,"2014-03-17 00:00:00","N","Y",349,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game. Cone was placed back in the current."
+266,"2014-03-18 00:00:00","N","Y",321,6,1,91,2,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+267,"2014-03-19 00:00:00","N","Y",303,5,1,90,0,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+268,"2014-03-20 00:00:00","N","Y",307,5,1,91,2,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+269,"2014-03-21 00:00:00","N","Y",290,5,1,86,-1,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+270,"2014-03-22 00:00:00","N","Y",289,0,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game. Pulled cone."
+271,"2014-03-23 00:00:00","N","N",287,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+272,"2014-03-24 00:00:00","N","Y",293,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game Placed cone back in stream"
+273,"2014-03-25 00:00:00","N","N",304,6,1,89,3,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+274,"2014-03-26 00:00:00","N","N",327,5.5,1,92,5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+275,"2014-03-27 00:00:00","N","Y",322,0,1,92,4,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game. Cone clogged with increasing load of debris flowing downstream. Raised cone and kept out."
+276,"2014-03-28 00:00:00","N","N",304,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+277,"2014-03-29 00:00:00","N","N",302,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+278,"2014-03-30 00:00:00","N","N",30,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+279,"2014-03-31 00:00:00","N","N",292,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+280,"2014-04-01 00:00:00","N","N",288,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+281,"2014-04-02 00:00:00","N","Y",293,,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game. Put Cone back in water."
+282,"2014-04-03 00:00:00","N","N",291,5.5,1,88,2,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+283,"2014-04-04 00:00:00","N","N",291,6,1,84,4,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Operated by Idaho Department of Fish and Game"
+284,"2014-04-05 00:00:00","N","Y",290,0,0.5,85,4,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Log jam in cone, cone not turning"
+285,"2014-04-06 00:00:00","N","N",285,6,1,86,5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","No targets"
+286,"2014-04-07 00:00:00","N","N",290,5,1,87,6,"Y","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","18:30 Opened diversion"
+287,"2014-04-08 00:00:00","N","N",298,5,1,89,6,"Y","L- just below diversion","Moved auto release box down below diversion"
+288,"2014-04-09 00:00:00","N","N",306,4,1,89,7,"Y","L- just below diversion",
+289,"2014-04-10 00:00:00","N","Y",320,0,0.5,90,7,"Y","L- just below diversion","Cone jammed, auto box did not release fish. Released previous night's fish at 10:00am"
+290,"2014-04-11 00:00:00","N","N",319,3,0.5,91,6,"Y","L- just below diversion","Cleaning drum jammed by dead muskrat and overflowing"
+291,"2014-04-12 00:00:00","N","N",327,5,1,91,7,"Y","R- Just below diversion","Moved release box to river right"
+292,"2014-04-13 00:00:00","N","N",328,5,1,91,5,"Y","R- Just below diversion",
+293,"2014-04-14 00:00:00","N","N",305,5,1,89,3.5,"Y","R- Just below diversion",
+294,"2014-04-15 00:00:00","N","N",300,5,1,85,5,"Y","R- Just below diversion",
+295,"2014-04-16 00:00:00","N","N",288,6,1,87,3.5,"Y","R- Just below diversion",
+296,"2014-04-17 00:00:00","N","N",271,5,1,84,4.5,"Y","R- Just below diversion",
+297,"2014-04-18 00:00:00","N","N",274,4,1,83,7,"Y","R- Just below diversion","Fixed rivets on cone"
+298,"2014-04-19 00:00:00","N","N",269,5,1,84,5,"Y","R- Just below diversion","16:00 Blew tire and no spares in town. Lots of debris, lifted cone"
+299,"2014-04-20 00:00:00","N","Y",259,0,0,84,5,"Y","R- Just below diversion",
+300,"2014-04-21 00:00:00","N","Y",249,5,0,,,"Y","R- Just below diversion","Put cone back in water, cleaned trap every 3 hrs"
+301,"2014-04-22 00:00:00","N","N",248,5,1,80,7.5,"Y","R- Just below diversion",
+302,"2014-04-23 00:00:00","N","N",284,4,1,85,5,"Y","R- Just below diversion",
+303,"2014-04-24 00:00:00","N","N",262,5,1,82,5,"Y","R- Just below diversion","Auto release box did not release, fish released at 9:00am"
+304,"2014-04-25 00:00:00","N","N",229,5,1,80,6,"Y","R- Just below diversion",
+305,"2014-04-26 00:00:00","N","N",262,4.5,1,83,7,"Y","R- Just below diversion",
+306,"2014-04-27 00:00:00","N","N",255,4,1,83,5,"Y","R- Just below diversion","Large log jammed in cone enterance"
+307,"2014-04-28 00:00:00","N","N",230,5,1,81,5,"Y","R- Just below diversion",
+308,"2014-04-29 00:00:00","N","N",203,5,1,78,4,"Y","R- Just below diversion",
+309,"2014-04-30 00:00:00","N","N",160,4,1,74,5,"Y","R- Just below diversion",
+310,"2014-05-01 00:00:00","N","N",122,2.5,1,70,7,"Y","R- Just below diversion","18:30 moved trap upstream about 12 inches"
+311,"2014-05-02 00:00:00","N","N",91,2.5,1,65,8,"Y","R- Just below diversion","Auto box did not release fish, too shallow and door could not drop"
+312,"2014-05-03 00:00:00","N","N",94,2,1,65,9,"Y","R- Just below diversion",
+313,"2014-05-04 00:00:00","N","N",133,2.5,1,71,8,"Y","R- Just below diversion",
+314,"2014-05-05 00:00:00","N","N",165,4,1,75,7,"Y","R- Just below diversion",
+315,"2014-05-06 00:00:00","N","N",167,4,1,75,6,"Y","R- Just below diversion",
+316,"2014-05-07 00:00:00","N","N",143,4,1,75,7,"Y","R- Just below diversion",
+317,"2014-05-08 00:00:00","N","N",97,3,1,68,6,"Y","R- Just below diversion",
+318,"2014-05-09 00:00:00","N","N",69,2.5,1,60,8,"Y","R- Just below diversion",
+319,"2014-05-10 00:00:00","N","N",116,4,1,64,5,"Y","R- Just below diversion",
+320,"2014-05-11 00:00:00","N","N",149,4,1,74,8,"Y","R- Just below diversion",
+321,"2014-05-12 00:00:00","N","N",134,4,1,72,5,"Y","R- Just below diversion",
+322,"2014-05-13 00:00:00","N","N",122,3,1,67,6,"Y","R- Just below diversion",
+323,"2014-05-14 00:00:00","N","N",116,3,1,68,7,"Y","R- Just below diversion",
+324,"2014-05-15 00:00:00","N","N",110,2.5,1,66,8,"Y","R- Just below diversion",
+325,"2014-05-16 00:00:00","N","N",120,3,1,70,10,"Y","R- Just below diversion",
+326,"2014-05-17 00:00:00","N","Y",193,4,0,73,10,"Y","R- Just below diversion","19:30 Cone clogged, trap box flushed"
+327,"2014-05-18 00:00:00","N","Y",307,0,0,,,"Y","R- Just below diversion","18:30 Cone jammed with debris, colar on cone slipped."
+328,"2014-05-19 00:00:00","N","N",390,0,0,,,"Y","R- Just below diversion","Replaced pulleys and cables on cone a put back in water.  19:30 Cleaning drum clogged and live box likely flushed"
+329,"2014-05-20 00:00:00","N","N",379,0,0,,,"Y","R- Just below diversion","Pulled trap"
+330,"2014-05-21 00:00:00","N","N",355,0,0,,,"Y","R- Just below diversion",
+331,"2014-05-22 00:00:00","N","N",400,0,0,,,"Y","R- Just below diversion",
+332,"2014-05-23 00:00:00","N","N",488,0,0,,,"Y","R- Just below diversion",
+333,"2014-05-24 00:00:00","N","N",583,0,0,,,"Y","R- Just below diversion",
+334,"2014-05-25 00:00:00","N","N",676,0,0,,,"Y","R- Just below diversion",
+335,"2014-05-26 00:00:00","N","N",743,0,0,,,"Y","R- Just below diversion",
+336,"2014-05-27 00:00:00","N","N",812,0,0,,,"Y","R- Just below diversion",
+337,"2014-05-28 00:00:00","N","N",842,0,0,,,"Y","R- Just below diversion",
+338,"2014-05-29 00:00:00","N","N",798,0,0,,,"Y","R- Just below diversion",
+339,"2014-05-30 00:00:00","N","N",730,0,0,,,"Y","R- Just below diversion",
+340,"2014-05-31 00:00:00","N","N",656,0,0,,,"Y","R- Just below diversion",
+341,"2014-06-01 00:00:00","N","N",601,0,0,,,"Y","R- Just below diversion",
+342,"2014-06-02 00:00:00","N","N",560,0,0,,,"Y","R- Just below diversion",
+343,"2014-06-03 00:00:00","N","N",552,0,0,,,"Y","R- Just below diversion",
+344,"2014-06-04 00:00:00","N","Y",563,10,0.5,,,"Y","R- Just below diversion","Put trap back in water"
+345,"2014-06-05 00:00:00","N","N",562,0,0,,,"Y","R- Just below diversion","Cone Clogged with debris, pulled trap"
+346,"2014-06-06 00:00:00","N","N",545,0,0,,,"Y","R- Just below diversion",
+347,"2014-06-07 00:00:00","N","N",530,0,0,,,"Y","R- Just below diversion",
+348,"2014-06-08 00:00:00","N","N",498,0,0,,,"Y","R- Just below diversion",
+349,"2014-06-09 00:00:00","N","Y",471,9,1,110,10,"Y","R- Just below diversion","Put trap back in water"
+350,"2014-06-10 00:00:00","N","N",475,8,1,112,9,"Y","R- Just below diversion",
+351,"2014-06-11 00:00:00","N","Y",468,8,1,109,9,"Y","R- Just below diversion","21:20 Clogged cone, lifted and  cone"
+352,"2014-06-12 00:00:00","N","N",445,9,1,107,9.5,"Y","R- Just below diversion",
+353,"2014-06-13 00:00:00","N","N",438,8,1,105,10,"Y","R- Just below diversion",
+354,"2014-06-14 00:00:00","N","N",441,8,1,105,10,"Y","R- Just below diversion",
+355,"2014-06-15 00:00:00","N","N",419,8,1,103,9.5,"Y","R- Just below diversion",
+356,"2014-06-16 00:00:00","N","N",474,8,1,106,8.5,"Y","R- Just below diversion",
+357,"2014-06-17 00:00:00","N","N",501,8,1,114,8.5,"Y","R- Just below diversion",
+358,"2014-06-18 00:00:00","N","N",456,8,1,99,8,"Y","R- Just below diversion",
+359,"2014-06-19 00:00:00","N","N",404,8,1,100,9,"Y","R- Just below diversion",
+360,"2014-06-20 00:00:00","N","N",367,6,1,97,10,"Y","R- Just below diversion",
+361,"2014-06-21 00:00:00","N","N",369,6,1,94,10,"Y","R- Just below diversion",
+362,"2014-06-22 00:00:00","N","Y   ",386,6,1,96,10,"Y","R- Just below diversion","Pulled cone to close unlatched access door"
+363,"2014-06-23 00:00:00","N","N",382,4,1,100,10,"Y","R- Just below diversion",
+364,"2014-06-24 00:00:00","N","Y",361,6,1,95,11.5,"Y","R- Just below diversion","Cleaning drum jammed, trap box overflowing; likely fish escaped"
+365,"2014-06-25 00:00:00","N","N",379,8,1,96,11.5,"Y","R- Just below diversion",
+366,"2014-06-26 00:00:00","N","N",405,8,1,99,11.5,"Y","R- Just below diversion",
+367,"2014-06-27 00:00:00","N","Y",464,0,0.5,100,11,"Y","R- Just below diversion","Cone jammed and trap box overflowing; likely fish escaped. Reattached port-side rail"
+368,"2014-06-28 00:00:00","N","N",519,0,0.5,107,10.5,"Y","R- Just below diversion","Coned jammed, lifted cone due to rising water levels from rain event"
+369,"2014-06-29 00:00:00","N","Y",475,0,0,100,11,"Y","R- Just below diversion","18:00 Put cone back in water"
+370,"2014-06-30 00:00:00","N","N",427,8,1,104,10,"Y","R- Just below diversion",
+371,"2014-07-01 00:00:00","N","Y",388,6,0.5,105,10,"Y","R- Just below diversion","Cleaning drum jammed and access door open, fish likely escaped"
+372,"2014-07-02 00:00:00","N","N",361,7,1,96,12,"Y","R- Just below diversion",
+373,"2014-07-03 00:00:00","N","N",358,6,1,95,12,"Y","R- Just below diversion",
+374,"2014-07-04 00:00:00","N","N",337,7,1,95,13,"Y","R- Just below diversion",
+375,"2014-07-05 00:00:00","N","N",316,6,1,95,13,"Y","R- Just below diversion","Access door on cone open; fish likely escaped"
+376,"2014-07-06 00:00:00","N","N",274,7,1,90,12,"Y","R- Just below diversion",
+377,"2014-07-07 00:00:00","N","N",245,6,1,86,13,"Y","R- Just below diversion",
+378,"2014-07-08 00:00:00","N","N",228,4,1,84,11,"Y","R- Just below diversion",
+379,"2014-07-09 00:00:00","N","N",203,4,1,84,14,"Y","R- Just below diversion","Access door on cone slightly open, possibility of fish escaping"
+380,"2014-07-10 00:00:00","N","N",202,3.5,1,79,13,"Y","R- Just below diversion",
+381,"2014-07-11 00:00:00","N","N",177,3.5,1,76,13,"Y","R- Just below diversion",
+382,"2014-07-12 00:00:00","N","N",142,4,1,71,14,"Y","R- Just below diversion",
+383,"2014-07-13 00:00:00","N","N",117,4,1,70,14.5,"Y","R- Just below diversion",
+384,"2014-07-14 00:00:00","N","N",103,3,1,70,14,"Y","R- Just below diversion",
+385,"2014-07-15 00:00:00","N","N",96,4,1,68,14,"Y","R- Just below diversion",
+386,"2014-07-16 00:00:00","N","N",70,3.5,1,68,14.5,"Y","R- Just below diversion",
+387,"2014-07-17 00:00:00","N","N",63,3.5,1,66,14,"Y","R- Just below diversion",
+388,"2014-07-18 00:00:00","N","N",60,3.5,1,61,14,"Y","R- Just below diversion",
+389,"2014-07-19 00:00:00","N","N",52,2.5,1,62,14,"Y","R- Just below diversion",
+390,"2014-07-20 00:00:00","N","N",43,2.5,1,61,15,"Y","R- Just below diversion",
+391,"2014-07-21 00:00:00","N","N",34,2.5,1,60,14.5,"Y","R- Just below diversion",
+392,"2014-07-22 00:00:00","N","N",25,2.5,1,60,15,"Y","R- Just below diversion",
+393,"2014-07-23 00:00:00","N","N",26,2.5,1,59,14,"Y","R- Just below diversion",
+394,"2014-07-24 00:00:00","N","N",26,3,1,58,15.5,"Y","R- Just below diversion",
+395,"2014-07-25 00:00:00","N","N",26,3,1,58,12.5,"Y","R- Just below diversion",
+396,"2014-07-26 00:00:00","N","N",26,3,1,57,15,"Y","R- Just below diversion",
+397,"2014-07-27 00:00:00","N","N",26,3,1,56,15,"Y","R- Just below diversion",
+398,"2014-07-28 00:00:00","N","N",27,3,1,58,15,"Y","R- Just below diversion",
+399,"2014-07-29 00:00:00","Y","N",27,2,1,55,13,"Y","R- Just below diversion","Put in diverters on river left"
+400,"2014-07-30 00:00:00","Y","N",28,2,1,53,12,"Y","R- Just below diversion",
+401,"2014-07-31 00:00:00","Y","N",28,2,1,52,23.5,"Y","R- Just below diversion",
+402,"2014-08-01 00:00:00","Y","N",28,2,1,48,15,"Y","R- Just below diversion",
+403,"2014-08-02 00:00:00","Y","N",29,2,1,48,15.5,"Y","R- Just below diversion",
+404,"2014-08-03 00:00:00","Y","N",29,2,1,47,14,"Y","R- Just below diversion",
+405,"2014-08-04 00:00:00","Y","N",29,2,1,51,13,"Y","R- Just below diversion",
+406,"2014-08-05 00:00:00","Y","N",30,1.5,1,48,14,"Y","R- Just below diversion",
+407,"2014-08-06 00:00:00","Y","N",30,1.5,1,42,14,"Y","R- Just below diversion",
+408,"2014-08-07 00:00:00","Y","N",29,1.5,1,43,14,"Y","R- Just below diversion","Put in River right diverters"
+409,"2014-08-08 00:00:00","Y","N",25,1.5,1,44,14,"Y","R- Just below diversion",
+410,"2014-08-09 00:00:00","Y","N",27,3,1,51,13.5,"Y","R- Just below diversion",
+411,"2014-08-10 00:00:00","Y","N",25,3,1,53,15,"Y","R- Just below diversion",
+412,"2014-08-11 00:00:00","Y","N",25,3,1,45,14,"Y","R- Just below diversion",
+413,"2014-08-12 00:00:00","Y","N",25,3,1,53,15,"Y","R- Just below diversion",
+414,"2014-08-13 00:00:00","Y","N",27,3,1,56,14,"Y","R- Just below diversion",
+415,"2014-08-14 00:00:00","Y","N",33,3.5,1,58,16,"Y","R- Just below diversion",
+416,"2014-08-15 00:00:00","Y","N",26,3.5,1,56,13,"Y","R- Just below diversion",
+417,"2014-08-16 00:00:00","Y","N",25,3.5,1,57,13.5,"Y","R- Just below diversion",
+418,"2014-08-17 00:00:00","Y","N",25,3.5,1,57,14.5,"Y","R- Just below diversion",
+419,"2014-08-18 00:00:00","Y","N",25,3.5,1,57,15,"Y","R- Just below diversion",
+420,"2014-08-19 00:00:00","Y","N",25,3.5,1,57,14,"Y","R- Just below diversion",
+421,"2014-08-20 00:00:00","Y","N",27,3.5,1,57,12.5,"Y","R- Just below diversion",
+422,"2014-08-21 00:00:00","Y","N",40,4,1,58,13,"Y","R- Just below diversion",
+423,"2014-08-22 00:00:00","Y","N",46,4,1,58,14,"Y","R- Just below diversion",
+424,"2014-08-23 00:00:00","Y","N",74,4.5,1,60,13,"Y","R- Just below diversion",
+425,"2014-08-24 00:00:00","Y","N",80,3.5,1,64,12.5,"Y","R- Just below diversion",
+426,"2014-08-25 00:00:00","Y","N",102,4,1,67,12,"Y","R- Just below diversion",
+427,"2014-08-26 00:00:00","Y","N",103,4,1,67,11,"Y","R- Just below diversion",
+428,"2014-08-27 00:00:00","Y","N",94,4,1,65,11,"Y","R- Just below diversion",
+429,"2014-08-28 00:00:00","Y","N",83,4,1,65,12,"Y","R- Just below diversion",
+430,"2014-08-29 00:00:00","Y","N",78,3,1,62,11.5,"Y","R- Just below diversion",
+431,"2014-08-30 00:00:00","Y","N",87,3,1,63,11.5,"Y","R- Just below diversion",
+432,"2014-08-31 00:00:00","Y","Y",108,0,0.5,67,12,"Y","R- Just below diversion","Cone clogged, raised and removed debris"
+433,"2014-09-01 00:00:00","Y","Y",97,3.5,1,68,12.5,"Y","R- Just below diversion","Lifted cone to remove debris after working up fish"
+434,"2014-09-02 00:00:00","Y","N",88,4,1,67,12,"Y","R- Just below diversion",
+435,"2014-09-03 00:00:00","Y","N",83,4,1,65,11,"Y","R- Just below diversion","Pulled diverters on river left"
+436,"2014-09-04 00:00:00","Y","N",83,2,1,63,9,"Y","R- Just below diversion",
+437,"2014-09-05 00:00:00","Y","N",86,2.5,1,60,10,"Y","R- Just below diversion",
+438,"2014-09-06 00:00:00","Y","N",77,2,1,64,11,"Y","R- Just below diversion",
+439,"2014-09-07 00:00:00","Y","N",73,2,1,62,10,"Y","R- Just below diversion",
+440,"2014-09-08 00:00:00","Y","N",70,2,1,60,11,"Y","R- Just below diversion",
+441,"2014-09-09 00:00:00","Y","N",64,2,1,60,10,"Y","R- Just below diversion",
+442,"2014-09-10 00:00:00","Y","N",54,2,1,58,11,"Y","R- Just below diversion",
+443,"2014-09-11 00:00:00","Y","N",46,2.75,1,62,11,"Y","R- Just below diversion",
+444,"2014-09-12 00:00:00","Y","N",42,2.5,1,59,1,"Y","R- Just below diversion",
+445,"2014-09-13 00:00:00","Y","N",37,2.5,1,59,9.5,"Y","R- Just below diversion",
+446,"2014-09-14 00:00:00","Y","N",37,2.75,1,59,10.5,"Y","R- Just below diversion",
+447,"2014-09-15 00:00:00","Y","N",35,2.5,1,57,11,"Y","R- Just below diversion",
+448,"2014-09-16 00:00:00","Y","N",29,1.75,1,55,9.5,"Y","R- Just below diversion",
+449,"2014-09-17 00:00:00","Y","N",27,2,1,53,11,"Y","R- Just below diversion",
+450,"2014-09-18 00:00:00","Y","N",30,1.5,1,52,9,"Y","R- Just below diversion",
+451,"2014-09-19 00:00:00","Y","N",31,2,1,52,10,"Y","R- Just below diversion",
+452,"2014-09-20 00:00:00","Y","N",29,1.5,1,50,9,"Y","R- Just below diversion",
+453,"2014-09-21 00:00:00","Y","N",29,1.75,1,50,9.5,"Y","R- Just below diversion",
+454,"2014-09-22 00:00:00","Y","N",30,2,1,54,11,"Y","R- Just below diversion",
+455,"2014-09-23 00:00:00","Y","N",36,2,1,56,9.5,"Y","R- Just below diversion",
+456,"2014-09-24 00:00:00","Y","N",36,2.25,1,50,10.5,"Y","R- Just below diversion",
+457,"2014-09-25 00:00:00","Y","Y",34,0,1,50,9,"Y","R- Just below diversion","Cone Jammed, raised and cleaned."
+458,"2014-09-26 00:00:00","Y","N",42,1.5,1,59,12,"Y","R- Just below diversion","Removed remaining diverters."
+459,"2014-09-27 00:00:00","N","N",74,0,0,63,11,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Cone jamming with leaves and debris. Cleaning more often."
+460,"2014-09-28 00:00:00","N","Y",108,0,0.5,69,11,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+461,"2014-09-29 00:00:00","N","N",126,2.5,1,72,10,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+462,"2014-09-30 00:00:00","N","Y",160,0,0.5,76,10,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Cone jammed, debris then was dislodged."
+463,"2014-10-01 00:00:00","N","Y",168,3.5,1,79,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+464,"2014-10-02 00:00:00","N","N",154,3,1,77,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+465,"2014-10-03 00:00:00","N","N",160,3,1,76,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+466,"2014-10-04 00:00:00","N","N",171,3.5,1,80,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+467,"2014-10-05 00:00:00","N","N",170,3,1,78,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+468,"2014-10-06 00:00:00","N","N",168,4,1,79,8,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+469,"2014-10-07 00:00:00","N","N",169,4,1,71,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+470,"2014-10-08 00:00:00","N","N",169,3.5,1,79,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+471,"2014-10-09 00:00:00","N","N",169,4,1,79,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+472,"2014-10-10 00:00:00","N","N",171,4,1,78,8,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+473,"2014-10-11 00:00:00","N","N",174,3.5,1,77,8,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+474,"2014-10-12 00:00:00","N","Y",201,4,0.5,81,8.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+475,"2014-10-13 00:00:00","N","N",209,3.5,1,81,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+476,"2014-10-14 00:00:00","N","N",222,4,1,83,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+477,"2014-10-15 00:00:00","N","N",220,4.5,1,83,8.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+478,"2014-10-16 00:00:00","N","N",224,4.5,1,87,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+479,"2014-10-17 00:00:00","N","N",238,4,1,85,6,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+480,"2014-10-18 00:00:00","N","Y",257,6,1,85,9.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Ferried trap across river. Replaced rivets and inspected a-frame."
+481,"2014-10-19 00:00:00","N","N",253,5.5,1,86,8.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+482,"2014-10-20 00:00:00","N","Y",259,0,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Pulled trap due to high water and debris."
+483,"2014-10-21 00:00:00","N","N",289,0,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+484,"2014-10-22 00:00:00","N","N",316,0,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+485,"2014-10-23 00:00:00","N","Y",307,0,0,,,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)","Put trap back into river."
+486,"2014-10-24 00:00:00","N","N",318,6,1,90,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+487,"2014-10-25 00:00:00","N","N",326,6,1,91,8,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+488,"2014-10-26 00:00:00","N","N",313,6,1,91,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+489,"2014-10-27 00:00:00","N","N",313,6.5,1,90,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+490,"2014-10-28 00:00:00","N","N",316,6,1,91,8,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+491,"2014-10-29 00:00:00","N","N",313,6,1,91,8.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+492,"2014-10-30 00:00:00","N","N",312,6,1,90,8.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+493,"2014-10-31 00:00:00","N","N",313,6,1,90,8.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+494,"2014-11-01 00:00:00","N","N",313,6,1,90,9.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+495,"2014-11-02 00:00:00","N","N",324,6,1,90,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+496,"2014-11-03 00:00:00","N","N",313,6,1,91,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+497,"2014-11-04 00:00:00","N","N",312,6,1,91,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+498,"2014-11-05 00:00:00","N","N",311,6,1,90,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+499,"2014-11-06 00:00:00","N","N",309,6,1,90,8.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+500,"2014-11-07 00:00:00","N","N",304,6,1,90,8.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+501,"2014-11-08 00:00:00","N","N",298,6,1,88,7,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+502,"2014-11-09 00:00:00","N","N",302,6,1,90,9,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+503,"2014-11-10 00:00:00","N","N",305,6,1,90,8.5,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+504,"2014-11-11 00:00:00","N","N",284,6,1,88,8,"N","L-Upstream of diversion, farthest upstream release location (eddy below overhanging branches)",
+505,"2014-11-12 00:00:00",,,217,0,0,,,"N",,"Ice build up stopped the cone from spinning. Trap will not fish until weather warms up considerably."
+506,"2014-11-13 00:00:00",,,219,,0,,,"N",,
+507,"2014-11-14 00:00:00",,,284,,0,,,"N",,
+508,"2014-11-15 00:00:00",,,308,,0,,,"N",,
+509,"2014-11-16 00:00:00",,,259,,0,,,"N",,
+510,"2014-11-17 00:00:00",,,256,,0,,,"N",,
+511,"2014-11-18 00:00:00",,,262,,0,,,"N",,
+512,"2014-11-19 00:00:00",,,306,,0,,,"N",,
+513,"2014-11-20 00:00:00",,,325,,0,,,"N",,"Trap completely  pulled."
+514,"2015-02-27 00:00:00","N","Y",278,8,1,116,2,"N","UPSTREAM OF DIVERSION",
+515,"2015-02-28 00:00:00","N","N",270,8,1,118,2,"N","UPSTREAM OF DIVERSION",
+516,"2015-03-01 00:00:00","N","N",237,0,0.5,110,0,"N","UPSTREAM OF DIVERSION","Cone jammed-frozen. "
+517,"2015-03-02 00:00:00","N","N",230,0,0.5,110,1,"N","UPSTREAM OF DIVERSION","Cone jammed-frozen. "
+518,"2015-03-03 00:00:00","N","N",261,,0,,,"N",,"Trap not fished"
+519,"2015-03-04 00:00:00","N","N",227,,0,,,"N",,"Trap not fished.  Cone dropped at 1630"
+520,"2015-03-05 00:00:00","N","N",227,6,1,105,0,"N","UPSTREAM OF DIVERSION",
+521,"2015-03-06 00:00:00","N","N",254,6,1,110,2,"N","UPSTREAM OF DIVERSION",
+522,"2015-03-07 00:00:00","N","N",278,6,1,117,2,"N","UPSTREAM OF DIVERSION",
+523,"2015-03-08 00:00:00","N","N",274,6,1,118,1,"N","UPSTREAM OF DIVERSION",
+524,"2015-03-09 00:00:00","N","N",272,5,1,118,3,"N","UPSTREAM OF DIVERSION","Trap maintenance-patched holes.  Cone raised from 1330-1700."
+525,"2015-03-10 00:00:00","N","N",267,7,1,114,2,"N","UPSTREAM OF DIVERSION","Trap maintenance-cone."
+526,"2015-03-11 00:00:00","N","N",271,7,1,115,3,"N","UPSTREAM OF DIVERSION",
+527,"2015-03-12 00:00:00","N","N",281,7,1,117,5.5,"N","UPSTREAM OF DIVERSION",
+528,"2015-03-13 00:00:00","N","N",271,6.5,1,117,0,"N","UPSTREAM OF DIVERSION",
+529,"2015-03-14 00:00:00","N","N",278,7,1,117,5.5,"N","UPSTREAM OF DIVERSION","Trap box flooded."
+530,"2015-03-15 00:00:00","N","N",295,7,1,117,8,"N","UPSTREAM OF DIVERSION",
+531,"2015-03-16 00:00:00","N","N",324,6,1,122,7,"N","UPSTREAM OF DIVERSION","Trap box flooded."
+532,"2015-03-17 00:00:00","N","N",327,7,1,122,7,"N","UPSTREAM OF DIVERSION",
+533,"2015-03-18 00:00:00","N","N",338,7,1,122,6,"N","UPSTREAM OF DIVERSION","Trap maintenance-replaced collar and added spacer.  First day of QCI tagging."
+534,"2015-03-19 00:00:00","N","N",320,7.5,0.5,120,3.5,"N","UPSTREAM OF DIVERSION",
+535,"2015-03-20 00:00:00","N","N",306,7,1,119,3.5,"N","UPSTREAM OF DIVERSION",
+536,"2015-03-21 00:00:00","N","N",306,7,1,118,5.5,"N","UPSTREAM OF DIVERSION",
+537,"2015-03-22 00:00:00","N","N",306,7,1,113,5,"N","UPSTREAM OF DIVERSION","Trap box flooded.  Trap maintenance-replaced bolt and nut on debris wheel, trap door and buckels."
+538,"2015-03-23 00:00:00","N","N",302,7.5,1,118,5,"N","UPSTREAM OF DIVERSION",
+539,"2015-03-24 00:00:00","N","N",302,6,1,119,4.5,"N","UPSTREAM OF DIVERSION","Trap box flooded.  Trap maintenance- replace nut/bolt on debris wheel."
+540,"2015-03-25 00:00:00","N","N",299,7,1,116,4,"N","UPSTREAM OF DIVERSION",
+541,"2015-03-26 00:00:00","N","N",295,7,1,117,6,"N","UPSTREAM OF DIVERSION",
+542,"2015-03-27 00:00:00","N","N",295,6.5,1,118,7,"N","UPSTREAM OF DIVERSION",
+543,"2015-03-28 00:00:00","N","N",293,6.5,1,116,8,"N","UPSTREAM OF DIVERSION",
+544,"2015-03-29 00:00:00","N","N",310,7.5,1,118,5,"N","UPSTREAM OF DIVERSION","Added solar panel to auto release box"
+545,"2015-03-30 00:00:00","N","N",285,6,1,116,5,"N","UPSTREAM OF DIVERSION",
+546,"2015-03-31 00:00:00","N","N",278,6,1,117,6,"N","UPSTREAM OF DIVERSION","Trap box flooded."
+547,"2015-04-01 00:00:00","N","N",292,6.5,1,116,6,"N","UPSTREAM OF DIVERSION",
+548,"2015-04-02 00:00:00","N","N",292,7,1,117,3,"N","UPSTREAM OF DIVERSION",
+549,"2015-04-03 00:00:00","N","N",278,6.5,1,115,1.5,"N","UPSTREAM OF DIVERSION",
+550,"2015-04-04 00:00:00","N","N",288,6.5,1,117,4,"N","UPSTREAM OF DIVERSION","Auto release box did not open- 4/3."
+551,"2015-04-05 00:00:00","N","N",278,6.5,1,115,4,"N","UPSTREAM OF DIVERSION",
+552,"2015-04-06 00:00:00","N","N",285,6.5,1,115,4.5,"N","UPSTREAM OF DIVERSION",
+553,"2015-04-07 00:00:00","N","N",262,6,1,115,2,"N","UPSTREAM OF DIVERSION",
+554,"2015-04-08 00:00:00","N","N",246,6,1,114,3.5,"N","UPSTREAM OF DIVERSION",
+555,"2015-04-09 00:00:00","N","N",240,6.5,1,110,6,"N","UPSTREAM OF DIVERSION",
+556,"2015-04-10 00:00:00","N","N",240,5,1,114,6,"N","UPSTREAM OF DIVERSION",
+557,"2015-04-11 00:00:00","N","N",230,4,1,110,7,"N","UPSTREAM OF DIVERSION",
+558,"2015-04-12 00:00:00","N","N",220,4,1,109,4.5,"N","UPSTREAM OF DIVERSION",
+559,"2015-04-13 00:00:00","N","N",207,5.75,1,108,5.5,"N","UPSTREAM OF DIVERSION",
+560,"2015-04-14 00:00:00","N","N",201,4,1,107,7,"N","UPSTREAM OF DIVERSION",
+561,"2015-04-15 00:00:00","N","N",195,5,1,107,4.5,"N","UPSTREAM OF DIVERSION",
+562,"2015-04-16 00:00:00","N","N",195,5,1,107,2,"N","UPSTREAM OF DIVERSION",
+563,"2015-04-17 00:00:00","N","N",187,4,1,106,5,"N","UPSTREAM OF DIVERSION",
+564,"2015-04-18 00:00:00","N","N",143,3,1,98,7,"Y","UPSTREAM OF DIVERSION",
+565,"2015-04-19 00:00:00","N","Y",143,3,1,98,6,"Y","UPSTREAM OF DIVERSION","Auto release box did not open- 4/18."
+566,"2015-04-20 00:00:00","N","N",93,3,1,94,8,"Y","UPSTREAM OF DIVERSION",
+567,"2015-04-21 00:00:00","N","N",54,0,0.5,82,8.5,"Y","UPSTREAM OF DIVERSION","Cone jammed.  Auto release box did not open-4/20."
+568,"2015-04-22 00:00:00","Y","N",35,0.75,1,76,8.5,"Y","UPSTREAM OF DIVERSION","Added diverters RR."
+569,"2015-04-23 00:00:00","Y","N",46,1.5,1,77,9,"Y","UPSTREAM OF DIVERSION",
+570,"2015-04-24 00:00:00","Y","N",42,2,1,74,9,"Y","UPSTREAM OF DIVERSION",
+571,"2015-04-25 00:00:00","Y","N",44,2,1,79,5,"Y","UPSTREAM OF DIVERSION",
+572,"2015-04-26 00:00:00","Y","N",58,2.5,1,81,7,"Y","UPSTREAM OF DIVERSION",
+573,"2015-04-27 00:00:00","Y","N",44,2.5,1,81,6,"Y","UPSTREAM OF DIVERSION",
+574,"2015-04-28 00:00:00","Y","N",36,2.5,0.5,81,7,"Y","UPSTREAM OF DIVERSION","Trap maintenance-pulled cone to put new beams around live box.  Dropped cone at 16:00."
+575,"2015-04-29 00:00:00","Y","Y",27,2,1,79,8.5,"Y","UPSTREAM OF DIVERSION",
+576,"2015-04-30 00:00:00","Y","N",36,2.5,1,81,9.5,"Y","UPSTREAM OF DIVERSION",
+577,"2015-05-01 00:00:00","Y","N",37,2.5,1,80,7,"Y","UPSTREAM OF DIVERSION",
+578,"2015-05-02 00:00:00","Y","N",50,3,1,83,8,"Y","UPSTREAM OF DIVERSION",
+579,"2015-05-03 00:00:00","Y","N",54,3,1,85,8,"Y","UPSTREAM OF DIVERSION",
+580,"2015-05-04 00:00:00","Y","N",69,3.5,1,85,8.5,"Y","UPSTREAM OF DIVERSION",
+581,"2015-05-05 00:00:00","Y","N",72,3,1,89,8.5,"Y","UPSTREAM OF DIVERSION","Removed diverters RR."
+582,"2015-05-06 00:00:00","Y","N",95,0,0.5,95,9.5,"Y","UPSTREAM OF DIVERSION","Cone jammed.  "
+583,"2015-05-07 00:00:00","N","N",125,1,1,100,8.5,"Y","UPSTREAM OF DIVERSION","Removed diverters RL. "
+584,"2015-05-08 00:00:00","N","N",113,2.5,1,98,7.5,"Y","UPSTREAM OF DIVERSION",
+585,"2015-05-09 00:00:00","N","N",101,2.5,1,95,6,"Y","UPSTREAM OF DIVERSION",
+586,"2015-05-10 00:00:00","N","N",88,3,1,93,10.5,"Y","UPSTREAM OF DIVERSION",
+587,"2015-05-11 00:00:00","N","N",82,3,1,93,10,"Y","UPSTREAM OF DIVERSION",
+588,"2015-05-12 00:00:00","N","N",82,2.25,1,94,9.5,"Y","UPSTREAM OF DIVERSION","Auto release box did not open 5/11/15."
+589,"2015-05-13 00:00:00","N","N",153,0,0.5,102,9,"Y","UPSTREAM OF DIVERSION","Cone jammed.  "
+590,"2015-05-14 00:00:00","N","N",140,2,1,103,9.5,"Y","UPSTREAM OF DIVERSION",
+591,"2015-05-15 00:00:00","N","N",264,3.75,0.5,113,10,"Y","UPSTREAM OF DIVERSION","Cone jammed.  "
+592,"2015-05-16 00:00:00","N","N",320,8,0.5,120,10,"Y","UPSTREAM OF DIVERSION","Cone jammed.  Trap pulled at 2230"
+593,"2015-05-17 00:00:00","N","N",466,,0,,,"Y",,"Trap not fished"
+594,"2015-05-18 00:00:00","N","N",466,,0,,,"Y",,"Trap not fished"
+595,"2015-05-19 00:00:00","N","N",406,,0,,,"Y",,"Trap not fished.  Dropped at 1030"
+596,"2015-05-20 00:00:00","N","N",368,7.5,1,132,9,"Y","SIDE CHANNEL","Moved auto-release box- 45.160005, -113.831498- RR side channel."
+597,"2015-05-21 00:00:00","N","N",349,0,0.5,128,9.5,"Y","SIDE CHANNEL","Cone jammed. "
+598,"2015-05-22 00:00:00","N","N",365,5,1,125,10,"Y","SIDE CHANNEL","Trap box flooded.  Door open.  Trap maintenance- replaced door buckles."
+599,"2015-05-23 00:00:00","N","N",386,6,1,131,10,"Y","SIDE CHANNEL",
+600,"2015-05-24 00:00:00","N","N",423,7.25,0.5,137,10.5,"Y","SIDE CHANNEL","Cone jammed. "
+601,"2015-05-25 00:00:00","N","N",433,6.25,1,138,10,"Y","SIDE CHANNEL",
+602,"2015-05-26 00:00:00","N","N",455,0,0,,,"Y",,"Cone jammed.  Pulled trap at 230"
+603,"2015-05-27 00:00:00","N","N",601,,0,,,"Y",,"Trap not fished-high water."
+604,"2015-05-28 00:00:00","N","N",601,,0,,,"Y",,"Trap not fished-high water."
+605,"2015-05-29 00:00:00","N","N",583,,0,,,"Y",,"Trap not fished-high water."
+606,"2015-05-30 00:00:00","N","N",574,,0,,,"Y",,"Trap not fished-high water."
+607,"2015-05-31 00:00:00","N","N",619,,0,,,"Y",,"Trap not fished-high water."
+608,"2015-06-01 00:00:00","N","N",706,,0,,,"Y",,"Trap not fished-high water."
+609,"2015-06-02 00:00:00","N","N",808,,0,,,"Y",,"Trap not fished-high water."
+610,"2015-06-03 00:00:00","N","N",716,,0,,,"Y",,"Trap not fished-high water."
+611,"2015-06-04 00:00:00","N","N",671,,0,,,"Y",,"Trap not fished-high water."
+612,"2015-06-05 00:00:00","N","N",624,,0,,,"Y",,"Trap not fished-high water."
+613,"2015-06-06 00:00:00","N","N",619,,0,,,"Y",,"Trap not fished-high water."
+614,"2015-06-07 00:00:00","N","N",574,,0,,,"Y",,"Trap not fished-high water."
+615,"2015-06-08 00:00:00","N","N",545,,0,,,"Y",,"Trap not fished-high water."
+616,"2015-06-09 00:00:00","N","N",570,,0,,,"Y",,"Trap not fished-high water."
+617,"2015-06-10 00:00:00","N","N",660,,0,,,"Y",,"Trap not fished-high water."
+618,"2015-06-11 00:00:00","N","N",680,,0,,,"Y",,"Trap not fished-high water."
+619,"2015-06-12 00:00:00","N","N",600,,0,,,"Y",,"Trap not fished-high water."
+620,"2015-06-13 00:00:00","N","N",530,,0,,,"Y",,"Trap not fished-high water."
+621,"2015-06-14 00:00:00","N","Y",458,7.5,1,135,11,"Y","SIDE CHANNEL",
+622,"2015-06-15 00:00:00","N","N",416,6.5,1,130,11,"Y","SIDE CHANNEL","Trap door open.  Trap maintenance- replaced door buckles."
+623,"2015-06-16 00:00:00","N","N",406,5,1,128,12.5,"Y","SIDE CHANNEL","Trap door open.  Trap maintenance from 700-1630- replaced door buckles. "
+624,"2015-06-17 00:00:00","N","N",390,0,0.5,124,12,"Y","SIDE CHANNEL","Cone jammed."
+625,"2015-06-18 00:00:00","N","N",361,6,0.5,121,13,"Y","SIDE CHANNEL","Cone jammed. "
+626,"2015-06-19 00:00:00","N","N",353,3.5,1,120,13,"Y","SIDE CHANNEL",
+627,"2015-06-20 00:00:00","N","N",317,4,1,121,13,"Y","SIDE CHANNEL",
+628,"2015-06-21 00:00:00","N","N",298,5,1,115,12.5,"Y","UPSTREAM OF DIVERSION","Moved auto-release box- 45.15939, -113.83114- RL."
+629,"2015-06-22 00:00:00","N","N",290,4.25,1,114,11.5,"Y","UPSTREAM OF DIVERSION",
+630,"2015-06-23 00:00:00","N","N",260,3.75,1,113,12.5,"Y","UPSTREAM OF DIVERSION","Auto release box did not open-6/22."
+631,"2015-06-24 00:00:00","N","N",234,2,1,111,12.5,"Y","UPSTREAM OF DIVERSION",
+632,"2015-06-25 00:00:00","N","N",182,2,1,106,14,"Y","UPSTREAM OF DIVERSION",
+633,"2015-06-26 00:00:00","N","N",155,2,1,100,14,"Y","UPSTREAM OF DIVERSION","Moved auto-release box- 45.15939, -113.83114- RR."
+634,"2015-06-27 00:00:00","N","N",145,2,0.5,100,15,"Y","UPSTREAM OF DIVERSION","Trap maintenance."
+635,"2015-06-28 00:00:00","N","N",127,2,1,99,15.5,"Y","UPSTREAM OF DIVERSION","Auto release box did not open-6/27.  Put in diverters- RL."
+636,"2015-06-29 00:00:00","Y","N",131,4,1,97,16,"Y","UPSTREAM OF DIVERSION",
+637,"2015-06-30 00:00:00","Y","N",136,4,1,97,16,"Y","UPSTREAM OF DIVERSION",
+638,"2015-07-01 00:00:00","Y","N",124,4,1,97,16,"Y","UPSTREAM OF DIVERSION",
+639,"2015-07-02 00:00:00","Y","N",111,4,1,95,15,"Y","UPSTREAM OF DIVERSION",
+640,"2015-07-03 00:00:00","Y","N",90,4,1,91,16,"Y","UPSTREAM OF DIVERSION",
+641,"2015-07-04 00:00:00","Y","N",69,3,1,88,15,"Y","UPSTREAM OF DIVERSION",
+642,"2015-07-05 00:00:00","Y","N",63,2.5,1,85,16.5,"Y","UPSTREAM OF DIVERSION",
+643,"2015-07-06 00:00:00","Y","N",64,2,1,85,15.5,"Y","UPSTREAM OF DIVERSION",
+644,"2015-07-07 00:00:00","Y","N",38,2,1,85,15,"Y","UPSTREAM OF DIVERSION","Put in diverters-RR."
+645,"2015-07-08 00:00:00","Y","N",41,2.5,1,84,14.5,"Y","UPSTREAM OF DIVERSION",
+646,"2015-07-09 00:00:00","Y","N",29,2,1,82,15,"Y","UPSTREAM OF DIVERSION",
+647,"2015-07-10 00:00:00","Y","N",40,2.5,1,85,14.5,"Y","UPSTREAM OF DIVERSION","Adjusted diverters-RL."
+648,"2015-07-11 00:00:00","Y","N",27,2.5,1,84,14.5,"Y","UPSTREAM OF DIVERSION",
+649,"2015-07-12 00:00:00","Y","N",31,2.5,1,84,14.5,"Y","UPSTREAM OF DIVERSION",
+650,"2015-07-13 00:00:00","Y","N",26,2.75,1,84,15,"Y","UPSTREAM OF DIVERSION",
+651,"2015-07-14 00:00:00","Y","N",28,3,1,85,13,"Y","UPSTREAM OF DIVERSION","Auto release box did not open 7/13/15."
+652,"2015-07-15 00:00:00","Y","N",41,3,1,86,14,"Y","UPSTREAM OF DIVERSION","Replaced auto release box timer."
+653,"2015-07-16 00:00:00","Y","N",46,3.5,1,87,14.5,"Y","UPSTREAM OF DIVERSION",
+654,"2015-07-17 00:00:00","Y","N",28,3,1,84,14,"Y","UPSTREAM OF DIVERSION",
+655,"2015-07-18 00:00:00","Y","N",27,3,1,85,13.5,"Y","UPSTREAM OF DIVERSION",
+656,"2015-07-19 00:00:00","Y","N",24,3.5,1,87,14,"Y","UPSTREAM OF DIVERSION",
+657,"2015-07-20 00:00:00","Y","N",34,3,1,85,14.5,"Y","UPSTREAM OF DIVERSION",
+658,"2015-07-21 00:00:00","Y","N",26,2.5,1,84,15,"Y","UPSTREAM OF DIVERSION",
+659,"2015-07-22 00:00:00","Y","N",25,2,1,81,15,"Y","UPSTREAM OF DIVERSION",
+660,"2015-07-23 00:00:00","Y","N",29,2,1,83,15,"Y","UPSTREAM OF DIVERSION","Put deflector on."
+661,"2015-07-24 00:00:00","Y","N",34,2,1,85,14,"Y","UPSTREAM OF DIVERSION",
+662,"2015-07-25 00:00:00","Y","N",27,2.75,1,84,14,"Y","UPSTREAM OF DIVERSION",
+663,"2015-07-26 00:00:00","Y","N",31,2.5,1,84,13.5,"Y","UPSTREAM OF DIVERSION",
+664,"2015-07-27 00:00:00","Y","N",37,3,1,86,14.5,"Y","UPSTREAM OF DIVERSION",
+665,"2015-07-28 00:00:00","Y","N",131,4,1,106,12,"Y","SIDE CHANNEL","Moved auto release box-45.160005, -113.831498, RR side channel."
+666,"2015-07-29 00:00:00","Y","N",84,3,1,95,12.5,"Y","SIDE CHANNEL",
+667,"2015-07-30 00:00:00","Y","N",75,4,1,94,14.5,"Y","SIDE CHANNEL",
+668,"2015-07-31 00:00:00","Y","N",55,3.5,1,90,15.5,"Y","UPSTREAM OF DIVERSION","Moved auto release box- 45.15939, -113.83114- RR.   Replaced auto release box timer. Adjusted diverters."
+669,"2015-08-01 00:00:00","Y","N",50,3.5,1,88,16.5,"Y","UPSTREAM OF DIVERSION",
+670,"2015-08-02 00:00:00","Y","N",31,3,1,85,14.5,"Y","UPSTREAM OF DIVERSION",
+671,"2015-08-03 00:00:00","Y","N",26,2,1,83,15,"Y","UPSTREAM OF DIVERSION","Auto release box did not open- 8/2."
+672,"2015-08-04 00:00:00","Y","N",25,2.25,1,82,15.5,"Y","UPSTREAM OF DIVERSION",
+673,"2015-08-05 00:00:00","Y","N",25,2,1,81,15,"Y","UPSTREAM OF DIVERSION",
+674,"2015-08-06 00:00:00","Y","N",30,2,1,82,14,"Y","UPSTREAM OF DIVERSION",
+675,"2015-08-07 00:00:00","Y","N",26,2,1,81,13,"Y","UPSTREAM OF DIVERSION",
+676,"2015-08-08 00:00:00","Y","N",25,2,1,81,14.5,"Y","UPSTREAM OF DIVERSION",
+677,"2015-08-09 00:00:00","Y","N",33,2,1,83,13.5,"Y","UPSTREAM OF DIVERSION",
+678,"2015-08-10 00:00:00","Y","N",32,2,1,83,13.5,"Y","UPSTREAM OF DIVERSION","Raised cone at 930."
+679,"2015-08-11 00:00:00","Y","N",27,1.75,0,79,22,"Y",,"Dropped cone at 1730."
+680,"2015-08-12 00:00:00","Y","N",25,1.75,0.5,79,17,"Y","UPSTREAM OF DIVERSION",
+681,"2015-08-13 00:00:00","Y","N",26,2,1,82,15,"Y","UPSTREAM OF DIVERSION",
+682,"2015-08-14 00:00:00","Y","N",25,2,1,82,16,"Y","UPSTREAM OF DIVERSION",
+683,"2015-08-15 00:00:00","Y","N",24,2,1,81,15,"Y","UPSTREAM OF DIVERSION",
+684,"2015-08-16 00:00:00","Y","N",26,2,1,82,13.5,"Y","UPSTREAM OF DIVERSION",
+685,"2015-08-17 00:00:00","Y","N",25,2,1,82,13,"Y","UPSTREAM OF DIVERSION",
+686,"2015-08-18 00:00:00","Y","N",25,1.75,1,80,12.5,"Y","UPSTREAM OF DIVERSION",
+687,"2015-08-19 00:00:00","Y","N",25,2,1,82,13,"Y","UPSTREAM OF DIVERSION",
+688,"2015-08-20 00:00:00","Y","N",26,2,1,81,13,"Y","UPSTREAM OF DIVERSION",
+689,"2015-08-21 00:00:00","Y","N",24,2,1,82,13,"Y","UPSTREAM OF DIVERSION",
+690,"2015-08-22 00:00:00","Y","N",24,2,1,82,13,"Y","UPSTREAM OF DIVERSION",
+691,"2015-08-23 00:00:00","Y","N",25,2,1,80,11,"Y","UPSTREAM OF DIVERSION",
+692,"2015-08-24 00:00:00","Y","N",25,2,1,83,12,"Y","UPSTREAM OF DIVERSION",
+693,"2015-08-25 00:00:00","Y","N",25,2,1,83,13,"Y","UPSTREAM OF DIVERSION",
+694,"2015-08-26 00:00:00","Y","N",26,2,1,82,14,"Y","UPSTREAM OF DIVERSION","E-shocked mark by trap today."
+695,"2015-08-27 00:00:00","Y","N",25,2,1,82,15,"Y","UPSTREAM OF DIVERSION","E-schocked recap by trap today."
+696,"2015-08-28 00:00:00","Y","N",26,2,1,83,14,"Y","UPSTREAM OF DIVERSION",
+697,"2015-08-29 00:00:00","Y","N",24,2,1,82,14.5,"Y","UPSTREAM OF DIVERSION",
+698,"2015-08-30 00:00:00","Y","N",26,2,1,82,15,"Y","UPSTREAM OF DIVERSION",
+699,"2015-08-31 00:00:00","Y","N",25,1.9,1,83,12,"Y","UPSTREAM OF DIVERSION",
+700,"2015-09-01 00:00:00","Y","N",25,1.95,1,82,12,"Y","UPSTREAM OF DIVERSION",
+701,"2015-09-02 00:00:00","Y","N",26,1.95,1,82,13.5,"Y","UPSTREAM OF DIVERSION",
+702,"2015-09-03 00:00:00","Y","N",25,1.95,1,82,13,"Y","UPSTREAM OF DIVERSION",
+703,"2015-09-04 00:00:00","Y","N",26,2,1,83,12,"Y","UPSTREAM OF DIVERSION","Removed diverters-RR."
+704,"2015-09-05 00:00:00","Y","N",38,2.25,1,87,11,"Y","UPSTREAM OF DIVERSION",
+705,"2015-09-06 00:00:00","Y","N",26,2,1,83,10,"Y","UPSTREAM OF DIVERSION",
+706,"2015-09-07 00:00:00","Y","N",25,2,1,83,10,"Y","UPSTREAM OF DIVERSION",
+707,"2015-09-08 00:00:00","Y","N",25,1.95,1,82,10,"Y","UPSTREAM OF DIVERSION","Moved auto-release box back- 45.15939, -113.83114, RL."
+708,"2015-09-09 00:00:00","Y","N",26,2,1,81,10.5,"Y","UPSTREAM OF DIVERSION",
+709,"2015-09-10 00:00:00","Y","N",27,2,1,81,10.5,"Y","UPSTREAM OF DIVERSION",
+710,"2015-09-11 00:00:00","Y","N",26,2,1,80,12,"Y","UPSTREAM OF DIVERSION",
+711,"2015-09-12 00:00:00","Y","N",26,1.5,1,80,14.5,"Y","UPSTREAM OF DIVERSION",
+712,"2015-09-13 00:00:00","Y","N",27,1.5,1,81,13,"Y","UPSTREAM OF DIVERSION","Added diverter-RR."
+713,"2015-09-14 00:00:00","Y","N",27,2,1,81,13.5,"Y","UPSTREAM OF DIVERSION",
+714,"2015-09-15 00:00:00","Y","N",28,2,1,82,13.5,"Y","UPSTREAM OF DIVERSION",
+715,"2015-09-16 00:00:00","Y","N",53,3,1,88,12,"Y","UPSTREAM OF DIVERSION","Adjusted diveters-RR and RL."
+716,"2015-09-17 00:00:00","Y","N",60,3,1,90,12,"Y","UPSTREAM OF DIVERSION",
+717,"2015-09-18 00:00:00","Y","N",89,3.5,1,95,10.5,"Y","UPSTREAM OF DIVERSION","Trap maintenance-replaced debris wheel tire."
+718,"2015-09-19 00:00:00","Y","N",77,4,1,94,9.5,"Y","UPSTREAM OF DIVERSION",
+719,"2015-09-20 00:00:00","Y","N",82,4,1,94,10,"Y","UPSTREAM OF DIVERSION",
+720,"2015-09-21 00:00:00","Y","N",82,4,1,94,11,"Y","UPSTREAM OF DIVERSION",
+721,"2015-09-22 00:00:00","Y","N",86,4,1,94,11,"Y","UPSTREAM OF DIVERSION",
+722,"2015-09-23 00:00:00","Y","N",95,4.25,1,96,11.5,"Y","UPSTREAM OF DIVERSION",
+723,"2015-09-24 00:00:00","Y","N",88,4,1,95,11,"Y","UPSTREAM OF DIVERSION","Removed diverters- RR and RL."
+724,"2015-09-25 00:00:00","N","N",82,4,1,95,10.5,"Y","UPSTREAM OF DIVERSION",
+725,"2015-09-26 00:00:00","N","N",82,3.75,1,96,12,"Y","UPSTREAM OF DIVERSION",
+726,"2015-09-27 00:00:00","N","N",82,2,1,98,11.5,"Y","UPSTREAM OF DIVERSION",
+727,"2015-09-28 00:00:00","N","N",88,3,1,98,10.5,"Y","UPSTREAM OF DIVERSION","Put deflector on."
+728,"2015-09-29 00:00:00","N","N",86,4,1,97,9.5,"Y","UPSTREAM OF DIVERSION",
+729,"2015-09-30 00:00:00","N","N",88,4,1,97,10,"Y","UPSTREAM OF DIVERSION",
+730,"2015-10-01 00:00:00","N","N",92,3,1,95,12.5,"Y","UPSTREAM OF DIVERSION",
+731,"2015-10-02 00:00:00","N","N",109,1.75,1,100,12.5,"Y","UPSTREAM OF DIVERSION",
+732,"2015-10-03 00:00:00","N","N",111,3.8,1,105,11.5,"Y","UPSTREAM OF DIVERSION",
+733,"2015-10-04 00:00:00","N","N",113,3.1,1,100,9,"Y","UPSTREAM OF DIVERSION",
+734,"2015-10-05 00:00:00","N","N",112,4,1,101,9.5,"Y","UPSTREAM OF DIVERSION","Replaced solar controller on auto release box. usgs gauge down"
+735,"2015-10-06 00:00:00","N","N",111,5,1,103,9,"Y","UPSTREAM OF DIVERSION","usgs gauge down"
+736,"2015-10-07 00:00:00","N","N",111,3.5,1,105,9,"N","UPSTREAM OF DIVERSION","Auto release box did not open 10/6."
+737,"2015-10-08 00:00:00","N","N",118,3.25,1,102,11.5,"N","UPSTREAM OF DIVERSION",
+738,"2015-10-09 00:00:00","N","N",121,3.25,1,105,10.5,"N","UPSTREAM OF DIVERSION",
+739,"2015-10-10 00:00:00","N","N",116,3,1,103,10.5,"N","UPSTREAM OF DIVERSION",
+740,"2015-10-11 00:00:00","N","N",120,1.5,1,103,10.5,"N","UPSTREAM OF DIVERSION","High amount of leaf litter"
+741,"2015-10-12 00:00:00","N","N",136,2.75,1,105,9.5,"N","UPSTREAM OF DIVERSION",
+742,"2015-10-13 00:00:00","N","N",138,4,1,105,11,"N","UPSTREAM OF DIVERSION",
+743,"2015-10-14 00:00:00","N","N",138,4,1,106,9,"N","UPSTREAM OF DIVERSION",
+744,"2015-10-15 00:00:00","N","N",143,3,1,108,8.5,"N","UPSTREAM OF DIVERSION",
+745,"2015-10-16 00:00:00","N","N",145,3,1,107,8,"N","UPSTREAM OF DIVERSION",
+746,"2015-10-17 00:00:00","N","N",153,3,1,110,8,"N","UPSTREAM OF DIVERSION",
+747,"2015-10-18 00:00:00","N","N",155,3.5,1,110,10.5,"N","UPSTREAM OF DIVERSION","High amount of leaf litter"
+748,"2015-10-19 00:00:00","N","N",168,2.3,1,113,12,"N","UPSTREAM OF DIVERSION",
+749,"2015-10-20 00:00:00","N","N",207,3.25,1,116,11,"N","UPSTREAM OF DIVERSION",
+750,"2015-10-21 00:00:00","N","N",192,4,1,112,9.5,"N","UPSTREAM OF DIVERSION",
+751,"2015-10-22 00:00:00","N","N",204,4,1,113,7.5,"N","UPSTREAM OF DIVERSION",
+752,"2015-10-23 00:00:00","N","N",198,4.5,1,112,7.5,"N","UPSTREAM OF DIVERSION",
+753,"2015-10-24 00:00:00","N","N",208,4,1,113,8,"N","UPSTREAM OF DIVERSION",
+754,"2015-10-25 00:00:00","N","N",227,4,1,115,8,"N","UPSTREAM OF DIVERSION",
+755,"2015-10-26 00:00:00","N","N",227,4,1,115,8.5,"N","UPSTREAM OF DIVERSION",
+756,"2015-10-27 00:00:00","N","N",247,4,1,116,8,"N","UPSTREAM OF SIDE CHANNEL","Moved auto release box-45.15987, -113.83156- RR."
+757,"2015-10-28 00:00:00","N","N",244,4.8,1,116,6,"N","UPSTREAM OF SIDE CHANNEL",
+758,"2015-10-29 00:00:00","N","N",286,4.5,1,120,7.5,"N","UPSTREAM OF SIDE CHANNEL","Removed deflector."
+759,"2015-10-30 00:00:00","N","N",282,4.5,1,119,7,"N","UPSTREAM OF SIDE CHANNEL",
+760,"2015-10-31 00:00:00","N","N",314,5,1,120,7.5,"N","UPSTREAM OF SIDE CHANNEL",
+761,"2015-11-01 00:00:00","N","N",313,5,1,119,9,"N","UPSTREAM OF SIDE CHANNEL",
+762,"2015-11-02 00:00:00","N","Y",310,5,1,118,7,"N","UPSTREAM OF SIDE CHANNEL","Trap maintenance-added foam under pontoons.  Moved trap upstream 6 ft."
+763,"2015-11-03 00:00:00","N","N",328,6,1,119,7,"N","UPSTREAM OF SIDE CHANNEL",
+764,"2015-11-04 00:00:00","N","N",344,6.5,1,122,5.5,"N","UPSTREAM OF SIDE CHANNEL","Trap box flooded.  Trap maintenance-rewired doors closed."
+765,"2015-11-05 00:00:00","N","N",364,6.5,1,124,5,"N","UPSTREAM OF SIDE CHANNEL"," Trap box flooded.  Trap maintenance-rewired doors closed."
+766,"2015-11-06 00:00:00","N","N",362,6.5,0.5,123,4,"N","UPSTREAM OF SIDE CHANNEL","Cone jammed.  Auto release box did not open 11/5."
+767,"2015-11-07 00:00:00","N","N",341,6.5,1,120,2,"N","UPSTREAM OF SIDE CHANNEL","Auto release box did not open 11/6/15."
+768,"2015-11-08 00:00:00","N","N",348,6,1,120,3,"N","UPSTREAM OF SIDE CHANNEL",
+769,"2015-11-09 00:00:00","N","N",372,6,1,120,3.5,"N","UPSTREAM OF SIDE CHANNEL",
+770,"2015-11-10 00:00:00","N","N",338,6,1,123,4.5,"N","UPSTREAM OF SIDE CHANNEL",
+771,"2015-11-11 00:00:00","N","N",361,5,0.5,121,2,"N","UPSTREAM OF SIDE CHANNEL","Cone jammed. "
+772,"2015-11-12 00:00:00","N","N",338,5.75,1,120,3,"N","UPSTREAM OF SIDE CHANNEL",
+773,"2015-11-13 00:00:00","N","N",338,5.5,1,119,3,"N","UPSTREAM OF SIDE CHANNEL",
+774,"2015-11-14 00:00:00","N","N",342,5.75,1,120,3.5,"N","UPSTREAM OF SIDE CHANNEL","Trap pulled-reached take limit."
+775,"2015-11-15 00:00:00","N","N",346,,0,,,"N",,
+776,"2015-11-16 00:00:00","N","N",327,,0,,,"N",,
+777,"2015-11-17 00:00:00","N","N",300,,0,,,"N",,
+778,"2015-11-18 00:00:00","N","N",310,6,1,119,4,"N","UPSTREAM OF SIDE CHANNEL",
+779,"2015-11-19 00:00:00","N","N",280,5.5,1,119,2,"N","UPSTREAM OF SIDE CHANNEL",
+780,"2015-11-20 00:00:00","N","N",290,5,1,117,2,"N","UPSTREAM OF SIDE CHANNEL",
+781,"2015-11-21 00:00:00","N","N",220,,0,,,"N","N/A","Pulled trap because of ice."
+782,"2016-03-04 00:00:00","N","N",345,6.5,1,119,6,"N","US of side channel","IDFG"
+783,"2016-03-05 00:00:00","N","N",345,7,1,120,2,"N","US of side channel","IDFG"
+784,"2016-03-06 00:00:00","N","N",376,7.5,1,123,4,"N","US of side channel","Pulled trap @ 20:30 due to debris jamming cone 451cfs.  IDFG"
+785,"2016-03-07 00:00:00","N","N",365,7.5,0,123,3,"N","US of side channel","Put trap back in water  9:15am.  IDFG"
+786,"2016-03-08 00:00:00","N","N",354,6,1,122,4,"N","US of side channel","IDFG"
+787,"2016-03-09 00:00:00","N","N",342,7.8,1,121,4,"N","US of side channel","IDFG"
+788,"2016-03-10 00:00:00","N","N",338,7.5,1,120,5,"N","US of side channel","IDFG"
+789,"2016-03-11 00:00:00","N","N",365,7.2,1,123,4.5,"N","US of side channel","IDFG"
+790,"2016-03-12 00:00:00","N","N",383,7.5,1,126,4.5,"N","US of side channel","QCI started operating trap"
+791,"2016-03-13 00:00:00","N","N",380,8,1,124,5,"N","US of side channel",
+792,"2016-03-14 00:00:00","N","N",380,7.5,1,125,5,"N","US of side channel","Pulled trap late because of weir install"
+793,"2016-03-15 00:00:00","N","N",353,7,1,122,2,"N","US of side channel",
+794,"2016-03-16 00:00:00","N","N",338,7,1,121,2,"N","US of side channel",
+795,"2016-03-17 00:00:00","N","N",342,8,1,120,2,"N","US of side channel",
+796,"2016-03-18 00:00:00","N","N",320,7,1,119,2,"N","US of side channel",
+797,"2016-03-19 00:00:00","N","N",313,7,1,117,2,"N","US of side channel",
+798,"2016-03-20 00:00:00","N","N",324,8,1,119,3.5,"N","US of side channel",
+799,"2016-03-21 00:00:00","N","N",327,7.5,1,120,5,"N","US of side channel",
+800,"2016-03-22 00:00:00","N","N",338,7.8,1,122,6,"N","US of side channel",
+801,"2016-03-23 00:00:00","N","N",335,7.9,1,120,4.5,"N","US of side channel",
+802,"2016-03-24 00:00:00","N","N",320,7.5,1,118,5,"N","US of side channel",
+803,"2016-03-25 00:00:00","N","N",324,8,1,118,3,"N","US of side channel",
+804,"2016-03-26 00:00:00","N","N",310,7.5,1,117,2,"N","US of side channel",
+805,"2016-03-27 00:00:00","N","N",318,8,1,117,4,"N","US of side channel",
+806,"2016-03-28 00:00:00","N","N",313,7.5,1,117,2,"N","US of side channel",
+807,"2016-03-29 00:00:00","N","N",310,8,1,117,4.5,"N","US of side channel",
+808,"2016-03-30 00:00:00","N","N",310,7.5,1,118,4.5,"N","US of side channel",
+809,"2016-03-31 00:00:00","N","N",310,7.5,1,116,6,"N","US of side channel",
+810,"2016-04-01 00:00:00","N","N",313,7.5,1,118,5.5,"N","US of side channel",
+811,"2016-04-02 00:00:00","N","N",317,8,1,117,5.5,"N","US of side channel",
+812,"2016-04-03 00:00:00","N","N",334,7,1,118,7,"N","US of side channel",
+813,"2016-04-04 00:00:00","N","N",356,6.5,1,121,7.5,"N","US of side channel",
+814,"2016-04-05 00:00:00","N","N",361,7,1,122,5,"N","US of side channel",
+815,"2016-04-06 00:00:00","N","N",346,8,1,120,4.5,"N","US of side channel",
+816,"2016-04-07 00:00:00","N","N",344,6,1,121,6,"N","US of side channel",
+817,"2016-04-08 00:00:00","N","N",358,6,1,122,6,"N","US of side channel",
+818,"2016-04-09 00:00:00","N","N",361,6.5,1,123,6,"Y","US of side channel","release box moved further upstream of side channel"
+819,"2016-04-10 00:00:00","N","N",403,7,0.5,,7,"Y","US of side channel",
+820,"2016-04-11 00:00:00","N","N",416,6.5,1,127,8,"Y","US of side channel",
+821,"2016-04-12 00:00:00","N","N",426,6.5,1,130,8,"Y","US of side channel",
+822,"2016-04-13 00:00:00","N","N",477,7,1,134,8.5,"Y","US of side channel",
+823,"2016-04-14 00:00:00","N","N",488,0,0,134,,"Y","US of side channel","Raised cone- trap not operating"
+824,"2016-04-15 00:00:00","N","N",496,0,0,,,"Y","US of side channel","Trap not operating"
+825,"2016-04-16 00:00:00","N","N",477,0,0,,,"Y","Side Channel","Trap not operating.  Stop taking DNA and scales"
+826,"2016-04-17 00:00:00","N","N",430,9.5,0,123,10.5,"Y","Side Channel","Dropped cone"
+827,"2016-04-18 00:00:00","N","N",437,7,0.5,127,6,"Y","Side Channel",
+828,"2016-04-19 00:00:00","N","N",426,7.5,1,125,7,"Y","Side Channel",
+829,"2016-04-20 00:00:00","N","N",426,6.5,1,125,9,"Y","Side Channel",
+830,"2016-04-21 00:00:00","N","N",396,6.5,1,123,9,"Y","Side Channel",
+831,"2016-04-22 00:00:00","N","N",448,6,1,128,9,"Y","Side Channel",
+832,"2016-04-23 00:00:00","N","N",473,0,0.5,130,9,"Y","Side Channel","Raised cone at 11:15; replaced door buckels"
+833,"2016-04-24 00:00:00","N","N",516,0,0,,,"Y","Side Channel",
+834,"2016-04-25 00:00:00","N","N",488,0,0,,,"Y","Side Channel",
+835,"2016-04-26 00:00:00","N","N",451,9,0.5,128,9,"Y","Side Channel","Dropped cone at 16:00"
+836,"2016-04-27 00:00:00","N","N",440,7.5,1,127,7,"Y","Side Channel",
+837,"2016-04-28 00:00:00","N","N",361,6,1,120,7.5,"Y","Side Channel",
+838,"2016-04-29 00:00:00","N","N",346,6.5,1,119,6,"Y","Side Channel",
+839,"2016-04-30 00:00:00","N","N",324,6.5,1,116,7,"Y","Side Channel",
+840,"2016-05-01 00:00:00","N","N",310,7,1,115,6,"Y","Side Channel",
+841,"2016-05-02 00:00:00","N","N",285,5,1,112,7.5,"Y","US of side channel","Moved auto-release box upstream RR"
+842,"2016-05-03 00:00:00","N","N",195,4.5,1,103,8.5,"Y","US of side channel",
+843,"2016-05-04 00:00:00","N","N",150,2.5,1,103,9,"Y","US of side channel","Put diverters in RL"
+844,"2016-05-05 00:00:00","Y","N",124,4,1,97,9.5,"Y","US of side channel",
+845,"2016-05-06 00:00:00","Y","N",165,1.25,1,100,10.5,"Y","US of side channel","Dropped trap downstream about 2 ft"
+846,"2016-05-07 00:00:00","N","Y",278,3,1,111,9.5,"Y","US of side channel","removed diverters"
+847,"2016-05-08 00:00:00","N","N",349,0,0.5,116,8.5,"Y","US of side channel",
+848,"2016-05-09 00:00:00","N","N",409,7.5,1,123,9,"Y","US of side channel",
+849,"2016-05-10 00:00:00","N","Y",448,7.5,1,129,6.5,"Y","US of side channel","Pulled trap US 2 ft."
+850,"2016-05-11 00:00:00","N","N",426,8.5,1,127,6,"Y","US of side channel",
+851,"2016-05-12 00:00:00","N","N",386,8,1,121,7.5,"Y","US of side channel",
+852,"2016-05-13 00:00:00","N","N",338,7.5,1,119,8.5,"Y","US of side channel",
+853,"2016-05-14 00:00:00","N","N",342,7,1,118,9,"Y","US of side channel",
+854,"2016-05-15 00:00:00","N","Y",409,6,1,127,8.5,"Y","US of side channel","Dead deer in trap!  Moved trap closer to bank.  Pulled trap @ 22:00 due to high flows."
+855,"2016-05-16 00:00:00",,,561,,0,,,"Y",,
+856,"2016-05-17 00:00:00",,,516,,0,,,"Y",,
+857,"2016-05-18 00:00:00",,,488,,0,,,"Y",,
+858,"2016-05-19 00:00:00",,,512,,0,,,"Y",,
+859,"2016-05-20 00:00:00",,,696,,0,,,"Y",,
+860,"2016-05-21 00:00:00",,,742,,0,,,"Y",,
+861,"2016-05-22 00:00:00",,,691,,0,,,"Y",,
+862,"2016-05-23 00:00:00",,,633,,0,,,"Y",,
+863,"2016-05-24 00:00:00",,,596,,0,,,"Y",,
+864,"2016-05-25 00:00:00",,,520,,0,,,"Y","US of Side Channel","Dropped cone to fish @ 19:10"
+865,"2016-05-26 00:00:00","N","N",508,7.5,0.5,139,9,"Y","US of Side Channel","Raised cone @ 9:30, dropped cone @ 18:20"
+866,"2016-05-27 00:00:00","N","N",477,7,0.5,135,10,"Y","US of Side Channel",
+867,"2016-05-28 00:00:00","N","N",488,6,1,135,9.5,"Y","US of Side Channel",
+868,"2016-05-29 00:00:00","N","N",451,7,1,132,9.5,"Y","US of Side Channel",
+869,"2016-05-30 00:00:00","N","N",455,7.5,1,133,10,"Y","US of Side Channel",
+870,"2016-05-31 00:00:00","N","N",440,7.5,1,131,9,"Y","US of Side Channel",
+871,"2016-06-01 00:00:00","N","N",423,7,1,129,9.5,"Y","US of Side Channel",
+872,"2016-06-02 00:00:00","N","N",437,5,1,130,10.5,"Y","US of Side Channel",
+873,"2016-06-03 00:00:00","N","N",473,5,1,135,9.5,"Y","US of Side Channel",
+874,"2016-06-04 00:00:00","N","N",504,7.5,1,135,10.5,"Y","US of Side Channel",
+875,"2016-06-05 00:00:00","N","Y",601,0,0.5,143,12,"Y","US of Side Channel","Debris jam.  Moved trap 5-6 feet from bank."
+876,"2016-06-06 00:00:00","N","N",686,8,1,147,12,"Y","US of Side Channel",
+877,"2016-06-07 00:00:00","N","N",791,8,1,157,11.5,"Y","US of Side Channel","Raised cone 1200-1915"
+878,"2016-06-08 00:00:00","N","N",813,0,0.5,160,11.5,"Y","US of Side Channel","Raised cone 1130"
+879,"2016-06-09 00:00:00","N","N",871,0,0,,,"Y","US of Side Channel","Not fishing"
+880,"2016-06-10 00:00:00","N","N",758,0,0,,,"Y","US of Side Channel","Dropped cone 1730"
+881,"2016-06-11 00:00:00","N","N",657,8.5,0.5,157,11.5,"Y","US of Side Channel",
+882,"2016-06-12 00:00:00","N","N",583,6.25,1,149,9.5,"Y","US of Side Channel","Raised cone 0700-1730"
+883,"2016-06-13 00:00:00","N","N",512,6.5,1,141,10,"Y","US of Side Channel","Raised cone 0700-1400"
+884,"2016-06-14 00:00:00","N","N",455,5,1,135,11.5,"Y","US of Side Channel","Moved trap back to RR bank"
+885,"2016-06-15 00:00:00","N","Y",416,6.5,1,130,9.5,"Y","US of Side Channel",
+886,"2016-06-16 00:00:00","N","N",485,0,0.5,138,9.5,"Y","US of Side Channel","Cone jammed"
+887,"2016-06-17 00:00:00","N","N",413,8.5,1,130,9,"Y","US of Side Channel",
+888,"2016-06-18 00:00:00","N","N",383,5.5,1,126,10.5,"Y","US of Side Channel",
+889,"2016-06-19 00:00:00","N","N",335,4.5,1,122,10.5,"Y","US of Side Channel",
+890,"2016-06-20 00:00:00","N","N",302,4.5,1,121,10,"Y","US of Side Channel",
+891,"2016-06-21 00:00:00","N","N",274,4.5,1,117,11.5,"Y","US of Side Channel",
+892,"2016-06-22 00:00:00","N","Y",240,4,1,113,11,"Y","US of Side Channel","Aligned trap with thalweg more"
+893,"2016-06-23 00:00:00","N","N",244,3,1,113,12,"Y","US of Side Channel",
+894,"2016-06-24 00:00:00","N","Y",247,4,1,113,13,"Y","US of Side Channel","Pulled trap up river 2 ft."
+895,"2016-06-25 00:00:00","N","N",247,4.5,1,114,10,"Y","US of Side Channel",
+896,"2016-06-26 00:00:00","N","N",227,5,1,110,11.5,"Y","US of Side Channel","Put in R Left diverters"
+897,"2016-06-27 00:00:00","Y","N",217,5.5,1,111,12.5,"Y","US of Side Channel",
+898,"2016-06-28 00:00:00","Y","N",187,5,1,108,14,"Y","US of Side Channel",
+899,"2016-06-29 00:00:00","Y","N",171,5,1,104,14.5,"Y","US of Side Channel",
+900,"2016-06-30 00:00:00","Y","N",163,4,1,101,14,"Y","US of Side Channel",
+901,"2016-07-01 00:00:00","Y","N",195,5.5,1,107,13,"Y","US of Side Channel",
+902,"2016-07-02 00:00:00","Y","N",168,4,1,104,14,"Y","US of Side Channel",
+903,"2016-07-03 00:00:00","Y","N",145,5,1,101,14,"Y","Across Island (45.15939, -113.83114)","Moved release box upstream more-across the island.  Put in one more diverter R Left"
+904,"2016-07-04 00:00:00","Y","N",145,6,1,105,12.5,"Y","Across Island (45.15939, -113.83114)",
+905,"2016-07-05 00:00:00","Y","N",131,4.5,1,102,12,"Y","Across Island (45.15939, -113.83114)",
+906,"2016-07-06 00:00:00","Y","N",72,5,1,99,12,"Y","Across Island (45.15939, -113.83114)",
+907,"2016-07-07 00:00:00","Y","N",54,4,1,97,12.5,"Y","Across Island (45.15939, -113.83114)",
+908,"2016-07-08 00:00:00","Y","N",46,4,1,95,12.5,"Y","Across Island (45.15939, -113.83114)",
+909,"2016-07-09 00:00:00","Y","N",35,4,1,90,14,"Y","Across Island (45.15939, -113.83114)",
+910,"2016-07-10 00:00:00","Y","N",28,3.5,1,85,14,"Y","Across Island (45.15939, -113.83114)",
+911,"2016-07-11 00:00:00","Y","N",74,6,1,101,10.5,"Y","Across Island (45.15939, -113.83114)",
+912,"2016-07-12 00:00:00","Y","N",64,5,1,98,11,"Y","Across Island (45.15939, -113.83114)",
+913,"2016-07-13 00:00:00","Y","N",74,6,1,100,11,"Y","Across Island (45.15939, -113.83114)",
+914,"2016-07-14 00:00:00","Y","N",52,5,1,95,12,"Y","Across Island (45.15939, -113.83114)",
+915,"2016-07-15 00:00:00","Y","N",38,4.5,1,94,13,"Y","Across Island (45.15939, -113.83114)",
+916,"2016-07-16 00:00:00","Y","N",35,4.5,1,93,13,"Y","Across Island (45.15939, -113.83114)",
+917,"2016-07-17 00:00:00","Y","N",35,4,1,91,13,"Y","Across Island (45.15939, -113.83114)",
+918,"2016-07-18 00:00:00","Y","N",44,4,1,92,14.5,"Y","Across Island (45.15939, -113.83114)",
+919,"2016-07-19 00:00:00","Y","N",31,3,1,88,14,"Y","Across Island (45.15939, -113.83114)",
+920,"2016-07-20 00:00:00","Y","N",25,3.5,1,88,13,"Y","Across Island (45.15939, -113.83114)","RR diverters installed at 16:00"
+921,"2016-07-21 00:00:00","Y","N",24,3,1,86,15,"Y","Across Island (45.15939, -113.83114)",
+922,"2016-07-22 00:00:00","Y","N",26,2.5,1,85,13,"Y","Across Island (45.15939, -113.83114)",
+923,"2016-07-23 00:00:00","Y","N",26,2.5,1,85,14,"Y","Across Island (45.15939, -113.83114)",
+924,"2016-07-24 00:00:00","Y","N",26,2.5,1,85,15,"Y","Across Island (45.15939, -113.83114)",
+925,"2016-07-25 00:00:00","Y","N",27,2.5,1,85,14,"Y","Across Island (45.15939, -113.83114)",
+926,"2016-07-26 00:00:00","Y","N",27,3,1,87,14.5,"Y","Across Island (45.15939, -113.83114)",
+927,"2016-07-27 00:00:00","Y","N",27,3,1,86,13.5,"Y","Across Island (45.15939, -113.83114)",
+928,"2016-07-28 00:00:00","Y","N",27,3,1,85,14.5,"Y","Across Island (45.15939, -113.83114)",
+929,"2016-07-29 00:00:00","Y","N",26,2.5,1,85,15,"Y","Across Island (45.15939, -113.83114)",
+930,"2016-07-30 00:00:00","Y","N",26,2.5,1,85,15.5,"Y","Across Island (45.15939, -113.83114)",
+931,"2016-07-31 00:00:00","Y","N",26,2.25,1,85,14,"Y","Across Island (45.15939, -113.83114)",
+932,"2016-08-01 00:00:00","Y","N",24,2.25,1,84,13.5,"Y","Across Island (45.15939, -113.83114)",
+933,"2016-08-02 00:00:00","Y","N",26,1.25,1,80,13,"Y","Across Island (45.15939, -113.83114)",
+934,"2016-08-03 00:00:00","Y","N",24,2.5,1,83,13,"Y","Across Island (45.15939, -113.83114)",
+935,"2016-08-04 00:00:00","Y","N",26,2.5,1,84,12.5,"Y","Across Island (45.15939, -113.83114)",
+936,"2016-08-05 00:00:00","Y","N",25,2.75,1,85,14,"Y","Across Island (45.15939, -113.83114)",
+937,"2016-08-06 00:00:00","Y","N",26,3.25,1,86,14.5,"Y","Across Island (45.15939, -113.83114)",
+938,"2016-08-07 00:00:00","Y","N",28,2.75,1,85,13.5,"Y","Across Island (45.15939, -113.83114)",
+939,"2016-08-08 00:00:00","Y","N",27,3,1,86,13,"Y","Across Island (45.15939, -113.83114)",
+940,"2016-08-09 00:00:00","Y","N",27,3,1,86,13.5,"Y","Across Island (45.15939, -113.83114)",
+941,"2016-08-10 00:00:00","Y","N",28,3,1,86,11,"Y","Across Island (45.15939, -113.83114)",
+942,"2016-08-11 00:00:00","Y","N",27,3,1,85,12,"Y","Across Island (45.15939, -113.83114)",
+943,"2016-08-12 00:00:00","Y","N",26,3,1,85,14.5,"Y","Across Island (45.15939, -113.83114)",
+944,"2016-08-13 00:00:00","Y","N",26,3,1,85,14.5,"Y","Across Island (45.15939, -113.83114)","Rebuilt rock sill River Left"
+945,"2016-08-14 00:00:00","Y","N",28,3,1,85,13.5,"Y","Across Island (45.15939, -113.83114)",
+946,"2016-08-15 00:00:00","Y","N",29,2.75,1,86,13,"Y","Across Island (45.15939, -113.83114)",
+947,"2016-08-16 00:00:00","Y","N",24,2.5,1,86,13,"Y","Across Island (45.15939, -113.83114)",
+948,"2016-08-17 00:00:00","Y","N",26,2.5,1,85,13,"Y","Across Island (45.15939, -113.83114)",
+949,"2016-08-18 00:00:00","Y","N",25,1.75,1,83,14,"Y","Across Island (45.15939, -113.83114)",
+950,"2016-08-19 00:00:00","Y","N",25,1.5,1,82,13.5,"Y","Across Island (45.15939, -113.83114)",
+951,"2016-08-20 00:00:00","Y","N",26,1.5,1,83,12,"Y","Across Island (45.15939, -113.83114)","Adjusted RL diverters"
+952,"2016-08-21 00:00:00","Y","N",26,2,1,82,12,"Y","Across Island (45.15939, -113.83114)",
+953,"2016-08-22 00:00:00","Y","N",26,1.5,1,82,12,"Y","Across Island (45.15939, -113.83114)",
+954,"2016-08-23 00:00:00","Y","N",26,2,1,83,11,"Y","Across Island (45.15939, -113.83114)",
+955,"2016-08-24 00:00:00","Y","N",26,1.75,1,83,10.5,"Y","Across Island (45.15939, -113.83114)",
+956,"2016-08-25 00:00:00","Y","N",26,1.5,1,83,12.5,"Y","Across Island (45.15939, -113.83114)",
+957,"2016-08-26 00:00:00","Y","N",27,1.25,1,83,13,"Y","Across Island (45.15939, -113.83114)",
+958,"2016-08-27 00:00:00","Y","N",27,1.75,1,82,12,"Y","Across Island (45.15939, -113.83114)",
+959,"2016-08-28 00:00:00","Y","N",27,2,1,83,12,"Y","Across Island (45.15939, -113.83114)",
+960,"2016-08-29 00:00:00","Y","N",26,1.5,1,82,13,"Y","Across Island (45.15939, -113.83114)",
+961,"2016-08-30 00:00:00","Y","N",26,1,1,82,14,"Y","Across Island (45.15939, -113.83114)",
+962,"2016-08-31 00:00:00","Y","N",27,1.6,1,82,13,"Y","Across Island (45.15939, -113.83114)",
+963,"2016-09-01 00:00:00","Y","N",26,1.75,1,83,12.5,"Y","Across Island (45.15939, -113.83114)",
+964,"2016-09-02 00:00:00","Y","N",27,2,1,84,12.5,"Y","Across Island (45.15939, -113.83114)",
+965,"2016-09-03 00:00:00","Y","N",28,2.5,1,85,11.5,"Y","Across Island (45.15939, -113.83114)",
+966,"2016-09-04 00:00:00","Y","N",26,2.4,1,86,12,"Y","Across Island (45.15939, -113.83114)",
+967,"2016-09-05 00:00:00","Y","N",26,2.75,1,94,11.5,"Y","Across Island (45.15939, -113.83114)","removed diverters"
+968,"2016-09-06 00:00:00","N","N",67,1.5,1,90,10,"Y","Across Island (45.15939, -113.83114)",
+969,"2016-09-07 00:00:00","N","N",29,1.25,1,85,11.5,"Y","Across Island (45.15939, -113.83114)","Replaced diverters at 1600"
+970,"2016-09-08 00:00:00","Y","N",27,2.5,1,85,12.5,"Y","Across Island (45.15939, -113.83114)",
+971,"2016-09-09 00:00:00","Y","N",27,2.25,1,85,11,"Y","Across Island (45.15939, -113.83114)",
+972,"2016-09-10 00:00:00","Y","N",25,2.5,1,85,10,"Y","Across Island (45.15939, -113.83114)",
+973,"2016-09-11 00:00:00","Y","N",26,2,1,82,10,"Y","Across Island (45.15939, -113.83114)",
+974,"2016-09-12 00:00:00","Y","N",27,1.5,1,82,10.5,"Y","Across Island (45.15939, -113.83114)",
+975,"2016-09-13 00:00:00","Y","N",28,1.75,1,83,9.5,"Y","Across Island (45.15939, -113.83114)",
+976,"2016-09-14 00:00:00","Y","N",27,2,1,83,10,"Y","Across Island (45.15939, -113.83114)",
+977,"2016-09-15 00:00:00","Y","N",28,2,1,85,9.5,"Y","Across Island (45.15939, -113.83114)",
+978,"2016-09-16 00:00:00","Y","N",28,2,1,85,9.5,"Y","Across Island (45.15939, -113.83114)",
+979,"2016-09-17 00:00:00","Y","N",30,2,1,85,9.5,"Y","Across Island (45.15939, -113.83114)",
+980,"2016-09-18 00:00:00","Y","N",31,2,1,85,12,"Y","Across Island (45.15939, -113.83114)",
+981,"2016-09-19 00:00:00","Y","N",28,2,1,85,11,"Y","Across Island (45.15939, -113.83114)",
+982,"2016-09-20 00:00:00","Y","N",28,1.5,1,83,11,"Y","Across Island (45.15939, -113.83114)",
+983,"2016-09-21 00:00:00","Y","N",28,1.75,1,86,11,"Y","Across Island (45.15939, -113.83114)",
+984,"2016-09-22 00:00:00","Y","N",31,1.75,1,86,12,"Y","Across Island (45.15939, -113.83114)",
+985,"2016-09-23 00:00:00","Y","N",82,3,1,95,11.5,"Y","Across Island (45.15939, -113.83114)","Lots of debris in box"
+986,"2016-09-24 00:00:00","Y","N",72,3.25,1,95,11,"Y","Across Island (45.15939, -113.83114)","Removed River Left diverters"
+987,"2016-09-25 00:00:00","Y","N",55,3,1,94,9,"Y","Across Island (45.15939, -113.83114)",
+988,"2016-09-26 00:00:00","Y","N",54,3,1,97,9,"Y","Across Island (45.15939, -113.83114)",
+989,"2016-09-27 00:00:00","Y","N",47,2.5,1,95,10,"Y","Across Island (45.15939, -113.83114)",
+990,"2016-09-28 00:00:00","Y","N",40,2,1,91,10,"Y","Across Island (45.15939, -113.83114)",
+991,"2016-09-29 00:00:00","Y","N",35,1.75,1,87,10,"Y","Across Island (45.15939, -113.83114)",
+992,"2016-09-30 00:00:00","Y","N",43,1.5,1,85,10.5,"Y","Across Island (45.15939, -113.83114)",
+993,"2016-10-01 00:00:00","Y","N",51,1,1,94,10.5,"Y","Across Island (45.15939, -113.83114)",
+994,"2016-10-02 00:00:00","Y","N",67,1.5,1,95,9,"Y","Across Island (45.15939, -113.83114)",
+995,"2016-10-03 00:00:00","Y","N",86,3,1,99,9,"Y","Across Island (45.15939, -113.83114)","Removed River Left diverters"
+996,"2016-10-04 00:00:00","N","N",124,2,1,105,8.5,"N","Across Island (45.15939, -113.83114)","L3AO turned off-  or very low flow???"
+997,"2016-10-05 00:00:00","N","N",163,4,1,110,8,"N","Across Island (45.15939, -113.83114)",
+998,"2016-10-06 00:00:00","N","N",179,3,1,114,8,"N","Across Island (45.15939, -113.83114)",
+999,"2016-10-07 00:00:00","N","N",179,3.5,1,112,7,"N","Across Island (45.15939, -113.83114)",
+1000,"2016-10-08 00:00:00","N","N",181,3.5,1,115,8,"N","Across Island (45.15939, -113.83114)",
+1001,"2016-10-09 00:00:00","N","Y",207,4,1,114,9,"N","Across Island (45.15939, -113.83114)","Adjusted trap upriver 3 ft"
+1002,"2016-10-10 00:00:00","N","N",207,3.75,1,113,9.5,"N","Across Island (45.15939, -113.83114)",
+1003,"2016-10-11 00:00:00","N","N",204,3.4,1,114,9,"N","Across Island (45.15939, -113.83114)",
+1004,"2016-10-12 00:00:00","N","N",192,4.5,1,115,5,"N","Across Island (45.15939, -113.83114)","Put RL diverters in to improve efficiency"
+1005,"2016-10-13 00:00:00","Y","N",230,6,1,117,5.5,"N","Across Island (45.15939, -113.83114)",
+1006,"2016-10-14 00:00:00","N","N",227,1.5,1,120,9,"N","Across Island (45.15939, -113.83114)","Removed RL diverters"
+1007,"2016-10-15 00:00:00","N","N",257,5,1,118,9,"N","Across Island (45.15939, -113.83114)","box flooded once overnight"
+1008,"2016-10-16 00:00:00","N","N",267,6,1,119,9,"N","Across Island (45.15939, -113.83114)",
+1009,"2016-10-17 00:00:00","N","N",271,6,1,120,9,"N","Across Island (45.15939, -113.83114)",
+1010,"2016-10-18 00:00:00","N","N",281,6,1,120,7.5,"N","Across Island (45.15939, -113.83114)","released upstream fish immediately in AM; tagged at 1045 "
+1011,"2016-10-19 00:00:00","N","N",271,6,1,121,6.5,"N","Across Island (45.15939, -113.83114)",
+1012,"2016-10-20 00:00:00","N","N",267,5.3,1,119,5,"N","Across Island (45.15939, -113.83114)",
+1013,"2016-10-21 00:00:00","N","N",267,5.4,1,119,7,"N","Across Island (45.15939, -113.83114)",
+1014,"2016-10-22 00:00:00","N","N",247,5.2,1,120,7,"N","Across Island (45.15939, -113.83114)",
+1015,"2016-10-23 00:00:00","N","N",250,5,1,120,7,"N","Across Island (45.15939, -113.83114)",
+1016,"2016-10-24 00:00:00","N","N",237,5.4,1,118,6.5,"N","Across Island (45.15939, -113.83114)",
+1017,"2016-10-25 00:00:00","N","N",281,5.2,0.5,121,7,"N","Across Island (45.15939, -113.83114)","Adjusted trap downriver 4 ft and RL 1.5 ft"
+1018,"2016-10-26 00:00:00","N","N",281,4,1,122,8,"N","Across Island (45.15939, -113.83114)",
+1019,"2016-10-27 00:00:00","N","N",267,4.5,1,120,8,"N","Across Island (45.15939, -113.83114)",
+1020,"2016-10-28 00:00:00","N","N",267,4,1,121,9,"N","Across Island (45.15939, -113.83114)",
+1021,"2016-10-29 00:00:00","N","Y",292,4.5,1,120,10,"N","Across Island (45.15939, -113.83114)","Moved trap to bank; put in 2 diverters on RL; trap box flooded 1x overnight"
+1022,"2016-10-30 00:00:00","Y","N",299,6,1,122,8,"N","Across Island (45.15939, -113.83114)",
+1023,"2016-10-31 00:00:00","Y","Y",410,0,0.5,130,7.5,"N","Across Island (45.15939, -113.83114)","Trap sunk twice overnight.  Loss of fish."
+1024,"2016-11-01 00:00:00","N","N",414,6.5,1,131,6,"N","Across Island (45.15939, -113.83114)",
+1025,"2016-11-02 00:00:00","N","N",439,6,1,130,7,"N","Across Island (45.15939, -113.83114)",
+1026,"2016-11-03 00:00:00","N","N",390,6.75,1,127,4.5,"N","Across Island (45.15939, -113.83114)",
+1027,"2016-11-04 00:00:00","N","N",378,6.5,1,127,3.5,"N","Across Island (45.15939, -113.83114)",
+1028,"2016-11-05 00:00:00","N","N",382,6.25,1,125,3,"N","Across Island (45.15939, -113.83114)",
+1029,"2016-11-06 00:00:00","N","N",370,6.25,1,125,4.25,"N","Across Island (45.15939, -113.83114)",
+1030,"2016-11-07 00:00:00","N","N",363,6.5,1,124,5,"N","Across Island (45.15939, -113.83114)",
+1031,"2016-11-08 00:00:00","N","N",351,6,0.5,120,4.5,"N","Across Island (45.15939, -113.83114)","Tire axle broken, Trap box flooded, Trap door open.  Replaced wheel and door"
+1032,"2016-11-09 00:00:00","N","N",390,6.5,1,124,4.5,"N","Across Island (45.15939, -113.83114)",
+1033,"2016-11-10 00:00:00","N","N",386,6.5,1,124,3.5,"N","Across Island (45.15939, -113.83114)","Trap door open"
+1034,"2016-11-11 00:00:00","N","N",414,6.25,1,124,4,"N","Across Island (45.15939, -113.83114)",
+1035,"2016-11-12 00:00:00","N","N",359,6,1,125,4,"N","Across Island (45.15939, -113.83114)","Axle broken, trap operating without cleaning drum only at night."
+1036,"2016-11-13 00:00:00","N","N",410,5.5,0.5,125,5,"N","Across Island (45.15939, -113.83114)","Axle broken, trap operating without cleaning drum only at night."
+1037,"2016-11-14 00:00:00","N","N",355,6.5,0.5,124,6,"N","Across Island (45.15939, -113.83114)","Axle broken, trap operating without cleaning drum only at night."
+1038,"2016-11-15 00:00:00","N","N",406,6.5,0.5,121,7,"N","Across Island (45.15939, -113.83114)","replaced drum axle"
+1039,"2016-11-16 00:00:00","N","N",464,5,0.5,131,6,"N","Across Island (45.15939, -113.83114)","debris on box, overflowing"
+1040,"2016-11-17 00:00:00","N","N",426,6.5,1,128,3,"N","Across Island (45.15939, -113.83114)",
+1041,"2016-11-18 00:00:00","N","N",344,6.5,1,124,0,"N","Across Island (45.15939, -113.83114)",
+1042,"2016-11-19 00:00:00","N","N",363,6,1,123,2,"N","Across Island (45.15939, -113.83114)",
+1043,"2016-11-20 00:00:00","N","N",359,6,1,124,2,"N","Across Island (45.15939, -113.83114)","raised cone @ 13:00; bolts sheared off from tire"
+1044,"2016-11-21 00:00:00","N","N",416,,0,,,"N","N/A","pulled trap for season"
+1045,"2017-02-28 00:00:00","N","Y",330,0,0.5,132,1,"N","Brush Pile","Trap Sunk, Re-set and adjusted position DS 2ft"
+1046,"2017-03-01 00:00:00","N","N",285,6.5,1,125,1,"N","Brush Pile","N/A"
+1047,"2017-03-02 00:00:00","N","N",289,6,1,125,0,"N","Brush Pile","N/A"
+1048,"2017-03-03 00:00:00","N","N",289,6.1,1,127,1,"N","Brush Pile","N/A"
+1049,"2017-03-04 00:00:00","N","N",314,6.7,1,127,2.5,"N","Brush Pile","N/A"
+1050,"2017-03-05 00:00:00","N","N",317,6.5,1,127,1,"N","Brush Pile","N/A"
+1051,"2017-03-06 00:00:00","N","N",292,6.6,0.5,128,1,"N","Brush Pile","Log in cone, not rotating"
+1052,"2017-03-07 00:00:00","N","N",283,6.2,1,126,2,"N","Brush Pile","N/A"
+1053,"2017-03-08 00:00:00","N","N",308,6.5,1,128,4,"N","Brush Pile","N/A"
+1054,"2017-03-09 00:00:00","N","N",320,6.7,1,130,4,"N","Brush Pile","N/A"
+1055,"2017-03-10 00:00:00","N","N",408,6,1,139,5,"N","Brush Pile","N/A"
+1056,"2017-03-11 00:00:00","N","N",450,0,0.5,141,4,"N","Brush Pile","Major debris, broke A-frame, trap decomisioned until repaired "
+1057,"2017-03-12 00:00:00","N","N",425,0,0,,,"N","Brush Pile","trap decomisioned until repaired "
+1058,"2017-03-13 00:00:00","N","N",408,0,0,,,"N","Brush Pile","repaired and set back into operation"
+1059,"2017-03-14 00:00:00","N","N",420,7,1,136,6,"N","Brush Pile","installed more foam blueboard to front of pontoons"
+1060,"2017-03-15 00:00:00","N","N",460,7.5,1,141,6,"N","Brush Pile","repaired blueboard foam that broke off"
+1061,"2017-03-16 00:00:00","N","N",506,6.7,1,145,6,"N","Brush Pile","added punched angle to blueboard, general maintenace, debris clogging cone"
+1062,"2017-03-17 00:00:00","N","N",514,7,1,145,4,"N","Brush Pile","Pulled the cone"
+1063,"2017-03-18 00:00:00","N","N",531,0,0,,,"N","Brush Pile","N/A"
+1064,"2017-03-19 00:00:00","N","N",614,0,0,,,"N","Brush Pile","N/A"
+1065,"2017-03-20 00:00:00","N","N",548,0,0,,,"N","Brush Pile","N/A"
+1066,"2017-03-21 00:00:00","N","N",527,0,0,,,"N","Brush Pile","N/A"
+1067,"2017-03-22 00:00:00","N","N",523,8.199999999999999,1,144,6,"N","Brush Pile","Dropped the cone"
+1068,"2017-03-23 00:00:00","N","N",523,6.7,1,146,5,"N","Brush Pile","N/A"
+1069,"2017-03-24 00:00:00","N","N",489,7.8,1,141,4,"N","Brush Pile","Debris Clogging Cone"
+1070,"2017-03-25 00:00:00","N","N",432,6.9,1,139,5,"N","Brush Pile","N/A"
+1071,"2017-03-26 00:00:00","N","N",444,7.2,1,138,3.5,"N","Brush Pile","N/A"
+1072,"2017-03-27 00:00:00","N","N",408,6.8,1,135,5.5,"N","Brush Pile","N/A"
+1073,"2017-03-28 00:00:00","N","N",381,6,1,135,5,"N","Brush Pile","N/A"
+1074,"2017-03-29 00:00:00","N","N",362,5.6,1,134,5,"N","Brush Pile","N/A"
+1075,"2017-03-30 00:00:00","N","N",456,6.7,1,145,5.5,"N","Brush Pile","N/A"
+1076,"2017-03-31 00:00:00","N","N",412,7.5,0.5,139,5,"N","Brush Pile","Cone not rotating at 6pm, log jam, removed."
+1077,"2017-04-01 00:00:00","N","N",393,7.2,1,137,4,"N","Brush Pile","N/A"
+1078,"2017-04-02 00:00:00","N","N",377,6.5,1,135,6,"N","Brush Pile","N/A"
+1079,"2017-04-03 00:00:00","N","N",381,7.1,1,135,4,"N","Brush Pile","A lot of small debri in trap box"
+1080,"2017-04-04 00:00:00","N","N",400,6.8,1,136,2,"N","Brush Pile","N/A"
+1081,"2017-04-05 00:00:00","N","N",377,6.8,1,135,4,"N","Brush Pile","N/A"
+1082,"2017-04-06 00:00:00","N","N",366,6.8,1,134,6,"N","Brush Pile","N/A"
+1083,"2017-04-07 00:00:00","N","N",370,6.7,1,134,7,"N","Brush Pile","N/A"
+1084,"2017-04-08 00:00:00","N","N",393,6.1,1,136,5,"N","Brush Pile","N/A"
+1085,"2017-04-09 00:00:00","N","N",400,6.8,1,136,4,"N","Brush Pile","N/A"
+1086,"2017-04-10 00:00:00","N","N",370,6.8,1,135,3,"N","Brush Pile","N/A"
+1087,"2017-04-11 00:00:00","N","N",360,6.7,1,133,3,"N","Brush Pile","N/A"
+1088,"2017-04-12 00:00:00","N","N",354,6.7,1,132,5,"N","Brush Pile","N/A"
+1089,"2017-04-13 00:00:00","N","N",343,5.7,1,131,7,"N","Brush Pile","N/A"
+1090,"2017-04-14 00:00:00","N","N",390,6,1,137,6,"N","Brush Pile","N/A"
+1091,"2017-04-15 00:00:00","N","N",400,5.9,1,136,6,"N","Brush Pile","N/A"
+1092,"2017-04-16 00:00:00","N","N",389,6.7,1,135,4,"N","Brush Pile","N/A"
+1093,"2017-04-17 00:00:00","N","N",400,5.9,1,135,7,"N","Brush Pile","N/A"
+1094,"2017-04-18 00:00:00","N","N",380,5.2,1,135,7,"N","Brush Pile","N/A"
+1095,"2017-04-19 00:00:00","N","N",380,5.2,1,134,7,"N","Brush Pile","N/A"
+1096,"2017-04-20 00:00:00","N","N",360,5.7,1,132,7,,"Brush Pile","N/A"
+1097,"2017-04-21 00:00:00","N","N",400,5.9,1,133,5.5,,"Brush Pile","N/A"
+1098,"2017-04-22 00:00:00","N","N",390,5.7,1,130,5.5,,"Brush Pile","N/A"
+1099,"2017-04-23 00:00:00","N","N",377,5.7,1,130,8.5,"Y","Brush Pile","N/A"
+1100,"2017-04-24 00:00:00","N","N",400,6.3,1,133,8,"Y","Brush Pile","N/A"
+1101,"2017-04-25 00:00:00","N","N",420,0,0.5,134,7,"Y","Brush Pile","Log in cone, not rotating"
+1102,"2017-04-26 00:00:00","N","N",385,5.3,1,132,8,"Y","Brush Pile","trap cone access door ajar; applied pop-rivets for repair "
+1103,"2017-04-27 00:00:00","N","N",393,0,0,,,"Y","Brush Pile","Cone left up overnight by error after repairs"
+1104,"2017-04-28 00:00:00","N","N",350,5.5,1,130,5,"Y","Brush Pile","N/A"
+1105,"2017-04-29 00:00:00","N","N",330,6,1,125,5,"Y","Brush Pile","N/A"
+1106,"2017-04-30 00:00:00","N","N",350,5.4,1,123,8,"Y","Brush Pile","N/A"
+1107,"2017-05-01 00:00:00","N","N",350,5.7,1,123,7,"Y","Brush Pile","N/A"
+1108,"2017-05-02 00:00:00","N","N",350,5,1,121,8.5,"Y","Brush Pile","N/A"
+1109,"2017-05-03 00:00:00","N","N",320,2.6,1,119,7.5,"Y","Brush Pile","algae build up on cone slowing rotation, needs more frequent cleaning (2Xdaily)"
+1110,"2017-05-04 00:00:00","N","N",268,0,0.5,115,9.5,"Y","Brush Pile","algae build up on cone slowing rotation, frequent cleaning (2Xdaily)"
+1111,"2017-05-05 00:00:00","N","N",275,1.75,1,115,10.5,"Y","Brush Pile","algae build up on cone slowing rotation, frequent cleaning (2Xdaily)"
+1112,"2017-05-06 00:00:00","N","N",343,1,1,120,11,"Y","Brush Pile","algae build up on cone slowing rotation, needs more frequent cleaning (3Xdaily)"
+1113,"2017-05-07 00:00:00","N","N",720,0,0.5,148,10,"Y","NA","Trap pulled due to high flows and debri"
+1114,"2017-05-08 00:00:00","N","N",860,0,0,,0,"Y","NA","Trap pulled due to high flows and debri, trap ferried across to river left"
+1115,"2017-05-09 00:00:00","N","N",762,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1116,"2017-05-10 00:00:00","N","N",733,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1117,"2017-05-11 00:00:00","N","N",748,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1118,"2017-05-12 00:00:00","N","N",844,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1119,"2017-05-13 00:00:00","N","N",1070,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1120,"2017-05-14 00:00:00","N","N",1100,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1121,"2017-05-15 00:00:00","N","N",1020,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1122,"2017-05-16 00:00:00","N","N",874,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1123,"2017-05-17 00:00:00","N","N",880,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1124,"2017-05-18 00:00:00","N","N",850,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1125,"2017-05-19 00:00:00","N","N",775,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1126,"2017-05-20 00:00:00","N","N",700,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1127,"2017-05-21 00:00:00","N","N",660,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1128,"2017-05-22 00:00:00","N","N",600,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1129,"2017-05-23 00:00:00","N","N",610,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1130,"2017-05-24 00:00:00","N","N",770,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1131,"2017-05-25 00:00:00","N","N",950,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1132,"2017-05-26 00:00:00","N","N",1000,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1133,"2017-05-27 00:00:00","N","N",900,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1134,"2017-05-28 00:00:00","N","N",800,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1135,"2017-05-29 00:00:00","N","N",780,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1136,"2017-05-30 00:00:00","N","N",900,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1137,"2017-05-31 00:00:00","N","N",1140,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1138,"2017-06-01 00:00:00","N","N",1050,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1139,"2017-06-02 00:00:00","N","N",1300,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1140,"2017-06-03 00:00:00","N","N",1500,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1141,"2017-06-04 00:00:00","N","N",1400,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1142,"2017-06-05 00:00:00","N","N",1800,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1143,"2017-06-06 00:00:00","N","N",2000,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1144,"2017-06-07 00:00:00","N","N",2000,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1145,"2017-06-08 00:00:00","N","N",1600,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1146,"2017-06-09 00:00:00","N","N",2000,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1147,"2017-06-10 00:00:00","N","N",1700,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1148,"2017-06-11 00:00:00","N","N",1400,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1149,"2017-06-12 00:00:00","N","N",1300,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1150,"2017-06-13 00:00:00","N","N",1900,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1151,"2017-06-14 00:00:00","N","N",2000,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1152,"2017-06-15 00:00:00","N","N",1500,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1153,"2017-06-16 00:00:00","N","N",1250,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1154,"2017-06-17 00:00:00","N","N",1300,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1155,"2017-06-18 00:00:00","N","N",1300,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1156,"2017-06-19 00:00:00","N","N",1300,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1157,"2017-06-20 00:00:00","N","N",1150,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1158,"2017-06-21 00:00:00","N","N",1350,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1159,"2017-06-22 00:00:00","N","N",1400,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1160,"2017-06-23 00:00:00","N","N",1325,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1161,"2017-06-24 00:00:00","N","N",950,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1162,"2017-06-25 00:00:00","N","N",870,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1163,"2017-06-26 00:00:00","N","N",850,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1164,"2017-06-27 00:00:00","N","N",825,0,0,,,"Y","u","Trap pulled due to high flows and debri"
+1165,"2017-06-28 00:00:00","N","N",786,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1166,"2017-06-29 00:00:00","N","N",727,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1167,"2017-06-30 00:00:00","N","N",646,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1168,"2017-07-01 00:00:00","N","N",605,0,0,,,"Y","NA","Trap pulled due to high flows and debri"
+1169,"2017-07-02 00:00:00","N","Y",566,0,0,,,"Y","NA","Trap installed"
+1170,"2017-07-03 00:00:00","N","N",561,5.8,1,,12,"Y","Brush Pile",
+1171,"2017-07-04 00:00:00","N","N",557,6,1,,12,"Y","Brush Pile",
+1172,"2017-07-05 00:00:00","N","N",523,6,1,180,12,"Y","Brush Pile",
+1173,"2017-07-06 00:00:00","N","N",493,6.4,1,180,12,"Y","Brush Pile",
+1174,"2017-07-07 00:00:00","N","N",460,6.2,1,175,12,"Y","Brush Pile",
+1175,"2017-07-08 00:00:00","N","N",430,5.9,1,170,14,"Y","Brush Pile",
+1176,"2017-07-09 00:00:00","N","N",415,5.9,1,170,14,"Y","Brush Pile",
+1177,"2017-07-10 00:00:00","N","N",390,5.7,1,166,14,"Y","Brush Pile",
+1178,"2017-07-11 00:00:00","N","N",350,5,1,161,13,"Y","Brush Pile",
+1179,"2017-07-12 00:00:00","N","N",330,5,1,161,13,"Y","Brush Pile","trap cone raised during day to allow passage of debri flow from diversion cleaning"
+1180,"2017-07-13 00:00:00","N","N",320,5.3,1,154,13,"Y","Brush Pile",
+1181,"2017-07-14 00:00:00","N","N",300,4.5,1,151,14,"Y","Brush Pile",
+1182,"2017-07-15 00:00:00","N","N",241,5,1,150,14,"Y","Brush Pile",
+1183,"2017-07-16 00:00:00","N","N",218,5,1,145,15,"Y","Brush Pile",
+1184,"2017-07-17 00:00:00","N","N",208,5.4,1,140,15,"Y","Brush Pile",
+1185,"2017-07-18 00:00:00","N","N",196,5.45,1,135,15,"Y","Brush Pile",
+1186,"2017-07-19 00:00:00","N","N",183,5,1,130,15,"Y","Brush Pile",
+1187,"2017-07-20 00:00:00","N","N",156,4.28,1,125,14,"Y","Brush Pile","Two diverters installed river left . "
+1188,"2017-07-21 00:00:00","Y","N",153,5.45,1,125,12.5,"Y","Brush Pile",
+1189,"2017-07-22 00:00:00","Y","N",139,4.6,1,120,13,"Y","Brush Pile",
+1190,"2017-07-23 00:00:00","Y","N",123,4,1,115,13,"Y","Brush Pile",
+1191,"2017-07-24 00:00:00","Y","N",105,2.5,1,110,14,"Y","Brush Pile",
+1192,"2017-07-25 00:00:00","Y","N",100,2,1,100,14,"Y","Brush Pile",
+1193,"2017-07-26 00:00:00","Y","N",70,3,1,101,14,"Y","Brush Pile",
+1194,"2017-07-27 00:00:00","Y","N",100,3.75,1,115,14,"Y","Brush Pile",
+1195,"2017-07-28 00:00:00","Y","N",130,3.75,1,120,14,"Y","Brush Pile",
+1196,"2017-07-29 00:00:00","Y","N",90,3.8,1,120,14,"Y","Brush Pile","Added more diverters and adjusted angle of existing diverters on river left"
+1197,"2017-07-30 00:00:00","Y","N",72,3.8,1,110,14,"Y","Brush Pile",
+1198,"2017-07-31 00:00:00","Y","N",67,3.5,1,105,15,"Y","Brush Pile",
+1199,"2017-08-01 00:00:00","Y","N",49.8,3,1,100,14,"Y","Brush Pile",
+1200,"2017-08-02 00:00:00","Y","N",48.5,3.3,1,105,13,"Y","Brush Pile",
+1201,"2017-08-03 00:00:00","Y","N",61.1,3.5,1,107,14,"Y","Brush Pile",
+1202,"2017-08-04 00:00:00","Y","N",59.6,4,1,107,14,"Y","Brush Pile",
+1203,"2017-08-05 00:00:00","Y","N",42.3,3,1,100,17,"Y","Brush Pile",
+1204,"2017-08-06 00:00:00","Y","N",37,2.6,1,97,14,"Y","Brush Pile",
+1205,"2017-08-07 00:00:00","Y","N",29,2.3,1,96,14,"Y","Brush Pile",
+1206,"2017-08-08 00:00:00","Y","N",26,2.2,1,96,14,"Y","Brush Pile",
+1207,"2017-08-09 00:00:00","Y","N",28,2.2,1,95,14,"Y","Brush Pile",
+1208,"2017-08-10 00:00:00","Y","N",27,2.2,1,95,13.5,"Y","Brush Pile","Added 2 diverters to river right"
+1209,"2017-08-11 00:00:00","Y","N",29,2.5,1,95,14,"Y","Brush Pile",
+1210,"2017-08-12 00:00:00","Y","N",26,2.7,1,95,14,"Y","Brush Pile",
+1211,"2017-08-13 00:00:00","Y","N",27,2.7,1,96,14.5,"Y","Brush Pile","rearranged diverters on river left and added one more diverter"
+1212,"2017-08-14 00:00:00","Y","N",27.2,3.15,1,97,14.5,"Y","Brush Pile",
+1213,"2017-08-15 00:00:00","Y","N",25.5,2.3,1,87,13,"Y","Brush Pile",
+1214,"2017-08-16 00:00:00","Y","N",25.5,2.4,1,87,13,"Y","Brush Pile",
+1215,"2017-08-17 00:00:00","Y","N",25.5,3,1,87,13,"Y","Brush Pile",
+1216,"2017-08-18 00:00:00","Y","N",25.5,2.72,1,90,13,"Y","Brush Pile",
+1217,"2017-08-19 00:00:00","Y","N",28.1,3.1,1,90,13,"Y","Brush Pile",
+1218,"2017-08-20 00:00:00","Y","N",24.7,2.85,1,90,12,"Y","Brush Pile",
+1219,"2017-08-21 00:00:00","Y","N",26,3,1,94,12,"Y","Brush Pile",
+1220,"2017-08-22 00:00:00","Y","N",26,3,1,93,11,"Y","Brush Pile",
+1221,"2017-08-23 00:00:00","Y","N",25.5,3,1,94,12,"Y","Brush Pile",
+1222,"2017-08-24 00:00:00","Y","N",26,3,1,94,13,"Y","Brush Pile",
+1223,"2017-08-25 00:00:00","Y","N",27,3,1,94,13.5,"Y","Brush Pile",
+1224,"2017-08-26 00:00:00","Y","N",26,2.9,1,93,14,"Y","Brush Pile","repositioned release box in to deeper water in main stream channel"
+1225,"2017-08-27 00:00:00","Y","N",25.5,2.7,1,91,13,"Y","Brush Pile",
+1226,"2017-08-28 00:00:00","Y","N",25.5,2.7,1,91,12,"Y","Brush Pile",
+1227,"2017-08-29 00:00:00","Y","N",25.5,2.8,1,93,13.5,"Y","Brush Pile",
+1228,"2017-08-30 00:00:00","Y","N",25.5,2.8,1,91,13.5,"Y","Brush Pile",
+1229,"2017-08-31 00:00:00","Y","N",26.3,3.15,1,93,13,"Y","Brush Pile",
+1230,"2017-09-01 00:00:00","Y","N",24.7,2.7,1,91,12.5,"Y","Brush Pile",
+1231,"2017-09-02 00:00:00","Y","N",25.5,2.5,1,91,12.5,"Y","Brush Pile",
+1232,"2017-09-03 00:00:00","Y","N",26,2.4,1,90,12.5,"Y","Brush Pile",
+1233,"2017-09-04 00:00:00","Y","N",26,2.5,1,91,13,"Y","Brush Pile",
+1234,"2017-09-05 00:00:00","Y","N",26,2.4,1,91,13,"Y","Brush Pile",
+1235,"2017-09-06 00:00:00","Y","N",26,2.4,1,91,12,"Y","Brush Pile",
+1236,"2017-09-07 00:00:00","Y","N",26,2.5,1,92,12,"Y","Brush Pile",
+1237,"2017-09-08 00:00:00","Y","N",26,2.4,1,92,12.5,"Y","Brush Pile",
+1238,"2017-09-09 00:00:00","Y","N",26,2.5,1,93,12.5,"Y","Brush Pile",
+1239,"2017-09-10 00:00:00","Y","N",26,2.5,1,94,13,"Y","Brush Pile",
+1240,"2017-09-11 00:00:00","Y","N",26,2.6,1,95,13,"Y","Brush Pile",
+1241,"2017-09-12 00:00:00","Y","N",25.5,2.5,1,92,13,"Y","Brush Pile",
+1242,"2017-09-13 00:00:00","Y","N",25.5,2.4,1,92,14,"Y","Brush Pile",
+1243,"2017-09-14 00:00:00","Y","N",26.3,2.4,1,92,13,"Y","Brush Pile",
+1244,"2017-09-15 00:00:00","Y","N",49.8,3.2,1,100,10,"Y","Brush Pile","Leaf litter increased significantly with rain .  Release box relocated to shallower water."
+1245,"2017-09-16 00:00:00","Y","N",131,5.5,1,123,8,"Y","Brush Pile","Leaf litter increased significantly with rain . Diverters under stress. Moved release box again . "
+1246,"2017-09-17 00:00:00","N","N",150,3.75,0.5,120,9,"Y","Brush Pile","Log in cone, not rotating"
+1247,"2017-09-18 00:00:00","N","N",162,3.5,1,120,10,"Y","Brush Pile",
+1248,"2017-09-19 00:00:00","N","N",238,3.75,1,135,9,"Y","Brush Pile",
+1249,"2017-09-20 00:00:00","N","N",220,4,1,135,8,"Y","Brush Pile",
+1250,"2017-09-21 00:00:00","N","N",215,4,1,134,8,"Y","Brush Pile",
+1251,"2017-09-22 00:00:00","N","N",215,4,1,134,8,"Y","Brush Pile",
+1252,"2017-09-23 00:00:00","N","N",260,4,1,141,8,"Y","Brush Pile",
+1253,"2017-09-24 00:00:00","N","N",230,3.75,1,132,8.5,"Y","Brush Pile",
+1254,"2017-09-25 00:00:00","N","N",240,3.75,1,131,8,"Y","Brush Pile",
+1255,"2017-09-26 00:00:00","N","N",255,3.8,1,132,9,"Y","Brush Pile",
+1256,"2017-09-27 00:00:00","N","N",258,4,1,132,10,"Y","Brush Pile",
+1257,"2017-09-28 00:00:00","N","Y",241,4,1,137,8,"Y","Brush Pile","Adjusted Safety cable length , ferry line pully location"
+1258,"2017-09-29 00:00:00","N","N",250,4,1,137,8,"Y","Brush Pile",
+1259,"2017-09-30 00:00:00","N","Y",251,4,1,140,9,"Y","Brush Pile","Moved trap upstream 4 feet "
+1260,"2017-10-01 00:00:00","N","N",290,4,1,141,7,"Y","Brush Pile",
+1261,"2017-10-02 00:00:00","N","N",295,6,1,145,8,"Y","Brush Pile",
+1262,"2017-10-03 00:00:00","N","N",300,5.5,1,145,8,"Y","Brush Pile",
+1263,"2017-10-04 00:00:00","N","N",310,5.5,1,145,5,"Y","Brush Pile",
+1264,"2017-10-05 00:00:00","N","N",350,5,1,147,6,"Y","Brush Pile","installed two diverters on river left to boost recapture efficiency "
+1265,"2017-10-06 00:00:00","Y","N",355,6.3,1,148,8,"Y","Brush Pile",
+1266,"2017-10-07 00:00:00","Y","N",360,6,1,149,10,"Y","Brush Pile",
+1267,"2017-10-08 00:00:00","Y","N",355,7.5,1,151,8,"Y","Brush Pile",
+1268,"2017-10-09 00:00:00","Y","N",358,6.5,1,148,4,"Y","Brush Pile",
+1269,"2017-10-10 00:00:00","Y","N",350,6.7,1,147,4,"Y","Brush Pile",
+1270,"2017-10-11 00:00:00","Y","Y",360,6.9,1,150,6,"Y","Brush Pile","moved trap upstream 3.5 feet"
+1271,"2017-10-12 00:00:00","Y","N",354,7.5,1,150,6,"Y","Brush Pile",
+1272,"2017-10-13 00:00:00","Y","N",362,7.8,1,152,6,"Y","Brush Pile",
+1273,"2017-10-14 00:00:00","Y","N",368,7.5,1,150,6.5,"Y","Brush Pile",
+1274,"2017-10-15 00:00:00","Y","N",351,7.8,1,150,5,"Y","Brush Pile",
+1275,"2017-10-16 00:00:00","Y","N",343,7.7,1,150,6,"Y","Brush Pile",
+1276,"2017-10-17 00:00:00","Y","N",347,7.59,1,150,5,"Y","Brush Pile",
+1277,"2017-10-18 00:00:00","Y","N",350,7.2,1,148,5,"Y","Brush Pile",
+1278,"2017-10-19 00:00:00","Y","N",350,7.3,1,148,8,"Y","Brush Pile",
+1279,"2017-10-20 00:00:00","Y","N",350,7.3,1,145,7,"Y","Brush Pile",
+1280,"2017-10-21 00:00:00","Y","N",350,7.3,1,149,5,"Y","Brush Pile",
+1281,"2017-10-22 00:00:00","Y","Y",350,6.6,1,145,8,"N","Brush Pile","adjusted upstream trap saftey cable to move trap in closer to the bank"
+1282,"2017-10-23 00:00:00","Y","N",355,6.7,1,148,5,"N","Brush Pile",
+1283,"2017-10-24 00:00:00","Y","N",360,6.5,1,148,4,"N","Brush Pile",
+1284,"2017-10-25 00:00:00","Y","N",358,6.4,1,148,3,"N","Brush Pile","Release box didn’t release last night due to mechanical error timer stuck"
+1285,"2017-10-26 00:00:00","Y","N",358,6,1,148,6,"N","Brush Pile","Released by hand"
+1286,"2017-10-27 00:00:00","Y","N",354,6.12,1,150,4.5,"N","Brush Pile","Released by hand"
+1287,"2017-10-28 00:00:00","Y","N",351,6.5,1,150,5,"N","Brush Pile","Released by hand"
+1288,"2017-10-29 00:00:00","Y","N",347,6.3,1,150,5,"N","Brush Pile","Released by hand"
+1289,"2017-10-30 00:00:00","Y","N",343,2,0.5,150,5,"N","Brush Pile","Released by hand"
+1290,"2017-10-31 00:00:00","Y","N",362,6.25,1,150,2.5,"N","Brush Pile","Released by hand"
+1291,"2017-11-01 00:00:00","Y","N",370,6.2,1,148,3,"N","Brush Pile","Released by hand"
+1292,"2017-11-02 00:00:00","Y","N",370,6,1,148,4,"N","Brush Pile","Released by hand"
+1293,"2017-11-03 00:00:00","Y","N",390,6.4,1,149,4,"N","Brush Pile","Released by hand"
+1294,"2017-11-04 00:00:00","Y","N",398,6.3,1,149,4,"N","Brush Pile","Released by hand"
+1295,"2017-11-05 00:00:00","Y","N",378,6.1,1,148,2,"N","Brush Pile","Released by hand"
+1296,"2017-11-06 00:00:00","Y","N",368,6.4,1,148,3,"N","Brush Pile","Released by hand"
+1297,"2017-11-07 00:00:00","Y","N",358,6.3,1,146,3,"N","Brush Pile","Released by hand"
+1298,"2017-11-08 00:00:00","Y","N",325,6.1,1,143,1,"N","Brush Pile","Released by hand"
+1299,"2017-11-09 00:00:00","Y","N",366,6.45,1,150,4,"N","Brush Pile","Released by hand"
+1300,"2017-11-10 00:00:00","Y","N",381,6.45,1,150,3,"N","Brush Pile","Released by hand"
+1301,"2017-11-11 00:00:00","Y","N",385,6.45,1,150,4,"N","Brush Pile","Released by hand"
+1302,"2017-11-12 00:00:00","Y","N",381,6.7,1,150,3,"N","Brush Pile","Released by hand"
+1303,"2017-11-13 00:00:00","Y","N",358,6.5,1,150,2,"N","Brush Pile","Released by hand"
+1304,"2017-11-14 00:00:00","Y","N",358,6.68,1,150,2,"N","Brush Pile","Released by hand"
+1305,"2017-11-15 00:00:00","Y","N",354,6.25,1,150,1,"N","Brush Pile","Released by hand"
+1306,"2017-11-16 00:00:00","Y","N",366,6.3,1,150,1,"N","Brush Pile","Released by hand"
+1307,"2017-11-17 00:00:00","Y","N",366,6.5,1,150,4,"N","Brush Pile","Released by hand"
+1308,"2017-11-18 00:00:00","Y","N",351,6,1,150,1,"N","Brush Pile","Released by hand"
+1309,"2017-11-19 00:00:00","Y","N",310,6.5,1,142,1.5,"N","Brush Pile","Released by hand"
+1310,"2017-11-20 00:00:00","Y","N",332,6,1,150,1,"N","Brush Pile","Released by hand"
+1311,"2017-11-21 00:00:00","Y","N",351,6,1,145,3,"N","Brush Pile","Released by hand"
+1312,"2017-11-22 00:00:00","Y","N",366,6,1,153,4,"N","Brush Pile","Released by hand"
+1313,"2017-11-23 00:00:00","Y","N",385,6,1,153,5,"N","Brush Pile","Released by hand"
+1314,"2017-11-24 00:00:00","Y","N",393,6,1,153,5,"N","Brush Pile","Released by hand"
+1315,"2017-11-25 00:00:00","Y","N",385,6,1,155,2,"N","Brush Pile","Released by hand"
+1316,"2017-11-26 00:00:00","Y","N",377,6,1,154,2,"N","Brush Pile","Released by hand"
+1317,"2017-11-27 00:00:00","Y","N",381,6.5,1,153,5,"N","Brush Pile","Released by hand"
+1318,"2017-11-28 00:00:00","Y","N",385,5.7,1,153,2,"N","Brush Pile","Released by hand"
+1319,"2017-11-29 00:00:00","Y","N",366,6,1,150,2,"N",,
+1320,"2018-02-14 00:00:00","Y","Y",278,0,0,,1,"N","Brush Pile",
+1321,"2018-02-15 00:00:00","Y","N",292,7,1,141,0,"N","Brush Pile",
+1322,"2018-02-16 00:00:00","N","Y",271,,0,,,"N","Brush Pile",
+1323,"2018-02-17 00:00:00","N","N",285,,0,,,"N","Brush Pile",
+1324,"2018-02-18 00:00:00","N","N",307,,0,,,"N","Brush Pile",
+1325,"2018-02-19 00:00:00","N","N",278,,0,,,"N","Brush Pile",
+1326,"2018-02-20 00:00:00","N","N",231,,0,,,"N","Brush Pile",
+1327,"2018-02-21 00:00:00","N","N",261,,0,,,"N","Brush Pile",
+1328,"2018-02-22 00:00:00","N","N",275,,0,,,"N","Brush Pile",
+1329,"2018-02-23 00:00:00","N","N",275,,0,,,"N","Brush Pile",
+1330,"2018-02-24 00:00:00","N","N",275,,0,,,"N","Brush Pile",
+1331,"2018-02-25 00:00:00","N","N",268,,0,,,"N","Brush Pile",
+1332,"2018-02-26 00:00:00","N","N",278,,0,,,"N","Brush Pile",
+1333,"2018-02-27 00:00:00","N","N",251,,0,,,"N","Brush Pile",
+1334,"2018-02-28 00:00:00","N","N",251,,0,,,"N","Brush Pile",
+1335,"2018-03-01 00:00:00","N","Y",265,5.45,1,138,0,"N","Brush Pile",
+1336,"2018-03-02 00:00:00","N","N",285,5.9,1,140,1,"N","Brush Pile",
+1337,"2018-03-03 00:00:00","N","N",268,0,1,140,0,"N","Brush Pile",
+1338,"2018-03-04 00:00:00","N","N",285,6.3,1,140,1,"N","Brush Pile",
+1339,"2018-03-05 00:00:00","N","N",271,6.2,1,138,0,"N","Brush Pile",
+1340,"2018-03-06 00:00:00","N","N",278,6.3,1,137,1,"N","Brush Pile",
+1341,"2018-03-07 00:00:00","N","N",271,6.2,1,137,0,"N","Brush Pile",
+1342,"2018-03-08 00:00:00","Y","N",278,6.7,1,138,2,"N","Brush Pile",
+1343,"2018-03-09 00:00:00","Y","N",292,6.8,1,141,2,"N","Brush Pile",
+1344,"2018-03-10 00:00:00","N","N",321,5.8,1,145,2,"N","Brush Pile","Flows inc. 150cfs, knocked over diverters, muddied water, debris increased"
+1345,"2018-03-11 00:00:00","N","N",292,6.4,1,145,2,"N","Brush Pile","Release Box Error- battery failed, door dropped early"
+1346,"2018-03-12 00:00:00","N","N",312,6.5,1,141,0,"N","Brush Pile",
+1347,"2018-03-13 00:00:00","N","N",333,6.4,1,143,2,"N","Brush Pile","Moved trap 2 ft away from river right bank and added a diverter river left at 11:00"
+1348,"2018-03-14 00:00:00","Y","Y",289,7,1,148,4,"N","Brush Pile",
+1349,"2018-03-15 00:00:00","Y","N",358,0,0.5,153,3,"N","Brush Pile","Trap was sunk in morning, BL & TM refloat half operation"
+1350,"2018-03-16 00:00:00","Y","N",282,6.67,1,157,4,"N","Brush Pile",
+1351,"2018-03-17 00:00:00","Y","N",238,6.67,1,152,2,"N","Brush Pile",
+1352,"2018-03-18 00:00:00","Y","N",211,6.67,1,149,2,"N","Brush Pile",
+1353,"2018-03-19 00:00:00","Y","N",354,6.5,1,148,2,"N","Brush Pile",
+1354,"2018-03-20 00:00:00","Y","Y",325,7.2,1,145,2.5,"N","Brush Pile","Adjusted trap the afternoon of 3/19.  Trap now two feet off of RL bank"
+1355,"2018-03-21 00:00:00","Y","N",325,7.2,1,143,3.5,"N","Brush Pile","Auto-release box did not open the night before-  no recaps.  5 YOY chinook BB upstream"
+1356,"2018-03-22 00:00:00","Y","N",354,7.2,1,147,5,"N","Brush Pile",
+1357,"2018-03-23 00:00:00","N","Y",561,0,0.5,169,5,"N","Brush Pile","Nite check, TM watched log jam cone and stop it. Raised cone, livewelled fish."
+1358,"2018-03-24 00:00:00","N","N",477,6.3,1,162,3,"N","Brush Pile",
+1359,"2018-03-25 00:00:00","N","Y",460,6.1,1,157,2,"N","Brush Pile",
+1360,"2018-03-26 00:00:00","N","N",389,7.3,1,153,2,"N","Brush Pile","3/25 noon- Adjust trap into thalwag to try and catch more fish"
+1361,"2018-03-27 00:00:00","N","N",354,7.1,1,148,3.5,"N","Brush Pile",
+1362,"2018-03-28 00:00:00","N","N",366,7.3,1,149,4,"N","Brush Pile","Added one diverter RL 10 m below ferry line"
+1363,"2018-03-29 00:00:00","Y","N",362,7.5,1,150,4,"N","Brush Pile","Adjust trap upstream & RL looking for SH"
+1364,"2018-03-30 00:00:00","Y","Y",366,7.9,1,151,5,"N","Brush Pile",
+1365,"2018-03-31 00:00:00","Y","N",393,7.7,1,155,6,"N","Brush Pile","Flow up, lots of water wash front of trap- detering SH?"
+1366,"2018-04-01 00:00:00","Y","N",396,6.9,1,150,5,"N","Brush Pile","Drum not rotating. Tire spinning, axel broken."
+1367,"2018-04-02 00:00:00","Y","N",401,8.1,0.5,147,5,"N","Brush Pile","Drum axle repair malfunction at 20:45 on 4/1.  Cone raised at that time for repair."
+1368,"2018-04-03 00:00:00","Y","Y",355,7.7,1,143,3,"N","Brush Pile","Cone raised until 1620 on 4/2.  Adjusted trap location closer to RL bank 2 ft and raised cone 7"" to minize ""wash"" in front of trap."
+1369,"2018-04-04 00:00:00","Y","N",359,7.5,1,147,4,"N","Brush Pile","Added rubber flap to drum"
+1370,"2018-04-05 00:00:00","Y","N",363,7.64,1,147,6,"N","Brush Pile","After worked fish: flipped tire, attempted studes on collar(fail), removed wood blocks"
+1371,"2018-04-06 00:00:00","Y","Y",382,7.7,1,149,7,"N","Brush Pile","Drum not spinning- collar wore flat spot in tire. Fix colloar & replace tire."
+1372,"2018-04-07 00:00:00","Y","N",422,7.1,1,155,7,"N","Brush Pile","Flows >400cfs last night. Still operating normally."
+1373,"2018-04-08 00:00:00","Y","N",483,5.8,1,158,5.5,"N","Brush Pile","Flows increased, high debris load. Tire spinning, but drum box not rotating."
+1374,"2018-04-09 00:00:00","Y","N",434,7,0.5,156,5,"N","Brush Pile","Tire, drive shaft and live box drum not working, pulled trap at 0530 to work on it."
+1375,"2018-04-10 00:00:00","Y","Y",403,7.2,1,153,5.5,"N","Brush Pile","Had trap pulled until 1440.  Operated trap without live box drum functioning.  Adjusted trap to 2 ft off RR bank."
+1376,"2018-04-11 00:00:00","Y","N",411,7.6,1,154,6,"N","Brush Pile","Live box drum still down for repair."
+1377,"2018-04-12 00:00:00","Y","N",423,7.4,1,157,7,"N","Brush Pile","Live box drum still down for repair."
+1378,"2018-04-13 00:00:00","Y","N",428,6.6,1,156,3.5,"N","Brush Pile","Live box drum still down for repair."
+1379,"2018-04-14 00:00:00","Y","N",400,6.2,1,153,5,"N","Brush Pile","Live box drum still down for repair."
+1380,"2018-04-15 00:00:00","Y","N",397,7,1,151,5,"N","Brush Pile","Live box drum still down for repair."
+1381,"2018-04-16 00:00:00","Y","N",397,7.15,1,151,7.5,"N","Brush Pile","Live box drum still down for repair."
+1382,"2018-04-17 00:00:00","Y","N",425,7.6,1,154,4.5,"N","Brush Pile","Live box drum still down for repair."
+1383,"2018-04-18 00:00:00","Y","N",386,7.5,1,149,5,"N","Brush Pile","Cone raised from 1330-1530 (2 hrs) on 4/17 for repair work."
+1384,"2018-04-19 00:00:00","Y","N",371,7.4,1,149,5.5,"N","Brush Pile","Cone raised from 0900-1400 4/18 for repairs."
+1385,"2018-04-20 00:00:00","Y","N",371,7.1,1,148,6,"N","Brush Pile",
+1386,"2018-04-21 00:00:00","Y","N",379,7.2,1,148,7,"N","Brush Pile",
+1387,"2018-04-22 00:00:00","Y","N",406,7,1,150,8,"N","Brush Pile",
+1388,"2018-04-23 00:00:00","Y","N",435,6.7,1,153,8,"N","Brush Pile",
+1389,"2018-04-24 00:00:00","Y","N",443,7.2,1,155,5,"N","Brush Pile",
+1390,"2018-04-25 00:00:00","Y","N",447,7.3,1,154,7,"N","Brush Pile",
+1391,"2018-04-26 00:00:00","Y","N",416,6.8,1,154,7.5,"N","Brush Pile",
+1392,"2018-04-27 00:00:00","Y","N",404,6.9,1,153,8,"Y","Brush Pile","Diversion turned on"
+1393,"2018-04-28 00:00:00","Y","N",436,6.6,1,156,10,"Y","Brush Pile","Removed diverters in anticipation of higher flows."
+1394,"2018-04-29 00:00:00","N","Y",473,6.2,1,157,8,"Y","Brush Pile","Adjusted trap at 1500 on 4/29/18.  Moved trap 2 ft to RR, right up against the bank in anticipation of higher flows."
+1395,"2018-04-30 00:00:00","N","Y",473,6.7,1,157,6.5,"Y","Brush Pile","Adjusted trap at 1300 on 4/30/18.  Moved trap back out 2 ft off of RR bank."
+1396,"2018-05-01 00:00:00","N","N",413,7.2,1,153,7,"Y","Brush Pile","Put diverters (2) back in on RL bank"
+1397,"2018-05-02 00:00:00","Y","N",359,7.2,1,149,7,"Y","Brush Pile",
+1398,"2018-05-03 00:00:00","Y","N",242,0,0.5,142,7,"Y","Brush Pile","Suspect that diveversions opened, flows dropped & lots of debris came down. Cone clogged and stopped rotating. Trap box flooded."
+1399,"2018-05-04 00:00:00","Y","Y",203,4.9,1,130,8,"Y","Brush Pile","12PM 5/3 Adjusted for low slows and stop trap from swaying to much"
+1400,"2018-05-05 00:00:00","y","N",213,5.1,1,132,9,"Y","Brush Pile",
+1401,"2018-05-06 00:00:00","Y","N",236,4.1,1,130,9.5,"Y","Brush Pile",
+1402,"2018-05-07 00:00:00","Y","N",316,5.2,1,142,9,"Y","Brush Pile",
+1403,"2018-05-08 00:00:00","Y","N",403,3.5,1,150,9,"Y","Brush Pile","Cone clogged with debris on arrival but still spinning, live box overflowing"
+1404,"2018-05-09 00:00:00","Y","N",452,6.8,1,156,9.5,"Y","Brush Pile","Raised cone 1730-1815. Log. Pulled diverters. Adjust trap 2ft to RR."
+1405,"2018-05-10 00:00:00","N","Y",552,4.8,1,160,8,"Y","Brush Pile","Pulled cone at 2230MT. Log jaming cone. Flows & debris high. Livewelled fish."
+1406,"2018-05-11 00:00:00","N","Y",614,0,0,165,9,"Y","Brush Pile","Worked up livewell fish. Cone still raised, waiting for flows to level out."
+1407,"2018-05-12 00:00:00","N","N",632,,0,,,"Y","Brush Pile","Cone still raised, waiting for flows to level out."
+1408,"2018-05-13 00:00:00","N","N",583,,0,,,"Y","Brush Pile","Cone still raised, waiting for flows to level out."
+1409,"2018-05-14 00:00:00","N","Y",544,5.5,1,160,8,"Y","Brush Pile","3 BLT"
+1410,"2018-05-15 00:00:00","N","N",502,6.6,1,158,8,"Y","Brush Pile","2 BLT"
+1411,"2018-05-16 00:00:00","N","N",494,6.2,1,156,9.5,"Y","Brush Pile","2 BLT"
+1412,"2018-05-17 00:00:00","N","Y",544,7.2,1,163,9,"Y","Side Channel","Raised cone from 0830-1030 for maintenance then adjusted trap 2 ft away from RR bank on 5/16/18"
+1413,"2018-05-18 00:00:00","N","Y",678,7.2,1,172,9,"Y","Side Channel","Adjusted trap 2 ft closer to RR bank at 2230 on 5/17/18"
+1414,"2018-05-19 00:00:00",,,821,,0,,,"Y",,
+1415,"2018-05-20 00:00:00",,,866,,0,,,"Y",,
+1416,"2018-05-21 00:00:00",,,937,,0,,,"Y",,
+1417,"2018-05-22 00:00:00",,,969,,0,,,"Y",,
+1418,"2018-05-23 00:00:00",,,1010,,0,,,"Y",,
+1419,"2018-05-24 00:00:00",,,1070,,0,,,"Y",,
+1420,"2018-05-25 00:00:00",,,1300,,0,,,"Y",,
+1421,"2018-05-26 00:00:00",,,1420,,0,,,"Y",,
+1422,"2018-05-27 00:00:00",,,1510,,0,,,"Y",,
+1423,"2018-05-28 00:00:00",,,1590,,0,,,"Y",,
+1424,"2018-05-29 00:00:00",,,1600,,0,,,"Y",,
+1425,"2018-05-30 00:00:00",,,1800,,0,,,"Y",,
+1426,"2018-05-31 00:00:00",,,1680,,0,,,"Y",,
+1427,"2018-06-01 00:00:00",,,1370,,0,,,"Y",,
+1428,"2018-06-02 00:00:00",,,1480,,0,,,"Y",,
+1429,"2018-06-03 00:00:00",,,1180,,0,,,"Y",,
+1430,"2018-06-04 00:00:00",,,1300,,0,,,"Y",,
+1431,"2018-06-05 00:00:00",,,1360,,0,,,"Y",,
+1432,"2018-06-06 00:00:00",,,1320,,0,,,"Y",,
+1433,"2018-06-07 00:00:00",,,1230,,0,,,"Y",,
+1434,"2018-06-08 00:00:00",,,1050,,0,,,"Y",,
+1435,"2018-06-09 00:00:00",,,1150,,0,,,"Y",,
+1436,"2018-06-10 00:00:00",,,1100,,0,,,"Y",,
+1437,"2018-06-11 00:00:00",,,918,,0,,,"Y",,
+1438,"2018-06-12 00:00:00",,,825,,0,,,"Y",,
+1439,"2018-06-13 00:00:00",,,715,,0,,,"Y",,
+1440,"2018-06-14 00:00:00",,,638,,0,,,"Y",,
+1441,"2018-06-15 00:00:00",,,603,,0,,,"Y",,
+1442,"2018-06-16 00:00:00","N","N",659,9.800000000000001,0,,10,"Y",,"sill gage out"
+1443,"2018-06-17 00:00:00",,,775,,0,,,"Y",,
+1444,"2018-06-18 00:00:00",,,1100,,0,,,"Y",,
+1445,"2018-06-19 00:00:00",,,1130,,0,,,"Y",,
+1446,"2018-06-20 00:00:00",,,1050,,0,,,"Y",,
+1447,"2018-06-21 00:00:00",,,970,,0,,,"Y",,
+1448,"2018-06-22 00:00:00",,,1050,,0,,,"Y",,
+1449,"2018-06-23 00:00:00",,,1020,,0,,,"Y",,
+1450,"2018-06-24 00:00:00",,,945,,0,,,"Y",,
+1451,"2018-06-25 00:00:00",,,879,,0,,,"Y",,
+1452,"2018-06-26 00:00:00",,,830,,0,,,"Y",,
+1453,"2018-06-27 00:00:00",,,762,,0,,,"Y",,
+1454,"2018-06-28 00:00:00",,,705,,0,,,"Y",,
+1455,"2018-06-29 00:00:00",,,701,,0,,,"Y",,
+1456,"2018-06-30 00:00:00",,,664,,0,,,"Y",,
+1457,"2018-07-01 00:00:00",,,632,,0,,,"Y",,
+1458,"2018-07-02 00:00:00",,,557,,0,,,"Y",,
+1459,"2018-07-03 00:00:00","N","N",506,7.4,1,135,11,"Y","Brush Pile","Began running trap on 7/2/18 at 13:30.  Trap 2 ft off of RR bank."
+1460,"2018-07-04 00:00:00","N","N",493,7.2,1,133,9.5,"Y","Brush Pile",
+1461,"2018-07-05 00:00:00","N","N",456,7,1,130,13,"Y","Brush Pile",
+1462,"2018-07-06 00:00:00","N","N",397,7,1,125,13,"Y","Brush Pile",
+1463,"2018-07-07 00:00:00","N","N",385,6.07,1,122,13,"Y","Brush Pile",
+1464,"2018-07-08 00:00:00",,,321,,0,,,"Y","N/A",
+1465,"2018-07-09 00:00:00","N","N",303,5.58,1,115,13,"Y","Brush Pile","began running trap on 7/8/18 at 13:00.  Trap 2 ft off of RR bank."
+1466,"2018-07-10 00:00:00","N","N",299,5.69,1,114,13,"Y","Brush Pile",
+1467,"2018-07-11 00:00:00","N","N",278,5,1,113,11,"Y","Brush Pile",
+1468,"2018-07-12 00:00:00","Y","Y",275,6.04,1,111,12,"Y","Brush Pile","Adjusted trap @ 1200 on 7/11.  Diverters installed."
+1469,"2018-07-13 00:00:00","Y","N",251,5.54,1,105,13,"Y","Brush Pile",
+1470,"2018-07-14 00:00:00","Y","N",218,4.54,1,104,13,"Y","Brush Pile",
+1471,"2018-07-15 00:00:00","Y","N",171,3.9,1,99,14.5,"Y","Above brush pile","Moved auto-release box 20 m upstream"
+1472,"2018-07-16 00:00:00","Y","N",152,3.9,1,98,14,"Y","Above brush pile",
+1473,"2018-07-17 00:00:00","Y","N",119,3.7,1,97,15.5,"Y","Above brush pile",
+1474,"2018-07-18 00:00:00","Y","N",89.59999999999999,3.5,1,95,14,"Y","Above brush pile","Added diverterto RL"
+1475,"2018-07-19 00:00:00","Y","N",72.5,3.1,1,91,13.5,"Y","Above brush pile",
+1476,"2018-07-20 00:00:00","Y","Y",56.7,2.8,1,87,14,"Y","Above brush pile","Added diverters RR"
+1477,"2018-07-21 00:00:00","Y","N",43,2,1,82,14,"Y","Above brush pile",
+1478,"2018-07-22 00:00:00","Y","Y",38.9,1.95,1,81,14,"Y","Above brush pile","Added gravel to diverters, filled gaps"
+1479,"2018-07-23 00:00:00","Y","N",34.7,2,1,81,13,"Y","Above brush pile",
+1480,"2018-07-24 00:00:00","Y","N",34.7,2.2,1,84,13.5,"Y","Above brush pile",
+1481,"2018-07-25 00:00:00","Y","N",26.3,2.8,1,85,14,"Y","Above brush pile",
+1482,"2018-07-26 00:00:00","Y","N",25.5,2.5,1,84,14,"Y","Above brush pile",
+1483,"2018-07-27 00:00:00","Y","N",25.5,2.45,1,84,14,"Y","Above brush pile",
+1484,"2018-07-28 00:00:00","Y","N",26.3,2.4,1,84,15,"Y","Above brush pile","F&G working on Diversion . Intermitant ."
+1485,"2018-07-29 00:00:00","Y","N",28.1,2.6,1,85,14.5,"Y","Above brush pile",
+1486,"2018-07-30 00:00:00","Y","N",26.3,2.6,1,85,13.5,"Y","Above brush pile",
+1487,"2018-07-31 00:00:00","Y","N",26.3,2.1,1,82,14,"Y","Above brush pile",
+1488,"2018-08-01 00:00:00","Y","N",26.3,2.1,1,84,14.5,"Y","Above brush pile",
+1489,"2018-08-02 00:00:00","Y","N",26.3,2.1,1,84,14.5,"Y","Above brush pile",
+1490,"2018-08-03 00:00:00","Y","N",25.5,2.4,1,85,13,"Y","Above brush pile",
+1491,"2018-08-04 00:00:00","Y","N",25.5,2.1,1,83,14.5,"Y","Above brush pile",
+1492,"2018-08-05 00:00:00","Y","N",26.3,2,1,83,13,"Y","Above brush pile",
+1493,"2018-08-06 00:00:00","Y","N",26.3,2.1,1,83,13,"Y","Above brush pile",
+1494,"2018-08-07 00:00:00","Y","N",26.3,2.2,1,83,13,"Y","Above brush pile",
+1495,"2018-08-08 00:00:00","Y","N",26.3,2,1,84,13,"Y","Above brush pile","Completed construction of new gabions . "
+1496,"2018-08-09 00:00:00","Y","N",26.3,1.6,1,81,13.5,"Y","Above brush pile","cfs fluctuating rapidly up and down. Observed sill at 72-95"
+1497,"2018-08-10 00:00:00","Y","N",25.5,1.6,1,80,14.5,"Y","Above brush pile","Added short diverter River Left"
+1498,"2018-08-11 00:00:00","Y","N",24.7,1.57,1,78,14,"Y","Above brush pile","Added earthen diverters, made some trap repairs"
+1499,"2018-08-12 00:00:00","Y","N",25.5,1.6,1,79,13.5,"Y","Above brush pile","Took wheel off trap, adjusted diverters on both sides of the river and channelize flow of water to increase trap RPM."
+1500,"2018-08-13 00:00:00","Y","N",25.5,2.5,1,80,13.5,"Y","Above brush pile","Raised cone from 8:00 to 14:00 for trap repairs"
+1501,"2018-08-14 00:00:00","Y","N",25.5,2.7,1,81,13,"Y","Above brush pile",
+1502,"2018-08-15 00:00:00","Y","N",25.5,2.6,1,81,12.5,"Y","Above brush pile",
+1503,"2018-08-16 00:00:00","Y","N",24.7,2.6,1,80,13,"Y","Above brush pile","Raised cone from 10:00 to 13:00 to setup new main line and anchor points"
+1504,"2018-08-17 00:00:00","Y","N",27.2,2.7,1,80,13,"Y","Above brush pile",
+1505,"2018-08-18 00:00:00","Y","N",24.7,2.8,1,81,13,"Y","Above brush pile",
+1506,"2018-08-19 00:00:00","Y","N",27.2,3,1,83,13,"Y","Above brush pile",
+1507,"2018-08-20 00:00:00","Y","N",26.3,2.85,1,83,13,"Y","Above brush pile",
+1508,"2018-08-21 00:00:00","Y","N",28.1,2.85,1,83,13,"Y","Above brush pile",
+1509,"2018-08-22 00:00:00","Y","N",24.7,2.8,1,81,12,"Y","Above brush pile",
+1510,"2018-08-23 00:00:00","Y","N",25.5,2.67,1,81,12,"Y","Above brush pile","Lots of debris in box from thunderstorms."
+1511,"2018-08-24 00:00:00","Y","N",25.5,2.83,1,82,11.5,"Y","Above brush pile","Straightened out/built up earthen diverters"
+1512,"2018-08-25 00:00:00","Y","N",24.7,2.72,1,82,12,"Y","Above brush pile",
+1513,"2018-08-26 00:00:00","Y","N",24.7,2.82,1,83,13,"Y","Above brush pile",
+1514,"2018-08-27 00:00:00","Y","N",26.3,2.7,1,81,13,"Y","Above brush pile",
+1515,"2018-08-28 00:00:00","Y","N",28.1,2.7,1,81,12,"Y","Above brush pile",
+1516,"2018-08-29 00:00:00","Y","N",26.3,2.9,1,83,10,"Y","Above brush pile",
+1517,"2018-08-30 00:00:00","Y","N",25.5,2.6,1,83,11,"Y","Above brush pile",
+1518,"2018-08-31 00:00:00","Y","N",26.3,2.8,1,83,12,"Y","Above brush pile",
+1519,"2018-09-01 00:00:00","Y","N",26.3,2.9,1,82,11.5,"Y","Above brush pile","Put wheel back on trap for cleaning drum, added oil to gear box"
+1520,"2018-09-02 00:00:00","Y","N",25.5,2.75,1,82,11,"Y","Above brush pile",
+1521,"2018-09-03 00:00:00","Y","N",26.3,2.82,1,82,11,"Y","Above brush pile",
+1522,"2018-09-04 00:00:00","Y","N",25.5,2.82,1,82,11,"Y","Above brush pile","Work began to replace L3AO fish screens"
+1523,"2018-09-05 00:00:00","Y","N",27.2,2.6,1,82,11,"Y","Above brush pile",
+1524,"2018-09-06 00:00:00","Y","N",25.5,2.52,1,83,12,"Y","Above brush pile",
+1525,"2018-09-07 00:00:00","Y","N",25.5,2.67,1,82,12,"Y","Above brush pile",
+1526,"2018-09-08 00:00:00","Y","N",25.5,2.5,1,82,13,"Y","Above brush pile",
+1527,"2018-09-09 00:00:00","Y","N",24.7,2.4,1,81,12.5,"Y","Above brush pile","Raised cone @ 8:00 AM to replace panels on cone. Began fishing at 12:30  AM Pacifac time . "
+1528,"2018-09-10 00:00:00","Y","N",25.5,2.7,1,82,11,"Y","Above brush pile","Raised cone from 1200 to 1400 to finish work on panels"
+1529,"2018-09-11 00:00:00","Y","N",25.5,2.8,1,82,10.5,"Y","Above brush pile",
+1530,"2018-09-12 00:00:00","Y","N",26.3,2.9,1,82,10.5,"Y","Above brush pile",
+1531,"2018-09-13 00:00:00","Y","N",29.8,2.8,1,82,11,"Y","Above brush pile",
+1532,"2018-09-14 00:00:00","Y","N",37.8,3.4,1,85,8.5,"Y","Above brush pile","Took out one diverter RR anticipating rising river flows"
+1533,"2018-09-15 00:00:00","Y","N",34.7,1.9,1,83,10,"Y","Above brush pile",
+1534,"2018-09-16 00:00:00","Y","N",29.8,2.2,1,82,9,"Y","Above brush pile",
+1535,"2018-09-17 00:00:00","Y","N",28.1,2.3,1,82,9,"Y","Above brush pile",
+1536,"2018-09-18 00:00:00","Y","N",25.5,1.93,1,80,9,"Y","Above brush pile",
+1537,"2018-09-19 00:00:00","Y","N",26.3,2.2,1,81,9,"Y","Above brush pile",
+1538,"2018-09-20 00:00:00","Y","N",27.2,2.4,1,83,9,"Y","Above brush pile",
+1539,"2018-09-21 00:00:00","Y","N",28.9,2.5,1,83,8,"Y","Above brush pile",
+1540,"2018-09-22 00:00:00","Y","N",30.8,2.4,1,83,9,"Y","Above brush pile","SH box fail to release, released next day 9/23/2018 10:30:00 AM"
+1541,"2018-09-23 00:00:00","Y","N",41.2,2.6,1,85,11,"Y","Above brush pile","Leaf Litter Greatly Increased"
+1542,"2018-09-24 00:00:00","Y","Y",44.7,3.3,1,87,9,"Y","Above brush pile","adjusted trap 8 ft upriver at 1400"
+1543,"2018-09-25 00:00:00","Y","N",56.7,4.1,1,91,7.5,"Y","Above brush pile",
+1544,"2018-09-26 00:00:00","Y","N",59.6,4.1,1,92,7,"Y","Above brush pile",
+1545,"2018-09-27 00:00:00","Y","N",64.2,4.3,1,92,9,"Y","Above brush pile",
+1546,"2018-09-28 00:00:00","Y","N",74.09999999999999,4.1,1,92,10,"Y","Above brush pile",
+1547,"2018-09-29 00:00:00","Y","N",62.6,4.6,1,94,9,"Y","Above brush pile",
+1548,"2018-09-30 00:00:00","Y","N",67.40000000000001,3.3,1,97,9,"Y","Above brush pile","Trap box full of leaves but not overflowing.  Possible loss of fish."
+1549,"2018-10-01 00:00:00","Y","N",93.09999999999999,4.8,1,99,9,"Y","Brush Pile","Moved auto release boxes to brush pile."
+1550,"2018-10-02 00:00:00","Y","N",108,5.26,1,100,9,"Y","Brush Pile",
+1551,"2018-10-03 00:00:00","Y","N",139,0,0,104,11,"Y","Brush Pile",
+1552,"2018-10-04 00:00:00","Y","N",153,6.5,1,107,9,"Y","Brush Pile","Pulled Cone 1230MT-230MT, high winds and rain. Diverter closest to pontoon blew out."
+1553,"2018-10-05 00:00:00","Y","Y",199,6.5,1,113,8,"Y","Brush Pile","Replaced diverter at 1330mt, all RL diverters blew out by 1500."
+1554,"2018-10-06 00:00:00","Y","N",228,5.2,1,113,8,"Y","Brush Pile",
+1555,"2018-10-07 00:00:00","Y","N",254,5.88,1,115,8,"Y","Brush Pile",
+1556,"2018-10-08 00:00:00","Y","N",231,5.6,1,114,7,"Y","Brush Pile",
+1557,"2018-10-09 00:00:00","Y","N",231,5.9,1,115,7,"Y","Brush Pile","Raised cone at 17:00 for 45 min to remove  woody debris ."
+1558,"2018-10-10 00:00:00","Y","N",261,6.25,1,117,7,"Y","Brush Pile",
+1559,"2018-10-11 00:00:00","Y","N",303,6.5,1,120,6,"Y","Brush Pile","RL Diverters in at 1:30MT, raised cone 130-3MT while installing diverters"
+1560,"2018-10-12 00:00:00","Y","N",292,7,1,120,4,"Y","Brush Pile",
+1561,"2018-10-13 00:00:00","Y","Y",325,6.1,0.5,122,7,"Y","Brush Pile","BK cleaned at 530 return at 800 barely spinning, guessing fish got flushed over the drum.Cone pulled 1030-130 Moved blue board from fronts of pontoons to the back."
+1562,"2018-10-14 00:00:00","Y","N",317,6.8,1,122,3,"Y","Brush Pile",
+1563,"2018-10-15 00:00:00","Y","N",307,6.8,1,122,3.5,"Y","Brush Pile",
+1564,"2018-10-16 00:00:00","Y","N",314,6.6,1,122,4,"Y","Brush Pile","Began night time tagging"
+1565,"2018-10-17 00:00:00","Y","N",332,6.7,1,123,4.5,"Y","Brush Pile",
+1566,"2018-10-18 00:00:00","Y","N",343,7,1,125,5,"N","Brush Pile","L3AO turned off"
+1567,"2018-10-19 00:00:00","Y","N",340,7,1,124,5,"N","Brush Pile",
+1568,"2018-10-20 00:00:00","Y","N",328,7.1,1,124,5,"N","Brush Pile",
+1569,"2018-10-21 00:00:00","Y","N",321,7.1,1,123,5,"N","Brush Pile",
+1570,"2018-10-22 00:00:00","Y","N",332,6.7,1,123,5.5,"N","Brush Pile",
+1571,"2018-10-23 00:00:00","Y","N",328,6.7,1,123,6,"N","Brush Pile",
+1572,"2018-10-24 00:00:00","Y","N",328,6.8,1,123,8,"N","Brush Pile","Auto-release box opened early and new tagged fish were recapped in same dce moved to nxt day. Cone pulled 430-7mt high leaf litter."
+1573,"2018-10-25 00:00:00","Y","N",296,6.5,1,122,8,"N","Brush Pile",
+1574,"2018-10-26 00:00:00","Y","N",289,6.5,1,122,8,"N","Brush Pile",
+1575,"2018-10-27 00:00:00","Y","N",296,5.5,1,123,9,"N","Brush Pile",
+1576,"2018-10-28 00:00:00","Y","N",299,6.8,1,123,6,"N","Brush Pile",
+1577,"2018-10-29 00:00:00","Y","N",303,6.2,1,123,6,"N","Brush Pile",
+1578,"2018-10-30 00:00:00","Y","N",314,6.6,1,123,5.5,"N","Brush Pile",
+1579,"2018-10-31 00:00:00","Y","N",303,6.7,1,123,4,"N","Brush Pile",
+1580,"2018-11-01 00:00:00","Y","N",307,6.5,1,123,4.5,"N","Brush Pile",
+1581,"2018-11-02 00:00:00","Y","N",307,6.8,1,122,5,"N","Brush Pile",
+1582,"2018-11-03 00:00:00","Y","N",310,6.7,1,123,5,"N","Brush Pile",
+1583,"2018-11-04 00:00:00","Y","N",310,7.1,1,124,5.5,"N","Brush Pile",
+1584,"2018-11-05 00:00:00","Y","N",310,6.9,1,124,5,"N","Brush Pile",
+1585,"2018-11-06 00:00:00","Y","N",310,6.8,1,123,4,"N","Brush Pile",
+1586,"2018-11-07 00:00:00","Y","N",310,6.8,1,123,3.5,"N","Brush Pile",
+1587,"2018-11-08 00:00:00","Y","N",303,7,1,123,3.5,"N","Brush Pile",
+1588,"2018-11-09 00:00:00","Y","N",278,6.4,1,122,2,"N","Brush Pile","Frozen debris on roller drum ice on trap deck"
+1589,"2018-11-10 00:00:00","Y","N",292,6.3,1,121,3,"N","Brush Pile",
+1590,"2018-11-11 00:00:00","Y","N",292,6.3,1,122,1,"N","Brush Pile","Frozen debris on roller drum ice on trap deck"
+1591,"2018-11-12 00:00:00","Y","N",261,6.4,1,120,0,"N","Brush Pile","Frozen debris on roller drum ice on trap deck, ice building on pontoons"
+1592,"2018-11-13 00:00:00","Y","N",241,6.4,1,118,0,"N","Brush Pile","Frozen debris on roller drum ice on trap deck, ice building on pontoons,removed ice at 15:00"
+1593,"2018-11-14 00:00:00","Y","N",265,6,1,120,1,"N","Brush Pile","Frozen debris on roller drum ice on trap deck, ice building on pontoons"
+1594,"2018-11-15 00:00:00","Y","N",278,6,1,119,1,"N","Brush Pile","Frozen debris on roller drum ice on trap deck, ice building on pontoons"
+1595,"2018-11-16 00:00:00","Y","N",296,6,1,121,3,"N","Brush Pile","Frozen debris on roller drum ice on trap deck, ice building on pontoons"
+1596,"2018-11-17 00:00:00","Y","N",299,6,1,123,2,"N","Brush Pile","Frozen debris on roller drum ice on trap deck, ice building on pontoons"
+1597,"2018-11-18 00:00:00","Y","N",275,6,1,121,0,"N","Brush Pile","Frozen debris on roller drum ice on trap deck, ice building on pontoons"
+1598,"2018-11-19 00:00:00","Y","Y",244,0,0,121,0,"N","Brush Pile","Trap sunk btwn 330-730. Frozen up. Unsunk and left on RL to thaw"
+1599,"2018-11-20 00:00:00","Y","Y",254,,0,,,"N","Brush Pile","Dropped cone at 2pm MT"
+1600,"2018-11-21 00:00:00","Y","N",258,5.2,1,116,0,"N","Brush Pile","Cone began slowing around 8am and froze up 830, pulled before sunk. Cone dropped at 2pm MT"
+1601,"2018-11-22 00:00:00","Y","N",278,6.6,1,118,0,"N","Brush Pile",
+1602,"2018-11-23 00:00:00","Y","N",289,6.1,1,122,2,"N","Brush Pile",
+1603,"2018-11-24 00:00:00","Y","N",292,6.4,1,122,3,"N","Brush Pile",
+1604,"2018-11-25 00:00:00","Y","N",282,6.6,1,121,0,"N","Brush Pile",
+1605,"2018-11-26 00:00:00","Y","N",238,6.25,0.5,113,0,"N","Brush Pile","Cone pulled early before froze and sunk. Release box error- froze shut. Day before Fish to be released with fish from 11/26. Cone dropped at 530MT."
+1606,"2018-11-27 00:00:00","Y","N",265,6.2,1,120,1,"N","Brush Pile",
+1607,"2018-11-28 00:00:00","Y","N",285,6.5,1,121,2,"N","Brush Pile",
+1608,"2018-11-29 00:00:00","Y","N",285,6.5,1,121,2,"N","Brush Pile","Warm Day. Cleaned with trash pump."
+1609,"2018-11-30 00:00:00","Y","N",275,6.8,1,120,1,"N","Brush Pile",
+1610,"2018-12-01 00:00:00","Y","N",282,6.5,1,120,1,"N","Brush Pile","Removed Ice from pontoons and A- Frame"
+1611,"2018-12-02 00:00:00","Y","N",261,6.4,1,120,0,"N","Brush Pile","Pulled cone for season"
