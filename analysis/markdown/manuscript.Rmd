@@ -1,0 +1,23 @@
+---
+title: "Juvenile Migration Tactics of a Stream-Type Chinook Salmon Population in Lemhi River, Idaho"
+author:
+  - Nicholas Porter:
+      email: nicholas.porter@merck.com
+      institute: [biomark]
+      correspondence: true
+  - Kevin E. See:
+      email: Kevin.See@dfw.wa.gov
+      institute: [wdfw, biomark]
+  - Michael W. Ackerman:
+      email: mike.ackerman@mthoodenvironmental.com
+      institute: [mhe_mccall, biomark]
+  - Michael S. Hall:
+      email: Mike.Hall1@merck.com
+      institute: [biomark]
+  - Tulley Mackey:
+      email: tulley.mackey@mthoodenvironmental.com
+      institute: [mhe_salmon, biomark]
+  - Richard A. Carmichael:
+      email: Richard.Carmichael@merck.com
+      institute: [biomark]
+
