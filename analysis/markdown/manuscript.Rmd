@@ -20,4 +20,174 @@ author:
   - Richard A. Carmichael:
       email: Richard.Carmichael@merck.com
       institute: [biomark]
+institute:
+  - biomark: Biomark, Inc. 705 South 8th St., Boise, Idaho, 83702, USA
+  - wdfw: Washington Department of Fish and Wildlife, PO Box 43200 Olympia, WA 98504-3200, USA
+  - mhe_mccall: Mount Hood Environmental, PO Box 4282, McCall, Idaho, 83638, USA
+  - mhe_salmon: Mount Hood Environmental, 1009 South Daisy Street, Salmon, Idaho, 83467, USA
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  bookdown::word_document2:
+    fig_caption: yes
+    reference_docx: "../templates/template.docx"
+    number_sections: FALSE
+    toc: no
+    always_allow_html: true
+    fig_width: 6
+    pandoc_args:
+    - --lua-filter=../templates/scholarly-metadata.lua
+    - --lua-filter=../templates/author-info-blocks.lua
+    - --lua-filter=../templates/pagebreak.lua
+  bookdown::html_document2:
+    theme: yeti
+    toc: yes
+    toc_depth: 2
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+    number_sections: yes
+    pandoc_args:
+    - --lua-filter=../templates/scholarly-metadata.lua
+    - --lua-filter=../templates/author-info-blocks.lua
+    - --lua-filter=../templates/pagebreak.lua
+fontsize: 12pt
+mainfont: Times New Roman
+bibliography:
+  - AckermanLibrary.bib
+csl: "../templates/american-fisheries-society.csl"
+always_allow_html: yes
+---
 
+```{r setup, echo = FALSE, message = F, warning = F}
+library(here)
+library(knitr)
+library(kableExtra)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  comment = "#>",
+  fig.path = here("analysis/figures//"),
+  dpi = 300
+)
+
+```
+
+```{r packages}
+# load packages
+library(tidyverse)
+library(magrittr)
+
+theme_set(theme_bw())
+
+```
+
+# Introduction
+
+**Paragraph 1:** Pacific salmon (*Onchorhynchus* spp.) exhibit a diverse suite of life history strategies (Quinn and Myers 2004; others?) which leads to increased population resilience (Kendall and Fox 2002; Hilborn et al. 2003) and buffers against extinction risk (Healey and Prince 1995). Within Chinook salmon (*o. tshawytscha*), populations (and in cases individuals within populations) vary in the time spent rearing in freshwater prior to emigration to the sea (Quinn 2005). Stream-type populations have an extended freshwater rearing phase and emigrate to the ocean as yearlings whereas ocean-type populations rear in freshwater for a much shorter period of time and emigrate before their first winter as subyearlings. Moreover, within stream-type populations there is considerable variation in how juveniles use the accessible freshwater habitat (Reimers 1973) prior to emigration to the ocean.
+
+**Paragraph 2:** Two juvenile migration tactics, described by Copeland et al. 2014, are dominant in stream-type Chinook salmon populations, termed downstream rearing (DSR) and natal reach rearing (NRR). Dispersal of juvenile salmon for overwintering and rearing is likely of demographic important in populations with extended freshwater rearing (Copeland et al. 2014). Juveniles of the first type (downstream rearing, or DSR) initially disperse downstream from natal habitat as parr, winter downstream in nonnatal reaches (e.g., mainstem rivers), and then enter the migration corridor as yearling smolts the following spring. Juveniles of the second type (natal-reach rearing, or NRR) rear in the natal habitat (e.g., Lemhi River) for roughly 1 year after emergence until the onset of smoltification and leaving the natal habitat. Biologists have long know that DSR emigrants use downstream-rearing and wintering habitats in the lower stretches of the Salmon and Grande Ronde rivers of in the middle reaches of the Snake River (Chapman and Bjornn 1969; Raymond 1979).
+
+**Paragraph 3:** Summarize findings from Copeland and Venditti (2014) and related.
+
+* DSR typically (almost always) greater than abundance than NRR
+* NRR have greater survival to LGR than DSR (but DSR survival includes winter mortality)
+* DSR arrive at LGR sooner
+* DSR SARs equal to (or close to) NRR SARs; LGR -> BON
+* More adults returning from DSR emigrants, but largely due to numerical advantage
+
+Copeland and Venditti (2014) posit that the DSR individuals have advantages over NRR individuals because 1) earlier and easier migration to the mainstem corridor the following spring (by mainstem they mean LGR; DSR seem to arrive a month earlier) and 2) increased overwinter survival.
+
+**Paragraph 4:** The first part of our paper explores the DSR and NRR juvenile migration tactics for one population in particular, the Lemhi River population. Providing an update to Copeland and Venditti (2014) using an updated dataset and the lower Lemhi RST (rather than the upper traps).
+
+* Estimate the abundance of each (DSR versus NRR), by brood year (cohort). We expect DSR is more abundant than NRR.
+* Estimate survival to LGR. We expect NRR survival > DSR survival, but because NRR emigrants already survived winter (would be nice to estimate overwinter survival, but outside of scope of this paper)
+* Estimate timing of arrival to LGR (perhaps also to BON?). We expect DSR to arrive sooner to LGR and BON i.e., earlier ocean entry?
+* Estimate LGR -> BON SARs for DSR versus NRR. We expect SARs to be roughly equal. (unless DSRs do have a much earlier ocean entry, then maybe DSRs have a slightly higher SAR?)
+* Estimate adult recruitment to the Lemhi River, DSR versus NRR (if possible). We expect that DSR adult escapement greater than NRR adult escapement, but largely due to numberical advantage
+
+**Paragraph 5:** Transition from part 1 to part 2, exploration of downstream habitat use by DSR individuals during the late fall and early winter. Something along the lines of a fair amount is known about NRR winter rearing habitats, but little is known about DSR winter habitat use. Several hundred kilometers of habitat occurs downstream of the Lemhi River including the Salmon and Snake rivers. In part 2, we explore downstream habitat use of the DSR juvenile migration tactic using radio telemetry and PIT-tag observations at mainstem dams.
+
+**Paragraph 6:** Questions and hypotheses.
+
+1. How long does downstream emigration continue for DSR individuals in the fall and early winter? Or does it ever stop? Hypothesis: We expect emigration to cease at some point in the winter, likely related to water temperature. At some point, the risk of continued emigration down the mainstem becomes too great.
+1. How far downstream do they distribute prior to ceasing emigration? Unknown hypothesis.
+1. Are there areas of decreased transition probabilities that we could attribute to or infer as decreases survival? CJS results.
+1. Anything learned from batch 2 or batch 3 observations? Perhaps this can simply be a summary of observations with time/location later in the season? Still need to think about this one...perhaps nix. 
+1. Are DSR individuals encountered in the mainstem Salmon River during fall only from the Lemhi (and perhaps adjacent Pahsimeroi) River populations? Or are encountered individuals from multiple Upper Salmon Subbasin populations? Genetic assessment.
+
+
+# Methods
+
+## Study Site
+
+* Lemhi River Chinook salmon population
+* lower Lemhi River RST
+* LGR
+* description of corridor from lower Lemhi -> LGR
+* radio telemetry sites with codes?
+* map of all of the above
+
+### Part 1
+
+* tagging at lower Lemhi RST
+  + replicate Figure 2 from Copeland and Venditti (2014)
+* estimating abundance at the trap
+* estimating survival to LGR
+* timing of arrival to LGR and BON
+* LGR -> BON SAR
+* adult recruitment
+* all of the above DSR versus NRR
+
+### Part 2
+
+* fall radio tagging
+  + size of tagged fish
+  + timing
+  + numbers
+* battery life
+* tag burden
+* thinking keep focus on batch 1
+* how long did emigration continue?
+* at what point did emigration significantly slow, if at all? related to temperature?
+* how far downstream did they distribute prior to ceasing or slowing emigration?
+* (apparent) survival by reach? reaches in particular with lower (apparent) survival?
+* genetic assessment
+
+# Results
+
+Results text. To largely mirror methods.
+
+# Discussion
+
+## Conclusions
+
+\newpage
+
+# Acknowledgements
+
+\newpage
+
+# References 
+<!-- The following line ensures the references appear here for the MS Word or HTML output files, rather than right at the end of the document (this will not work for PDF files):  -->
+<div id="refs"></div>
+
+\newpage
+
+### Colophon
+
+This report was generated on `r Sys.time()` using the following computational environment and dependencies: 
+
+```{r colophon, cache = FALSE}
+# which R packages and versions?
+if ("devtools" %in% installed.packages()) devtools::session_info()
+```
+
+The current Git commit details are:
+
+```{r}
+# what commit is this file at? 
+if ("git2r" %in% installed.packages() & git2r::in_repository(path = ".")) git2r::repository(here::here())  
+```
