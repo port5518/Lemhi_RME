@@ -81,6 +81,7 @@ library(lubridate)
 library(PITcleanr)
 library(magrittr)
 library(rstan)
+library(readxl)
 
 theme_set(theme_bw())
 ```
@@ -160,7 +161,20 @@ delta_df = stan_df %>%
 
 There are two dominant life history strategies employed by spring-summer Chinook salmon spawned in the Lemhi River; downstream rearing (DSR or smolt) and natal reach rearing (NRR or smolt) [@Copeland2014]. The DSR migrants leave their natal area as subyearlings between June and November and typically overwinter in downstream, mainstem habitats until the following spring when they emigrate to the ocean as smolts. Alternatively, NRR migrants remain in their natal areas for approximately one year after emergence until emigration to the ocean as smolts. Both life history types reach Lower Granite Dam in the spring, and subsequently move to the ocean.
 
-Recently, the DSR life history has dominated within the Lemhi River population i.e., they are more abundant at the lower Lemhi rotary screw trap (RST). It is unclear whether their abundance is a result of local adaptation where DSR fish have a survival advantage, or the result of habitat degradation within the Lemhi River leading to limited overwintering habitat and thereby preventing the NRR type. Here, we investigate the survival between the two life history types across severy brood years, attempting to compare the relative success of one versus the other.
+Recently, the DSR life history has dominated within the Lemhi River population i.e., they are more abundant at the lower Lemhi rotary screw trap (RST). It is unclear whether their abundance is a result of local adaptation where DSR fish have a survival advantage, or the result of habitat degradation within the Lemhi River leading to limited rearing habitat during winter months and thereby preventing the NRR type. Here, we explore the abundance, emigration timing, and survival between the two strategies across several brood years, attempting to compare the relative success of one versus the other.
+
+## Objectives
+
+* Estimate the abundance of each life history strategy (DSR and NRR), by brood year. 
+  + We hypothesize DSR are more abundant than NRR.
+* Estimate timing of arrival at LGR and BON.
+  + We expect DSR arrive sooner to LGR and BON, suggesting an earlier ocean entry.
+* Estimate survival of each life history strategy to LGR, by brood year.
+  + We hypothesize NRR survival > DSR survival, but because NRR emigrants already survived winter i.e., DSR survival includes winter mortality.
+* Estimate LGR to BON SARs for DSR versus NRR life history strategies.
+  + We hypothesize SARs to be roughly equal unless DSRs do have a much earlier ocean entry, then perhaps DSRs have a higher SAR.
+* If possible, estimate adult recruitment to the Lemhi River for DSR and SRR. 
+  + We expect that DSR adult escapement is greater than NRR adult escapement, but largely due to a numerical advantage (i.e., greater juvenile abundance).
 
 
 # Methods
@@ -169,7 +183,10 @@ Recently, the DSR life history has dominated within the Lemhi River population i
 
 We compiled a list of all PIT tags deployed within the Lemhi River using two PTAGIS queries. The first was a "Tagging Details" query, with filters set such that the mark subbasin is Lemhi, capture method is screw trap, species is Chinook, and mark year is 1986-2020. We filtered these results further to focus on fish tagged at the lower Lemhi RST, which are assumed to be emigrating out of the Lemhi River, by focuing on mark site codes "LEMHIR" or "LLRTP" (the former was used prior to 2016) and filtering out any tags released at LEMHIW (the upper Lemhi RST). The second was a "Recapture Details" query, with similar filters set: mark subbasin is Lemhi, capture method is screw trap, species is Chinook, and recap year is 1986-2020. Again, we further refined these results by filtering for recapture site code of "LEMHIR" or "LLRTP", and recapture released that were not released at LEMHIW.
 
-These two queries often resulted in tags showing up in both the mark and recapture lists. For tags recaptured within a week of marking, we used the mark date as the starting point, but for fish recaptured more than a week after marking (sometimes months later) we used the maximum recapture date to indicate when we believe that fish left the Lemhi River. Tags that left after Aug 31 were considered DSR and tags that left prior to July 1 were considered NRR. To date, we have excluded tags that left between July 1 and Aug 31, so as to avoid any confusion as to which brood year to assign them. DSR fish were assigned a brood year on year prior to their emigration date in the fall, and NRR fish were assigned a brood year two years prior. The number of tags assigned to each brood year and life-history are shown in Table \@ref(tab:lh-tags-tab).
+These two queries often resulted in tags showing up in both the mark and recapture lists. For tags recaptured within a week of marking, we used the mark date as the starting point, but for fish recaptured more than a week after marking (sometimes months later) we used the maximum recapture date to indicate when we believe that fish left the Lemhi River. 
+
+<!-- Need to refine how we specify DSR and NRR and fix the below -->
+Tags that left after Aug 31 were considered DSR and tags that left prior to July 1 were considered NRR. To date, we have excluded tags that left between July 1 and Aug 31, so as to avoid any confusion as to which brood year to assign them. DSR fish were assigned a brood year on year prior to their emigration date in the fall, and NRR fish were assigned a brood year two years prior. The number of tags assigned to each brood year and life-history are shown in Table \@ref(tab:lh-tags-tab).
 
 ```{r lh-tags-tab}
 obs_df %>%
@@ -197,6 +214,19 @@ obs_df %>%
   kable_styling(position = "center", full_width = F)
 
 ```
+
+
+## Abundance
+
+Estimates of emigrant abundance at the lower Lemhi River rotary screw trap (LLRTP) by brood year and life stage were provided by the Idaho Department of Fish and Game (S. Meyer, personal communication, April 4, 2022) which were summarized from annual reports [e.g., @Poole2019; @Feeken2020; @McClure2021]. Detailed methods are provided by @Copeland2021a. Briefly, the spring trapping period occurs through June 30 and is dominated by age-1 smolts which will be emigrating past Lower Granite Dam and Bonneville Dam the same year. Age-0 fry can also be captured during the spring period, but are differentiated from smolts based on size. The summer parr period is July 1 through August 31. The fall presmolt period is September 1 through the end of the year. Seasonal abundance by life stage are calculated by stratifying fish into smaller date ranges based on recapture efficiency of the trap and processing the strata in R statistical software [@RCoreTeam2021].
+
+Emigrant abundance estimates from trap operations were estimated using the stratified Lincoln-Peterson estimator with Bailey's modification:
+
+$$
+\hat{N} = \sum\limits_{i=1}^k c_i(m_i + 1)(r_i + 1)
+$$
+
+where $\hat{N}$ is the estimate of abundance in a given season or year, $i$ is season, $c_i$ is the number of all unique fish captures in season $i$, $m_i$ is the number of tagged fish released in season $i$, and $r_i$ is the number of recaptures in season $i$ [@Bailey1951]. The estimator is computed using an interative maximization of the log likelihood [@Steinhorst2004]. The method assumes that fish are captured independently with probability $p$ (equivalent to trap efficiency) and tagged fish mix thoroughly with untagged fish. The 95% confidence intervals were computed using 10,000 bootstraps [@Steinhorst2004]. Emigrant abundance estimates do not account for periods where the trap was not in operation.
 
 
 ## Run Timing
@@ -243,6 +273,75 @@ We anticipated that the survival between LLRTP and GRJ would be higher for smolt
 
 
 # Results
+
+## Data
+
+```{r lem-size-date-fig}
+lem_rst_tags = read_rds(here("analysis/data/derived_data/lemhi_rst_tags_cleaned.rds"))
+
+# size and time plot by strategy (DSR, NRR)
+strategy_p = lem_rst_tags %>%
+  select(tag_code,
+         brood_year,
+         date,
+         length,
+         emig_stage,
+         strategy) %>%ggplot(aes(x = as.Date(yday(date), "1900-01-01"),
+             y = length)) +
+  geom_point(aes(
+    #shape = factor(strategy),
+    color = factor(strategy))) +
+  geom_vline(xintercept = as.Date("1900-06-30")) +
+  geom_vline(xintercept = as.Date("1900-09-01")) +
+  scale_color_manual(name = "Strategy",
+                     values = c("orangered2", "dodgerblue2")) +
+  scale_x_date(date_breaks = "months",
+               date_labels = "%b") +
+  theme_classic() +
+  labs(x = "Date Tagged",
+       y = "Fork Length (mm)") +
+  theme(axis.title.x = element_text(size = 11,
+                                    color = "black"),
+        axis.title.y = element_text(size = 11,
+                                    color = "black"),
+        axis.text.x = element_text(size = 11,
+                                   color = "black"),
+        axis.text.y = element_text(size = 11,
+                                   color = "black"),
+        #legend.position = c(0.5, 0.9)
+        legend.position = "top")
+strategy_p
+
+```
+
+## Abundance
+
+```{r abund-tab}
+# abundance table by life stage
+abund_tab = read_excel(here("analysis/data/derived_data/LLRTP_Emigrant_Abundance_20220404.xlsx"),
+                       sheet = 1)
+
+# abundance table by strategy
+strat_abund_tab = abund_tab %>%
+  mutate_if(is.character,
+            as.numeric) %>%
+  filter(`Brood Year` >= 2012) %>%
+  rename(NRR = Smolt) %>%
+  rowwise() %>%
+  mutate(DSR = sum(Parr, Presmolt, na.rm = T)) %>%
+  ungroup() %>%
+  select(`Brood Year`,
+         DSR,
+         NRR) %>%
+  adorn_totals() %>%
+  mutate(`DSR (%)` = round(DSR / rowSums(select(., DSR, NRR)) * 100, 1),
+         `NRR (%)` = round(NRR / rowSums(select(., DSR, NRR)) * 100, 1)) %>%
+  kbl(caption = "Estimates of emigrant abundance by life history strategy and brood year at the lower Lemhi rotary screw trap (LLRTP). DSR emigrant abundances for brood years 2012 and 2013 do not include parr abundance estimates, which were unavailable.",
+      format.args = list(big.mark = ",")) %>%
+  kable_styling(position = "center", full_width = F)
+strat_abund_tab
+
+```
 
 ## Run Timing
 
