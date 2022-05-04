@@ -24,6 +24,8 @@ lem_rst_tags = read_rds(here("analysis/data/derived_data/lemhi_rst_tags_cleaned.
 # explore a bit
 tabyl(lem_rst_tags, brood_year, site_name)
 tabyl(lem_rst_tags, brood_year, source)
+tabyl(lem_rst_tags, brood_year, emig_stage)
+tabyl(lem_rst_tags, brood_year, strategy)
 
 lem_df = lem_rst_tags %>%
   select(tag_code,

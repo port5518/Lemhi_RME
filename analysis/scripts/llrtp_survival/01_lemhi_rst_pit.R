@@ -60,7 +60,7 @@ lem_tags_all = lem_mrk_tags %>%
               mutate(source = "recap_details")) %>%
   arrange(tag_code, date) %>%
   # filter out lengths = 0 and unreasonable lengths
-  filter(length > 25 & length < 250) %>%
+  filter(length > 25 & length < 200) %>%
   # assign juveniles to a life stage, standard classification
   mutate(
     emig_stage = "nada",
@@ -79,6 +79,7 @@ lem_tags_all = lem_mrk_tags %>%
     emig_stage = if_else(yday(date) >= 163 & yday(date) < 167 & length <= 110 & !is.na(length), "Parr", emig_stage),
     emig_stage = if_else(yday(date) >= 167 & yday(date) < 174 & length <= 112 & !is.na(length), "Parr", emig_stage),
     emig_stage = if_else(yday(date) >= 174 & yday(date) < 183 & length <= 116 & !is.na(length), "Parr", emig_stage),
+    emig_stage = if_else(yday(date) >= 182 & yday(date) < 213 & length >= 150 & !is.na(length), "Smolt",emig_stage)
   ) %>%
   # assign brood year
   mutate(brood_year = if_else(emig_stage == "Smolt",
@@ -164,6 +165,19 @@ identical(n_distinct(lem_tags_all$tag_code), n_distinct(lem_tags_fix$tag_code))
 #   pivot_wider(names_from = brood_year,
 #               values_from = date,
 #               names_sort = T)
+
+# split by strategy
+lem_tags_fix %>%
+  split(list(.$strategy)) %>%
+  map(.f = function(x) {
+    x %>%
+      select(tag_code) %>%
+      distinct() %>%
+      write_delim(file = here('analysis/data/raw_data/tag_lists',
+                              paste0('Lemhi_', unique(x$strategy), '_tags.txt')),
+                  delim = "\n",
+                  col_names = F)
+  })
 
 # split by life-stage
 lem_tags_fix %>%
