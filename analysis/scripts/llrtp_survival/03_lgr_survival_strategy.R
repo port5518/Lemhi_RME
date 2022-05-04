@@ -1,8 +1,9 @@
-# Author: Kevin See
-# Purpose: Survival from LLRTP to LGR
+# Author: Kevin See and Mike Ackerman
+# Purpose: Survival from LLRTP to LGR, by strategy (DSR vs. NRR)
 # Created: 6/14/21
-# Last Modified: 4/25/22
-# Notes: Re-ran by Mike A in April 2022 w/ cleaned tag lists
+# Last Modified: 5/4/2022
+# Notes: Re-ran by Mike A in May 2022 to work by strategy (DSR, NRR) rather
+# than life stage (Smolt, Parr, Presmolt)
 
 # clear environment
 rm(list = ls())
@@ -131,7 +132,7 @@ obs_df = tibble(brood_year = 2004:2019) %>%
                            .f = function(comp_obs) {
                              comp_obs %>%
                                left_join(lem_tags %>%
-                                           select(tag_code, start_date = date, emig_stage),
+                                           select(tag_code, start_date = date, strategy),
                                          by = "tag_code") %>%
                                # left_join(comp_obs %>%
                                #             filter(node %in% c("LLRTP", "LEMHIR"),
@@ -152,11 +153,10 @@ obs_df = tibble(brood_year = 2004:2019) %>%
                                mutate(llrtp_time = difftime(min_det, start_date, units = "days")) %>%
                                mutate(across(llrtp_time,
                                              as.numeric)) %>%
-                               mutate(across(emig_stage,
+                               mutate(across(strategy,
                                              factor,
-                                             levels = c("Parr",
-                                                        "Presmolt",
-                                                        "Smolt"))) %>%
+                                             levels = c("DSR",
+                                                        "NRR"))) %>%
                                mutate(life_stage = if_else(llrtp_time < 350 | node %in% (filter(config_file, site_type_name == "AvianColony") %>% pull(node)),
                                                            "juv",
                                                            "adult"))
@@ -167,8 +167,7 @@ model_df = obs_df %>%
   mutate(cjs_df = map(llrtp_start,
                       .f = function(x) {
                         ch_df = x %>%
-                          filter(emig_stage != "Parr") %>%
-                          mutate(across(emig_stage,
+                          mutate(across(strategy,
                                         fct_drop)) %>%
                           left_join(config_file %>%
                                       arrange(site_code, node, rkm) %>%
@@ -196,7 +195,7 @@ model_df = obs_df %>%
                           filter(node %in% c("LLRTP", "GRJ", "BOJ", "BON", "GRA", "above_GRA")) %>%
                           mutate(node = factor(node,
                                                levels = c("LLRTP", "GRJ", "BOJ", "BON", "GRA", "above_GRA"))) %>%
-                          select(tag_code, emig_stage, node) %>%
+                          select(tag_code, strategy, node) %>%
                           distinct() %>%
                           mutate(seen = 1) %>%
                           pivot_wider(names_from = node,
@@ -214,7 +213,7 @@ model_df = obs_df %>%
 
                         ch_df %<>%
                           unite(ch,
-                                -c(tag_code:emig_stage),
+                                -c(tag_code:strategy),
                                 sep = "",
                                 remove = F)
                         return(ch_df)
@@ -233,8 +232,8 @@ model_df = obs_df %>%
 model_df %<>%
   mutate(cjs_mod = map(cjs_df,
                        .f = function(cjs_df) {
-                         if(n_distinct(cjs_df$emig_stage) == 1) {
-                           cat("Only one life-stage\n")
+                         if(n_distinct(cjs_df$strategy) == 1) {
+                           cat("Only one Strategy\n")
                            cjs_proc = cjs_df %>%
                              select(-tag_code) %>%
                              as.data.frame() %>%
@@ -254,14 +253,14 @@ model_df %<>%
                          cjs_proc = cjs_df %>%
                            select(-tag_code) %>%
                            as.data.frame() %>%
-                           process.data(group = c("emig_stage"))
+                           process.data(group = c("strategy"))
 
                          cjs_ddl = make.design.data(cjs_proc)
 
                          mod = try(crm(data = cjs_proc,
                                        ddl = cjs_ddl,
-                                       model.parameters = list(Phi = list(formula = ~ emig_stage * time),
-                                                               p = list(formula = ~ emig_stage * time)),
+                                       model.parameters = list(Phi = list(formula = ~ strategy * time),
+                                                               p = list(formula = ~ strategy * time)),
                                        accumulate = F,
                                        itnmax = 1e4) %>%
                                      cjs.hessian())
@@ -280,7 +279,7 @@ model_df %<>%
   mutate(pred = map(cjs_mod,
                     .f = function(mod) {
                       predict(mod,
-                              newdata = data.frame(emig_stage = factor(c("Presmolt", "Smolt"))),
+                              newdata = data.frame(strategy = factor(c("DSR", "NRR"))),
                               se = TRUE) %>%
                         map_df(.id = "param",
                                .f = identity)
@@ -290,7 +289,7 @@ model_df %<>%
                          try(x %>%
                                filter(param == "Phi",
                                       occ <= 3) %>%
-                               group_by(emig_stage) %>%
+                               group_by(strategy) %>%
                                summarize(across(c(estimate, lcl, ucl),
                                                 prod)))
                        }),
@@ -299,7 +298,7 @@ model_df %<>%
                          try(x %>%
                                filter(param == "Phi",
                                       occ <= 4) %>%
-                               group_by(emig_stage) %>%
+                               group_by(strategy) %>%
                                summarize(across(c(estimate, lcl, ucl),
                                                 prod)))
                        }))
@@ -311,12 +310,12 @@ model_df %>%
   select(brood_year,
          pred) %>%
   unnest(pred) %>%
-  mutate(emig_stage = if_else(is.na(emig_stage) & brood_year == 2010,
-                              "Presmolt",
-                              if_else(is.na(emig_stage) & brood_year == 2011,
-                                      "Smolt",
-                                      as.character(emig_stage)))) %>%
-  mutate(across(emig_stage,
+  mutate(strategy = if_else(is.na(strategy) & brood_year == 2010,
+                              "DSR",
+                              if_else(is.na(strategy) & brood_year == 2011,
+                                      "NRR",
+                                      as.character(strategy)))) %>%
+  mutate(across(strategy,
                 as_factor)) %>%
   filter((param == "Phi" & occ == 1) |
            (param == "p" & occ == 2)) %>%
@@ -325,8 +324,8 @@ model_df %>%
                            "Phi" = "Survival to GRJ")) %>%
   ggplot(aes(x = brood_year,
              y = estimate,
-             color = emig_stage,
-             fill = emig_stage)) +
+             color = strategy,
+             fill = strategy)) +
   geom_errorbar(aes(ymin = lcl,
                     ymax = ucl),
                 width = 0.3,
@@ -337,9 +336,9 @@ model_df %>%
   geom_point(size = 4,
              position = position_dodge(width = dodge_width)) +
   scale_color_brewer(palette = "Set1",
-                     name = "Life stage") +
+                     name = "Strategy") +
   scale_fill_brewer(palette = "Set1",
-                    name = "Life stage") +
+                    name = "Strategy") +
   facet_wrap(~ param_nm,
              ncol = 1) +
   theme_bw() +
@@ -355,12 +354,12 @@ travel_time = model_df %>%
   mutate(grj_det = if_else(sum(node == "GRJ") > 0, T, F)) %>%
   ungroup() %>%
   filter(grj_det) %>%
-  group_by(brood_year, tag_code, emig_stage) %>%
+  group_by(brood_year, tag_code, strategy) %>%
   summarize(grj_time = difftime(min_det[node == "GRJ"], max_det[node=="LLRTP"], units = "days"),
             .groups = "drop") %>%
   mutate(across(grj_time,
                 as.numeric)) %>%
-  group_by(brood_year, emig_stage) %>%
+  group_by(brood_year, strategy) %>%
   summarise(across(grj_time,
                    list(mean = mean,
                         median = median)),
@@ -371,12 +370,12 @@ model_df %>%
   select(brood_year,
          pred) %>%
   unnest(pred) %>%
-  mutate(emig_stage = if_else(is.na(emig_stage) & brood_year == 2010,
-                              "Presmolt",
-                              if_else(is.na(emig_stage) & brood_year == 2011,
-                                      "Smolt",
-                                      as.character(emig_stage)))) %>%
-  mutate(across(emig_stage,
+  mutate(strategy = if_else(is.na(strategy) & brood_year == 2010,
+                              "DSR",
+                              if_else(is.na(strategy) & brood_year == 2011,
+                                      "NRR",
+                                      as.character(strategy)))) %>%
+  mutate(across(strategy,
                 as_factor)) %>%
   filter((param == "Phi" & occ == 1)) %>%
   select(-se) %>%
@@ -385,8 +384,8 @@ model_df %>%
                 ~ . ^ (1/grj_time_mean))) %>%
   ggplot(aes(x = brood_year,
              y = estimate,
-             color = emig_stage,
-             fill = emig_stage)) +
+             color = strategy,
+             fill = strategy)) +
   geom_errorbar(aes(ymin = lcl,
                     ymax = ucl),
                 width = 0.3,
@@ -394,9 +393,9 @@ model_df %>%
   geom_point(size = 4,
              position = position_dodge(width = dodge_width)) +
   scale_color_brewer(palette = "Set1",
-                     name = "Life stage") +
+                     name = "Strategy") +
   scale_fill_brewer(palette = "Set1",
-                    name = "Life stage") +
+                    name = "Strategy") +
   theme_bw() +
   theme(legend.position = "bottom") +
   coord_cartesian(ylim = c(0.9, 1)) +
@@ -459,7 +458,6 @@ obs_df %>%
   select(brood_year,
          llrtp_start) %>%
   unnest(llrtp_start) %>%
-  filter(emig_stage != "Parr") %>%
   filter(node %in% c("GRJ", "BOJ", "BON")) %>%
   mutate(node = recode(node,
                        "GRJ" = "Lower Granite",
@@ -472,7 +470,7 @@ obs_df %>%
   mutate(min_jday = yday(min_det)) %>%
   ggplot(aes(x = min_jday,
              y = fct_rev(as.factor(brood_year)),
-             fill = emig_stage)) +
+             fill = strategy)) +
   geom_boxplot() +
   facet_wrap(~ node) +
   theme(legend.position = "bottom") +
