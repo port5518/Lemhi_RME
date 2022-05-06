@@ -33,6 +33,7 @@ load(here("analysis/data/derived_data/CJS_model_fits.rda"))
 ch_df = model_df %>%
   select(brood_year, cjs_df) %>%
   unnest(cjs_df) %>%
+  filter(!is.na(strategy)) %>%
   #filter(strategy != "Parr") %>%
   mutate(across(strategy,
                 fct_drop)) %>%
@@ -78,7 +79,7 @@ stan_df = ch_df %>%
                            # num. individuals
                            I = nrow(y)
 
-                           # life-history type (DSR or NRR)
+                           # strategy (DSR or NRR)
                            lh = ch_df %>%
                              mutate(across(strategy,
                                            fct_drop)) %>%
@@ -204,6 +205,7 @@ delta_surv_p = comp_df %>%
              linetype = 2) +
   labs(x = "Brood Year",
        y = "<--  Better for DSR ... Better for NRR  -->\n\n\nLog( DSR / NRR )")
+delta_surv_p
 
 ggsave(here("analysis/figures/log_surv_comp.pdf"),
        delta_surv_p,
@@ -232,6 +234,7 @@ delta_sar_p = comp_df %>%
              linetype = 2) +
   labs(x = "Brood Year",
        y = "<--  Better for DSR ... Better for NRR  -->\n\n\nLog( DSR / NRR )")
+delta_sar_p
 
 ggsave(here("analysis/figures/log_sar_comp.pdf"),
        delta_sar_p,
@@ -262,36 +265,37 @@ delta_fresh_p = comp_df %>%
              linetype = 2) +
   labs(x = "Brood Year",
        y = "<--  Better for DSR ... Better for NRR  -->\n\n\nLog( DSR / NRR )")
+delta_fresh_p
 
 ggsave(here("analysis/figures/log_fresh_comp.pdf"),
        delta_fresh_p,
        width = 12,
        height = 9)
 
-stan_df %>%
-  select(brood_year,
-         stan_summ) %>%
-  # filter(brood_year < 2018) %>%
-  unnest(stan_summ) %>%
-  filter(grepl('phi\\[1,', param)) %>%
-  mutate(across(brood_year,
-                as_factor)) %>%
-  ggplot(aes(x = brood_year)) +
-  geom_boxplot(aes(ymin = `2.5%`,
-                   lower = `25%`,
-                   middle = mean,
-                   upper = `75%`,
-                   ymax = `97.5%`,
-                   fill = strategy),
-               stat = "identity") +
-  theme_bw() +
-  theme(axis.text.x = element_text(angle = 45,
-                                   hjust = 1),
-        legend.position = "bottom") +
-  scale_fill_brewer(palette = "Set1",
-                    name = "Life History") +
-  labs(x = "Brood Year",
-       y = "Survival: LLRTP to GRJ")
+# stan_df %>%
+#   select(brood_year,
+#          stan_summ) %>%
+#   # filter(brood_year < 2018) %>%
+#   unnest(stan_summ) %>%
+#   filter(grepl('phi\\[1,', param)) %>%
+#   mutate(across(brood_year,
+#                 as_factor)) %>%
+#   ggplot(aes(x = brood_year)) +
+#   geom_boxplot(aes(ymin = `2.5%`,
+#                    lower = `25%`,
+#                    middle = mean,
+#                    upper = `75%`,
+#                    ymax = `97.5%`,
+#                    fill = strategy),
+#                stat = "identity") +
+#   theme_bw() +
+#   theme(axis.text.x = element_text(angle = 45,
+#                                    hjust = 1),
+#         legend.position = "bottom") +
+#   scale_fill_brewer(palette = "Set1",
+#                     name = "Life History") +
+#   labs(x = "Brood Year",
+#        y = "Survival: LLRTP to GRJ")
 
 stan_df %>%
   filter(brood_year < 2018) %>%
