@@ -228,29 +228,12 @@ model_df = obs_df %>%
                               "GRA" %in% names(x)
                             }))
 
-
+# run survival models
 model_df %<>%
   mutate(cjs_mod = map(cjs_df,
                        .f = function(cjs_df) {
-                         if(n_distinct(cjs_df$strategy) == 1) {
-                           cat("Only one Strategy\n")
-                           cjs_proc = cjs_df %>%
-                             select(-tag_code) %>%
-                             as.data.frame() %>%
-                             process.data()
-
-                           cjs_ddl = make.design.data(cjs_proc)
-
-                           mod = try(crm(data = cjs_proc,
-                                         ddl = cjs_ddl,
-                                         model.parameters = list(Phi = list(formula = ~ time),
-                                                                 p = list(formula = ~ time)),
-                                         accumulate = F,
-                                         itnmax = 1e4) %>%
-                                       cjs.hessian())
-                         }
-
                          cjs_proc = cjs_df %>%
+                           filter(!is.na(strategy)) %>%
                            select(-tag_code) %>%
                            as.data.frame() %>%
                            process.data(group = c("strategy"))
@@ -305,7 +288,7 @@ model_df %<>%
 
 # detection probability and survival to LGR
 dodge_width = 0.4
-model_df %>%
+lgr_p = model_df %>%
   filter(incl_GRJ) %>%
   select(brood_year,
          pred) %>%
@@ -330,9 +313,6 @@ model_df %>%
                     ymax = ucl),
                 width = 0.3,
                 position = position_dodge(width = dodge_width)) +
-  # geom_crossbar(aes(ymin = estimate - se,
-  #                   ymax = estimate + se),
-  #               alpha = 0.5) +
   geom_point(size = 4,
              position = position_dodge(width = dodge_width)) +
   scale_color_brewer(palette = "Set1",
@@ -345,17 +325,19 @@ model_df %>%
   theme(legend.position = "bottom") +
   labs(x = "Brood Year",
        y = "Probability")
+lgr_p
 
 # look at travel times to Lower Granite
 travel_time = model_df %>%
-  select(brood_year, llrtp_start) %>%
+  select(brood_year,
+         llrtp_start) %>%
   unnest(llrtp_start) %>%
   group_by(tag_code) %>%
   mutate(grj_det = if_else(sum(node == "GRJ") > 0, T, F)) %>%
   ungroup() %>%
   filter(grj_det) %>%
   group_by(brood_year, tag_code, strategy) %>%
-  summarize(grj_time = difftime(min_det[node == "GRJ"], max_det[node=="LLRTP"], units = "days"),
+  summarize(grj_time = difftime(min_det[node == "GRJ"], max_det[node == "LLRTP"], units = "days"),
             .groups = "drop") %>%
   mutate(across(grj_time,
                 as.numeric)) %>%
@@ -364,17 +346,18 @@ travel_time = model_df %>%
                    list(mean = mean,
                         median = median)),
             .groups = "drop")
+travel_time
 
 # daily survival rates
-model_df %>%
+daily_surv_p = model_df %>%
   select(brood_year,
          pred) %>%
   unnest(pred) %>%
   mutate(strategy = if_else(is.na(strategy) & brood_year == 2010,
-                              "DSR",
-                              if_else(is.na(strategy) & brood_year == 2011,
-                                      "NRR",
-                                      as.character(strategy)))) %>%
+                            "DSR",
+                            if_else(is.na(strategy) & brood_year == 2011,
+                                    "NRR",
+                                    as.character(strategy)))) %>%
   mutate(across(strategy,
                 as_factor)) %>%
   filter((param == "Phi" & occ == 1)) %>%
@@ -402,6 +385,7 @@ model_df %>%
   labs(x = "Brood Year",
        y = "Probability",
        title = "Daily Survival Rate")
+daily_surv_p
 
 #---------------------------------------------------------
 # save some things
@@ -409,55 +393,12 @@ save(lem_tags, config_file, obs_df, model_df, travel_time,
      file = here("analysis/data/derived_data/CJS_model_fits.rda"))
 
 #---------------------------------------------------------
-# combine all years, and fit a CJS model with a year effect
-# cjs_df = model_df %>%
-#   select(brood_year, cjs_df) %>%
-#   unnest(cjs_df) %>%
-#   mutate(across(-c(brood_year:emig_stage),
-#                 replace_na,
-#                 0)) %>%
-#   select(-ch) %>%
-#   unite(ch,
-#         -c(brood_year:emig_stage),
-#         sep = "",
-#         remove = F)
-#
-# cjs_proc = cjs_df %>%
-#   select(-tag_code) %>%
-#   mutate(across(brood_year,
-#                 as.factor)) %>%
-#   as.data.frame() %>%
-#   process.data(group = c("brood_year", "emig_stage"))
-#
-# cjs_ddl = make.design.data(cjs_proc)
-#
-# mod = try(crm(data = cjs_proc,
-#               ddl = cjs_ddl,
-#               model.parameters = list(Phi = list(formula = ~ (brood_year + emig_stage) * time),
-#                                       p = list(formula = ~ (brood_year + emig_stage) * time)),
-#               accumulate = F,
-#               itnmax = 1e4) %>%
-#             cjs.hessian())
-#
-# mod_pred = tidyr::expand(cjs_df, brood_year, emig_stage) %>%
-#   mutate(across(brood_year,
-#                 as_factor)) %>%
-#   filter(emig_stage != "Parr") %>%
-#   mutate(across(emig_stage,
-#                 fct_drop)) %>%
-#   # filter(brood_year )
-#   predict(mod,
-#           newdata = .,
-#           se = TRUE) %>%
-#   map_df(.id = "param",
-#          .f = identity)
-
-#---------------------------------------------------------
 # look at run timing statistics
-obs_df %>%
+run_time_p = obs_df %>%
   select(brood_year,
          llrtp_start) %>%
   unnest(llrtp_start) %>%
+  filter(!is.na(strategy)) %>%
   filter(node %in% c("GRJ", "BOJ", "BON")) %>%
   mutate(node = recode(node,
                        "GRJ" = "Lower Granite",
@@ -478,6 +419,7 @@ obs_df %>%
        y = "Brood Year",
        fill = "Emigrant Stage",
        title = "DSR/NRR Run Timing")
+run_time_p
 
 #---------------------------------------------------------
 # look at proportion of fish by life history that come back to BON
@@ -488,33 +430,30 @@ ocean_df = obs_df %>%
   unnest(llrtp_start) %>%
   filter(node == "BON",
          life_stage == "adult") %>%
-  mutate(return_age = if_else(emig_stage == "Smolt",
+  mutate(return_age = if_else(strategy == "NRR",
                               if_else(llrtp_time < 500,
                                       3,
                                       if_else(between(llrtp_time, 500, 900),
                                               4,
                                               5)),
-                              if_else(emig_stage == "Presmolt",
+                              if_else(strategy == "DSR",
                                       if_else(llrtp_time < 700,
                                               3,
                                               if_else(between(llrtp_time, 700, 1200),
                                                       4, 5)),
-                                      if_else(emig_stage == "Parr",
-                                              if_else(llrtp_time < 700,
-                                                      3,
-                                                      if_else(between(llrtp_time, 700, 1200),
-                                                              4, 5)),
-                                              NA_real_))))
+                                      NA_real_)))
 
-ocean_df %>%
-  tabyl(emig_stage, return_age) %>%
+# ocean age table
+ocean_tbl = ocean_df %>%
+  tabyl(strategy, return_age) %>%
   adorn_percentages(denominator = "row") %>%
   # adorn_percentages(denominator = "col") %>%
   adorn_pct_formatting()
 
-ocean_df %>%
+# ocean age plot
+ocean_p1 = ocean_df %>%
   ggplot(aes(x = llrtp_time,
-             fill = emig_stage,
+             fill = strategy,
              color = as.factor(return_age))) +
   scale_color_brewer(palette = "Set1",
                      name = "Return Age") +
@@ -522,14 +461,15 @@ ocean_df %>%
                     name = "Emig. Stage") +
   geom_histogram() +
   labs(x = "Days Since LLRTP")
+ocean_p1
 
 ocean_df %>%
-  group_by(emig_stage, return_age) %>%
+  group_by(strategy, return_age) %>%
   summarize(n_tags = n(),
             .groups = "drop") %>%
-  group_by(emig_stage) %>%
+  group_by(strategy) %>%
   mutate(prop = n_tags / sum(n_tags)) %>%
-  ggplot(aes(x = emig_stage,
+  ggplot(aes(x = strategy,
              y = prop,
              fill = as.factor(return_age))) +
   geom_col(position = "stack") +
@@ -539,14 +479,13 @@ ocean_df %>%
        y = "Proportion")
 
 ocean_df %>%
-  filter(emig_stage != "Parr",
-         brood_year < 2018) %>%
-  group_by(emig_stage, brood_year, return_age) %>%
+  filter(brood_year < 2018) %>%
+  group_by(strategy, brood_year, return_age) %>%
   summarize(n_tags = n(),
             .groups = "drop") %>%
-  group_by(emig_stage, brood_year) %>%
+  group_by(strategy, brood_year) %>%
   mutate(prop = n_tags / sum(n_tags)) %>%
-  ggplot(aes(x = emig_stage,
+  ggplot(aes(x = strategy,
              y = prop,
              fill = as.factor(return_age))) +
   geom_col(position = "stack") +
@@ -558,19 +497,19 @@ ocean_df %>%
        y = "Proportion")
 
 ocean_df %>%
-  group_by(brood_year, emig_stage, return_age) %>%
+  group_by(brood_year, strategy, return_age) %>%
   summarize(n_tags = n(),
             .groups = "drop") %>%
   group_by(brood_year, return_age) %>%
   mutate(tot_tags = sum(n_tags),
          prop = n_tags / tot_tags) %>%
   group_by(brood_year) %>%
-  mutate(n_lh = n_distinct(emig_stage)) %>%
+  mutate(n_lh = n_distinct(strategy)) %>%
   ungroup() %>%
   filter(n_lh > 1) %>%
   # filter(n_lh == 1)
   select(-n_tags) %>%
-  pivot_wider(names_from = emig_stage,
+  pivot_wider(names_from = strategy,
               values_from = prop,
               values_fill = 0) %>%
   filter(return_age == 3)
@@ -579,7 +518,6 @@ model_df %>%
   select(brood_year,
          cjs_df) %>%
   unnest(cjs_df) %>%
-  filter(emig_stage != "Parr") %>%
   mutate(across(c(BOJ:above_GRA),
                 replace_na,
                 0)) %>%
@@ -595,7 +533,7 @@ model_df %>%
                            "BON",
                            "GRA",
                            "above_GRA"))) %>%
-  group_by(brood_year, emig_stage, node) %>%
+  group_by(brood_year, strategy, node) %>%
   summarise(n_obs = n_distinct(tag_code),
             .groups = "drop") %>%
   pivot_wider(names_from = "node",
