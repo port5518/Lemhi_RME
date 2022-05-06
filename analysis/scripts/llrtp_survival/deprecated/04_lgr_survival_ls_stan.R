@@ -1,8 +1,8 @@
 # Author: Kevin See
 # Purpose: Survival from LLRTP to LGR - Bayesian style with Stan
 # Created: 6/29/21
-# Last Modified: 4/25/22
-# Notes: Re-ran by Mike A in April 2022 w/ cleaned tag lists
+# Last Modified:
+# Notes:
 
 # clear environment
 rm(list = ls())
