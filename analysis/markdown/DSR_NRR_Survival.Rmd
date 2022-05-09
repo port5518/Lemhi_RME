@@ -193,17 +193,17 @@ obs_df %>%
   mutate(n_tags = map(llrtp_start,
                       .f = function(x) {
                         x %>%
-                          group_by(emig_stage) %>%
+                          group_by(strategy) %>%
                           summarize(n_tags = n_distinct(tag_code))
                       })) %>%
   select(brood_year, n_tags) %>%
   unnest(n_tags) %>%
-  mutate(across(emig_stage,
-                fct_recode,
-                "DSR" = "Presmolt",
-                "NRR" = "Smolt")) %>%
-  filter(emig_stage != "Parr") %>%
-  pivot_wider(names_from = emig_stage,
+  # mutate(across(emig_stage,
+  #               fct_recode,
+  #               "DSR" = "Presmolt",
+  #               "NRR" = "Smolt")) %>%
+  # filter(emig_stage != "Parr") %>%
+  pivot_wider(names_from = strategy,
               values_from = n_tags,
               values_fill = 0) %>%
   mutate(across(brood_year,
@@ -352,7 +352,7 @@ obs_df %>%
   select(brood_year,
          llrtp_start) %>%
   unnest(llrtp_start) %>%
-  filter(emig_stage != "Parr") %>%
+  #filter(emig_stage != "Parr") %>%
   filter(node %in% c("GRJ", "BOJ", "BON")) %>%
   mutate(node = recode(node,
                        "GRJ" = "Lower Granite",
