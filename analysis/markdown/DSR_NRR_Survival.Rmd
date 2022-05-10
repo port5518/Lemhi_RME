@@ -73,7 +73,7 @@ knitr::opts_chunk$set(
 
 ```
 
-```{r packages}
+```{r packages, message = FALSE}
 # load packages
 library(tidyverse)
 library(janitor)
@@ -183,13 +183,12 @@ Recently, the DSR life history has dominated within the Lemhi River population i
 
 We compiled a list of all PIT tags deployed within the Lemhi River using two PTAGIS queries. The first was a "Tagging Details" query, with filters set such that the mark subbasin is Lemhi, capture method is screw trap, species is Chinook, and mark year is 1986-2020. We filtered these results further to focus on fish tagged at the lower Lemhi RST, which are assumed to be emigrating out of the Lemhi River, by focuing on mark site codes "LEMHIR" or "LLRTP" (the former was used prior to 2016) and filtering out any tags released at LEMHIW (the upper Lemhi RST). The second was a "Recapture Details" query, with similar filters set: mark subbasin is Lemhi, capture method is screw trap, species is Chinook, and recap year is 1986-2020. Again, we further refined these results by filtering for recapture site code of "LEMHIR" or "LLRTP", and recapture released that were not released at LEMHIW.
 
-These two queries often resulted in tags showing up in both the mark and recapture lists. For tags recaptured within a week of marking, we used the mark date as the starting point, but for fish recaptured more than a week after marking (sometimes months later) we used the maximum recapture date to indicate when we believe that fish left the Lemhi River. 
+These two queries often resulted in tags showing up in both the mark and recapture lists. For tags recaptured within a week of marking, we used the mark date as the starting point, but for fish recaptured more than a week after marking (sometimes months later) we used the maximum recapture date to indicate when we believe that fish left the Lemhi River.
 
-<!-- Need to refine how we specify DSR and NRR and fix the below -->
-Tags that left after Aug 31 were considered DSR and tags that left prior to July 1 were considered NRR. To date, we have excluded tags that left between July 1 and Aug 31, so as to avoid any confusion as to which brood year to assign them. DSR fish were assigned a brood year on year prior to their emigration date in the fall, and NRR fish were assigned a brood year two years prior. The number of tags assigned to each brood year and life-history are shown in Table \@ref(tab:lh-tags-tab).
+We further filtered out tags that were less than 25 mm or greater than 200 mm as these seemed to be either fry, precocials, or errant sizes, and thus, were not assigned to the DSR or NRR strategies. Generally, parr and presmolts were classified as DSR whereas smolts were classified as NRR. Size and time of capture were used to differentiate smolts and parr were used to distinguish DSR and NRR during the spring period when both migratory types were captured concurrently (Figure \@ref(fig:lem-size-date-fig)). DSR fish were assigned a brood year on year prior to their emigration date in the fall, and NRR fish were assigned a brood year two years prior. The number of tags assigned to each brood year and emigrant strategy are shown in Table \@ref(tab:lh-tags-tab).
 
 ```{r lh-tags-tab}
-obs_df %>%
+tags_tab = obs_df %>%
   mutate(n_tags = map(llrtp_start,
                       .f = function(x) {
                         x %>%
@@ -198,20 +197,18 @@ obs_df %>%
                       })) %>%
   select(brood_year, n_tags) %>%
   unnest(n_tags) %>%
-  # mutate(across(emig_stage,
-  #               fct_recode,
-  #               "DSR" = "Presmolt",
-  #               "NRR" = "Smolt")) %>%
-  # filter(emig_stage != "Parr") %>%
+  filter(!is.na(strategy)) %>%
   pivot_wider(names_from = strategy,
               values_from = n_tags,
               values_fill = 0) %>%
   mutate(across(brood_year,
                 as.character)) %>%
   rename(`Brood Year` = brood_year) %>%
+  adorn_totals() %>%
   kbl(caption = "Number of PIT tags deployed at Lower Lemhi rotary screw trap by brood year and life history type.",
       format.args = list(big.mark = ",")) %>%
   kable_styling(position = "center", full_width = F)
+tags_tab
 
 ```
 
@@ -229,7 +226,7 @@ $$
 where $\hat{N}$ is the estimate of abundance in a given season or year, $i$ is season, $c_i$ is the number of all unique fish captures in season $i$, $m_i$ is the number of tagged fish released in season $i$, and $r_i$ is the number of recaptures in season $i$ [@Bailey1951]. The estimator is computed using an interative maximization of the log likelihood [@Steinhorst2004]. The method assumes that fish are captured independently with probability $p$ (equivalent to trap efficiency) and tagged fish mix thoroughly with untagged fish. The 95% confidence intervals were computed using 10,000 bootstraps [@Steinhorst2004]. Emigrant abundance estimates do not account for periods where the trap was not in operation.
 
 
-## Run Timing
+## Arrival Timing
 
 We also investigated the difference in arrival timing between DSR and NRR Chinook salmon to Lower Granite Dam as juveniles, to Bonneville Dam as juveniles, and further, back to Bonneville Dam as adults. This relies on tags that were detected at GRJ, BOJ, or BON, respectively. We converted the dates of detection to Julian day, and calculated the mean arrival day for each life-history type / brood year combination. We then took the mean of each life-history type across brood years. This was all done based on detections at Bonneville, not the consolidated nodes described in the [Survival](#survival) section.
 
@@ -276,7 +273,7 @@ We anticipated that the survival between LLRTP and GRJ would be higher for smolt
 
 ## Data
 
-```{r lem-size-date-fig}
+```{r lem-size-date-fig, fig.cap = "Separation of natal-reach rearing (NRR) and downstream-rearing (DSR) types of Chinook salmon based on length and time of capture at the lower Lemhi rotary screw trap, brood years 2004-2019."}
 lem_rst_tags = read_rds(here("analysis/data/derived_data/lemhi_rst_tags_cleaned.rds"))
 
 # size and time plot by strategy (DSR, NRR)
@@ -314,6 +311,7 @@ strategy_p
 
 ```
 
+
 ## Abundance
 
 ```{r abund-tab}
@@ -343,16 +341,16 @@ strat_abund_tab
 
 ```
 
-## Run Timing
+
+## Arrival Timing
 
 Boxplots showing the distribution of observed arrival timing for all brood years are shown in Figure \@ref(fig:run-timing), and the average difference between mean DSR and NRR arrivals at each location is shown in Table \@ref(tab:jday-tab).
 
 ```{r run-timing, fig.cap = "Boxplots showing the range of arrival timing to Lower Granite as juveniles, Bonneville as juveniles and Bonneville again as adults, colored by life history."}
-obs_df %>%
+jday_p = obs_df %>%
   select(brood_year,
          llrtp_start) %>%
   unnest(llrtp_start) %>%
-  #filter(emig_stage != "Parr") %>%
   filter(node %in% c("GRJ", "BOJ", "BON")) %>%
   mutate(node = recode(node,
                        "GRJ" = "Lower Granite",
@@ -365,28 +363,26 @@ obs_df %>%
   mutate(min_jday = yday(min_det)) %>%
   ggplot(aes(x = min_jday,
              y = fct_rev(as.factor(brood_year)),
-             fill = emig_stage)) +
+             fill = strategy)) +
   geom_boxplot() +
-  scale_fill_brewer(palette = "Set1",
-                    name = "Life History",
-                    labels = c("Presmolt" = "DSR",
-                               "Smolt" = "NRR")) +
+  scale_fill_brewer(palette = "Set2",
+                    name = "Strategy") +
   facet_wrap(~ node,
              nrow = 1) +
   theme(legend.position = "bottom") +
   labs(x = "Julian Day of Arrival",
        y = "Brood Year",
-       fill = "Emigrant Stage",
+       fill = "Strategy",
        title = "DSR/NRR Run Timing")
+jday_p
 
 ```
 
 ```{r jday-tab}
-obs_df %>%
+jday_tab = obs_df %>%
   select(brood_year,
          llrtp_start) %>%
   unnest(llrtp_start) %>%
-  filter(emig_stage != "Parr") %>%
   filter(node %in% c("GRJ", "BOJ", "BON")) %>%
   mutate(node = recode(node,
                        "GRJ" = "Lower Granite",
@@ -397,32 +393,31 @@ obs_df %>%
                                   "Bonneville - Juv.",
                                   "Bonneville - Adult"))) %>%
   mutate(min_jday = yday(min_det)) %>%
-  group_by(brood_year, emig_stage, node) %>%
+  group_by(brood_year, strategy, node) %>%
   summarize(across(min_jday,
                    list(mean = mean, 
                         median = median, 
                         sd = sd),
                    .names = "{fn}"),
             .groups = "drop") %>%
-  pivot_longer(cols = -c(brood_year, emig_stage, node),
+  pivot_longer(cols = -c(brood_year, strategy, node),
                names_to = "statistic") %>%
-  pivot_wider(names_from = emig_stage,
+  pivot_wider(names_from = strategy,
               values_from = value) %>%
-  mutate(diff = Smolt - Presmolt) %>%
+  mutate(diff = NRR - DSR) %>%
   filter(statistic == "mean") %>%
   select(-statistic) %>%
   arrange(node, brood_year) %>%
   group_by(node) %>%
-  summarize(across(c(Presmolt:diff),
+  summarize(across(c(DSR:diff),
                    mean,
                    na.rm = T)) %>%
   rename(Location = node,
-         DSR = Presmolt,
-         NRR = Smolt,
          `Difference (days)` = diff) %>%
   kbl(digits = 0,
-      caption = "Mean Julian day of arrival at a few locations by life-history, and the difference in days.") %>%
+      caption = "Mean Julian day of arrival at a few locations by strategy, and the difference in days.") %>%
   kable_styling(position = "center", full_width = FALSE)
+jday_tab
 
 ```
 
@@ -432,7 +427,7 @@ obs_df %>%
 Estimates of survival between each detection point are shown in \@ref(fig:surv-post-fig).
 
 ```{r surv-post-fig, fig.cap = "Boxplots showing posteriors of survival probability between detection sites, colored by life history. Boxes represent the middle 50% of the posterior draws and the median is shown by the bisecting line. Whiskers show range of values within 1.5 times the interquartile range. Outliers are represented by points."}
-stan_df %>%
+surv_p = stan_df %>%
   filter(brood_year < 2018) %>%
   mutate(stan_mcmc = map(stan_fit,
                          .f = function(x) {
@@ -446,11 +441,11 @@ stan_df %>%
   pivot_longer(cols = starts_with("phi["),
                names_to = "param",
                values_to = "value") %>%
-  mutate(emig_stage = if_else(str_detect(param, ",1]") & brood_year != 2011,
-                              "DSR",
-                              if_else(str_detect(param, ",2]") | brood_year == 2011,
-                                      "NRR",
-                                      NA_character_))) %>%
+  mutate(strategy = if_else(str_detect(param, ",1]") & brood_year != 2011,
+                            "DSR",
+                            if_else(str_detect(param, ",2]") | brood_year == 2011,
+                                    "NRR",
+                                    NA_character_))) %>%
   mutate(surv_period = str_extract(param, "[:digit:]"),
          surv_period = recode(surv_period,
                               "1" = "LLRTP to GRJ",
@@ -462,7 +457,7 @@ stan_df %>%
                 as_factor)) %>%
   ggplot(aes(x = brood_year,
              y = value,
-             fill = emig_stage)) +
+             fill = strategy)) +
   # geom_violin(draw_quantiles = c(0.5),
   #             scale = "area") +
   geom_boxplot(outlier.size = 0.3) +
@@ -470,15 +465,17 @@ stan_df %>%
   theme(axis.text.x = element_text(angle = 45,
                                    hjust = 1),
         legend.position = "bottom") +
-  scale_fill_brewer(palette = "Set1",
+  scale_fill_brewer(palette = "Set2",
                     name = "Life History") +
   coord_cartesian(ylim = c(0,1)) +
   labs(x = "Brood Year",
        y = "Survival Probability")
+surv_p
+
 ```
 
 ```{r delta-fresh, fig.cap = "Boxplots of posteriors of log odds ratios of survival between DSR and NRR tags. Values greater than 0 indicate relatively better survival for DSR fish and less than 0 indicates relatively better survival for NRR fish. Color indicates which life history was favored for that brood year. Boxes represent the middle 50% of the posterior draws and the median is shown by the bisecting line. Whiskers show 95% credible intervals."}
-delta_df %>%
+favored_p = delta_df %>%
   filter(param %in% c("LLRTP to GRJ",
                       "GRJ to BOJ",
                       "LLRTP to BOJ")) %>%
@@ -496,16 +493,18 @@ delta_df %>%
   theme(axis.text.x = element_text(angle = 45,
                                    hjust = 1),
         legend.position = "bottom") +
-  scale_fill_brewer(palette = "Set1",
+  scale_fill_brewer(palette = "Set2",
                     name = "Favored Life History") +
   geom_hline(yintercept = 0,
              linetype = 2) +
   labs(x = "Brood Year",
        y = "<--  Better for NRR ... Better for DSR  -->\n\n\nLog( DSR / NRR )")
+favored_p
+
 ```
 
-```{r delta-table}
-delta_df %>%
+```{r delta-tab}
+delta_tab = delta_df %>%
   filter(param %in% c("LLRTP to GRJ",
                       "GRJ to BOJ",
                       "LLRTP to BOJ")) %>%
@@ -527,6 +526,7 @@ delta_df %>%
   kbl(caption = "Odds ratio (90% credible interval) of survival between various detection points, comparing DSR to NRR. Values less than 1 indicate NRR has better relative survival, while values greater than 1 favor DSR. Cells in bold show statistically significant differences.",
         escape = F) %>%
   kable_styling()
+delta_tab
 
 ```
 
@@ -534,7 +534,7 @@ delta_df %>%
 ## Smolt-to-Adult Return Rates (SAR)
 
 ```{r delta-sar, fig.cap = "Boxplots of posteriors of log odds ratios of SARs between DSR and NRR tags. Values greater than 0 indicate relatively better survival for DSR fish and less than 0 indicates relatively better survival for NRR fish. Color indicates which life history was favored for that brood year. Boxes represent the middle 50% of the posterior draws and the median is shown by the bisecting line. Whiskers show 95% credible intervals."}
-delta_df %>%
+delta_sar_p = delta_df %>%
   filter(grepl("SAR", param)) %>%
   ggplot(aes(x = brood_year)) +
   geom_boxplot(aes(ymin = `2.5%`,
@@ -550,16 +550,18 @@ delta_df %>%
   theme(axis.text.x = element_text(angle = 45,
                                    hjust = 1),
         legend.position = "bottom") +
-  scale_fill_brewer(palette = "Set1",
-                    name = "Favored Life History") +
+  scale_fill_brewer(palette = "Set2",
+                    name = "Favored Strategy") +
   geom_hline(yintercept = 0,
              linetype = 2) +
   labs(x = "Brood Year",
        y = "<--  Better for NRR ... Better for DSR  -->\n\n\nLog( DSR / NRR )")
+delta_sar_p
+
 ```
 
 ```{r}
-delta_df %>%
+delta_sar_tab = delta_df %>%
   filter(str_detect(param, "SAR")) %>%
   mutate(odds_ratio = exp(mean),
          odds_lci = exp(`5%`),
@@ -577,6 +579,8 @@ delta_df %>%
   kbl(caption = "Odds ratio (90% credible interval) of SARs to BON and GRA, comparing DSR to NRR. Values less than 1 indicate NRR has better relative survival, while values greater than 1 favor DSR Cells in bold show statistically significant differences.",
         escape = F) %>%
   kable_styling()
+delta_sar_tab
+
 ```
 
 
