@@ -1,0 +1,721 @@
+---
+title: "Habitat Use versus Availability by Juvenile Chinook Salmon in Winter Months, Lemhi River"
+author:
+  - Kevin E. See:
+      email: Kevin.See@dfw.wa.gov
+      institute: [wdfw]
+      correspondence: false
+  - Michael W. Ackerman:
+      email: mike.ackerman@mthoodenvironmental.com
+      institute: [mhe_mccall]
+      correspondence: true 
+  - Nick Porter:
+      email: Nicholas.Porter@merck.com
+      institute: [biomark]
+      correspondence: true
+  - Tulley Mackey:
+      email: tulley.mackey@mthoodenvironmental.com
+      institute: [mhe_salmon]
+      correspondence: false
+  - Mike Hall:
+      email: Mike.Hall1@merck.com
+      institute: [biomark]
+      correspondence: false
+  - Richie Carmichael:
+      email: Richard.Carmichael@merck.com
+      institute: [biomark]
+      correspondence: false
+institute:
+  - wdfw: Washington Department of Fish and Wildife, Fish Program, Science Division, 1111 Washington Street NE, Olympia, Washington, 98501, USA
+  - mhe_mccall: Mount Hood Environmental, PO Box 4282, McCall, Idaho, 83638, USA
+  - biomark: Biomark, Inc., 705 South 8th Street, Boise, Idaho, 83702, USA
+  - mhe_salmon: Mount Hood Environmental, 1009 South Daisy Street, Salmon, Idaho, 83467, USA
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  bookdown::html_document2:
+    theme: yeti
+    toc: yes
+    toc_depth: 2
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+    number_sections: yes
+    pandoc_args:
+    - --lua-filter=../templates/scholarly-metadata.lua
+    - --lua-filter=../templates/author-info-blocks.lua
+    - --lua-filter=../templates/pagebreak.lua
+  bookdown::word_document2:
+    fig_caption: yes
+    reference_docx: "../templates/template.docx"
+    number_sections: FALSE
+    toc: no
+    always_allow_html: true
+    fig_width: 6
+    pandoc_args:
+    - --lua-filter=../templates/scholarly-metadata.lua
+    - --lua-filter=../templates/author-info-blocks.lua
+    - --lua-filter=../templates/pagebreak.lua  
+csl: "../templates/american-fisheries-society.csl"
+bibliography:
+  - AckermanLibrary.bib
+always_allow_html: yes
+---
+
+```{r setup, echo = FALSE, message = F, warning = F}
+library(here)
+library(knitr)
+library(kableExtra)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  comment = "#>",
+  fig.path = here("analysis/figures//"),
+  dpi = 300
+)
+
+```
+
+```{r packages}
+# load packages
+library(tidyverse)
+library(here)
+library(magrittr)
+library(janitor)
+library(sf)
+library(EMT)
+library(DescTools)
+
+theme_set(theme_bw())
+
+```
+
+```{r load-data}
+load(here("analysis/data/derived_data/habitat_available.rda"))
+load(here("analysis/data/derived_data/habitat_use.rda"))
+
+```
+
+```{r clean-data}
+xs_all = xs_use %>%
+  mutate(source = "use") %>%
+  bind_rows(xs_avail %>%
+              mutate(source = "avail")) %>%
+  clean_names() %>%
+  # improve some column names
+  rename(release_loc = location,
+         release_date = release,
+         xs_name = name,
+         stream_name = stream_nam,
+         sin_cat = category,
+         frazil_ice = frazel_ice) %>%
+  # correct the code for small side channels
+  mutate(channel_unit_type = recode(channel_unit_type,
+                                    `SC` = "SSC")) %>%
+  # round distance to cover to nearest 0.1m and rename
+  mutate(distance_to_cover = round(distance_to_cover_round_to_nearest_0_1m, 1)) %>%
+  select(-distance_to_cover_round_to_nearest_0_1m) %>%
+  # fix some names within dominant substrate and reorder levels
+  mutate(dominant_substrate_1mx1m = fct_recode(dominant_substrate_1mx1m,
+                                               Boulder = "boulder",
+                                               Cobble = "cobble",
+                                               Fines = "silt_fines",
+                                               Sand = "sand",
+                                               Gravel = "gravel"),
+         dominant_substrate_1mx1m = fct_relevel(dominant_substrate_1mx1m,
+                                                "Gravel",
+                                                after = 2),
+         dominant_substrate_1mx1m = fct_relevel(dominant_substrate_1mx1m,
+                                                "Sand",
+                                                after = 3)) %>%
+  # add a variable of wehtere there's any cover present within 1.5m
+  mutate(has_cover = if_else(dominant_cover_type_1_5m_radius %in% c("No Cover", "Unknown") | is.na(dominant_cover_type_1_5m_radius),
+                             "No", "Yes"))
+
+xs_summary = xs_all %>%
+  filter(source == "avail") %>%
+  group_by(xs_name, sin_cat) %>%
+  summarise(n_pts = n_distinct(xs_point_number))
+
+```
+
+# Background
+
+Degradation of tributary habitat has been implicated as a major factor contributing to declines of Pacific salmon *Oncorhynchus* spp. Tributary habitat rehabilitation actions are necessary towards stemming population declines. However, habitat use information for juvenile salmonids, particularly during winter months, is somewhat lacking. 
+
+<!-- The following was largely plagarized from Favrot et al. 2018. At some point, it would be worth wordsmithing to make our own. --> Fish habitat is composed of physical and biological components that are necessary to complete a fish's life history [@Newcomb2007]. Habitat availability is the accessibility and procurability of those physical and biological resources by a fish [@Johnson1980]. Alternatively, habitat use is the way a fish uses the physical and biological resources available to them. Habitat suitability is a measure of the capacity of a specific available habitat to support a fish, with those habitats being most suitable being optimal [@Bovee1986]. Available habitats can be hierarchically characterized employing a spectrum ranging from least suitable (i.e., avoided) to most suitable (i.e., optimal). Habitat selection is the process of choosing a physical or biological component from a suite of available habitats [@Johnson1980]. In general, habitat use is considered random (i.e., no preference) if habitat use is proportionally equivalent to habitat availability. However, preferred habitat refers to a specific physical or biological component that is preferentially selected under equal availabilities (e.g., laboratory experiment: @Johnson1980). Lastly, critical habitat areas exhibit characteristics important to sensitive life stages (e.g., early life history: @Pitlo1989, @Newcomb2007).
+
+
+## Objectives
+
+The goal of this study was to characterize microhabitat use and preference for juvenile Chinook salmon *O. tshawytscha* in the lower Lemhi River during winter months. Habitat availability data and use data were collected in the lower Lemhi River using methods similar to those described by @Favrot2018 and implemented in Catherine Creek, Oregon. The habitat availability and use information will be used to describe habitat preference of juvenile Chinook salmon overwintering in the lower Lemhi River, which can in turn be used to describe target habitat conditions to be used in habitat restoration planning and designs.
+
+
+# Methods
+
+## Habitat Availability
+
+```{r hab-avail-data}
+center_pts_all = st_read("S:/main/data/habitat/lemhi_telemetry/availability/raw/Centerline_XS_Intersects.shp",
+                         quiet = T) %>%
+  st_zm() %>%
+  mutate(Category = factor(Category,
+                           levels = c("Low",
+                                      "Med",
+                                      "High")))
+
+```
+
+Microhabitat availability data were collected in the lower Lemhi River using line-transect survey techniques similar to those described by @Favrot2018. Line-transect techniques can minimize measurement error and are more repeatable than visual techniques [@McMahon1996; @Stanfield1998]. Microhabitat availability data were collected during base-flow conditions in August 2019 and variables measured at each transect point corresponded to microhabitat use variables (described below). Points were placed each 1 m along a linear network of the lower Lemhi River from its confluence with Hayden Creek downstream to its confluence with the Salmon River, resulting in `r prettyNum(nrow(center_pts_all), big.mark = ",")` points in total. Each point was then categorized as occurring within a low, medium, or high sinuosity reach (calculated at the 500m reach scale) of the lower Lemhi River (Table \@ref(tab:sin-table)).
+
+```{r sin-table}
+sin_tbl = tibble(
+  Category = c("Low", "Med", "High"),
+  Minimum = c(
+    min(center_pts_all$Sinuosity[center_pts_all$Category == "Low"]),
+    min(center_pts_all$Sinuosity[center_pts_all$Category == "Med"]),
+    min(center_pts_all$Sinuosity[center_pts_all$Category == "High"])
+  ),
+  Maximum = c(
+    max(center_pts_all$Sinuosity[center_pts_all$Category == "Low"]),
+    max(center_pts_all$Sinuosity[center_pts_all$Category == "Med"]),
+    max(center_pts_all$Sinuosity[center_pts_all$Category == "High"])
+  ),
+  `Length (m)` = c(
+    nrow(center_pts_all[center_pts_all$Category == "Low", ]),
+    nrow(center_pts_all[center_pts_all$Category == "Med", ]),
+    nrow(center_pts_all[center_pts_all$Category == "High", ])
+  )
+) %>%
+  kbl(caption = "The number of points within each sinousity category including the minimum and maximum sinuosity values for reach category.",
+      format.args = list(digits = 4,
+                         big.mark = ",")) %>%
+  kable_styling(position = "center", full_width = F)
+sin_tbl
+
+```
+
+We then randomly sampled an approximately equal number of points within each sinuosity category (Table \@ref(tab:xs-table)) and transects were placed at a right angle to the flow at each of the sampled points. At each transect, we then started at the wetted width midpoint (`xs_point_number = 0`) of the river and sampled every 1m to river right and river left (facing downstream), including the midpoint, to the wetted margin. Points to river right were designated positive (+) and points towards river left were designated negative (-) and habitat availability measurements were taken at each point.<!-- Need to verify those previous statements. Did we sample each meter and was river right (facing downstream) designated positive?--> Habitat availability measurements were taken at each point describing channel unit type, bank condition, dominant substrate, availability of substrate concealment, presence of adjacent side channels, dominant cover type, and distance to cover. In addition, depth and velocity estimates for each point were available from LiDAR-derived 2D numerical models. In total, habitat measurements were collected from `r nrow(xs_summary)` transects and `r prettyNum(sum(xs_summary$n_pts), big.mark = ",")` points, resulting in an average of `r round(sum(xs_summary$n_pts) / nrow(xs_summary), 1)` points per transect.
+
+```{r xs-table}
+xs_tbl = tibble(
+  Category = c("Low", "Med", "High"),
+  `n Transects` = c(
+    nrow(xs_summary[xs_summary$sin_cat == "Low", ]),
+    nrow(xs_summary[xs_summary$sin_cat == "Med", ]),
+    nrow(xs_summary[xs_summary$sin_cat == "High", ])
+  ),
+  `n Transect Points` = c(
+    sum(xs_summary$n_pts[xs_summary$sin_cat == "Low"]),
+    sum(xs_summary$n_pts[xs_summary$sin_cat == "Med"]),
+    sum(xs_summary$n_pts[xs_summary$sin_cat == "High"])
+  )
+) %>%
+  mutate(`Avg. Points per Transect` = round(`n Transect Points` / `n Transects`, 1)) %>%
+  kbl(caption = "The number of points within each sinousity category including the minimum and maximum sinuosity values for reach category.",
+      format.args = list(digits = 4,
+                         big.mark = ",")) %>%
+  kable_styling(position = "center", full_width = F)
+xs_tbl
+
+```
+
+## Habitat Use
+
+Microhabitat use data were collected from radio-tagged juvenile Chinook salmon in the lower Lemhi River and during winter months. <!-- Need to describe radio telemetry and the collection of use measurements -->
+
+
+## Habitat Availability Power Analysis
+
+```{r read_dv_data}
+# read in depth and velocities from the habitat availability transects
+xs_raster = crossing(metric = c("depth", "velocity"),
+                     sin_class = c("Low", "Med", "High")) %>%
+  mutate(sample_xs = map2(metric,
+                          sin_class,
+                          .f = function(x, y) {
+                            st_read(paste0("S:/main/data/habitat/lemhi_telemetry/availability/raw/cross_sections/DV_extract/", y, "_", str_sub(x, 0 ,1), ".shp"),
+                            quiet = T) %>%
+                              dplyr::select(Name:Sinuosity, 
+                                            Category,
+                                            raster_val = RASTERVALU) %>%
+                              mutate_at(vars(raster_val),
+                                        list(~ if_else(. == -9999,
+                                                       NA_real_,
+                                                       .))) %>%
+                              mutate(metric = x)
+                            }))
+
+# depth & velocity cross section values - sf object
+dv_sf = xs_raster %>%
+  select(-metric) %>%
+  unnest(cols = sample_xs) %>%
+  st_as_sf()
+
+# depth & velocity cross section values - data frame
+dv_df = dv_sf %>%
+  st_drop_geometry() %>%
+  as_tibble()
+
+# get all available depths & velocities from the complete rasters
+load("S:/main/data/habitat/lemhi_telemetry/availability/prepped/d_v_avail_sin.rda") # d_v_avail_sin
+
+# compose a data frame for comparison
+comp_df = dv_df %>%
+  select(metric,
+         sin_class,
+         raster_val) %>%
+  mutate(source = "sampled") %>%
+  bind_rows(d_v_avail_sin %>%
+              as_tibble() %>%
+              select(-ID) %>%
+              rename(raster_val = value) %>%
+              mutate(source = "all")) %>%
+  mutate(sin_class = factor(sin_class,
+                            levels = c("Low", "Med", "High")),
+         metric = str_to_title(metric))
+
+```
+
+First, we wanted to assess whether the habitat availability data collected in August 2019 was sufficient to capture the overall distribution of available habitat throughout the lower Lemhi River, or whether addition habitat availablity data were needed. Again, in August 2019, a total of `r nrow(xs_summary)` transects (cross-sections) were sampled, based on a stratified sample where strata were defined by low, medium, and high sinuosity (Tables \@ref(tab:sin-table) & \@ref(tab:xs-table)). We started by examining the depth and velocity values available from raster build on 2D numerical models for the entire lower Lemhi. We then extracted depth and velocity values from points along the sampled transects, and compared those distributions with the distributions of depth and velocity for the entire available raster. Our hypothesis is that if the distributions are similar between the enitre raster and the sampled transects, then the sample has done an adequate job of capturing the distribution of available habitat.
+
+
+## Habitat Preference
+
+After filtering the found radio tags to include only those fish that we deemed selected a given location, we compared the available habitat to the habitat used by radio-tagged juvenile Chinook salmon. To date, we made comparisons for the following categories:
+
+* Channel Unit Types
+* Substrate Concealment
+* Cover within 1.5 m
+
+
+### Channel Unit Types
+
+Because there are multiple types of channel units, we employed a goodness-of-fit test for discrete multivariate data. This test compares the observed channel unit type that radio-tagged juveniles were found in with the proportion of channel unit types from the habitat availability dataset. The null hypothesis is that the "use" tags will be found in similar channel unit types relative to what is available. Because there are `r n_distinct(xs_all$channel_unit_type)` channel unit types, this leads to a large number of potential arrangements. Therefore, we used a Monte Carlo approach to simulate `r prettyNum(1e5, scientific=FALSE, big.mark = ",")` samples of $n$ observations ($n$ being the number of selected "use" channel units) using the habitat availability proportions of channel unit types. The p-value is then calculated by summing the relative frequencies of outcomes occurring less frequently than the observed ones, so a low p-value indicates that the observed "use" channel types are distributed differently that the available ones, suggesting that fish are not randomly distributed in overwinter habitat. We also used a log likelihood ratio goodness of fit test (G-test).
+
+
+### Concealment
+
+Because concealment is binary (either available or not), we tested whether there were differences between habitat availability and use using a Chi-squared test, as well as a G-test.
+
+
+### Cover
+
+For the purposed of our initial cover analysis, we grouped all types of cover into a single category, and compared that with the category of "no cover". This made cover a binary variable, like concealment, allowing us to also use the Chi-squared and G-test.
+
+
+# Results
+
+## Habitat Availability
+
+Habitat availability text...
+
+
+## Habitat Use
+
+Habitat use text...
+
+
+## Habitat Availability Power Analysis
+
+Results of the habitat availability power analysis are shown in Figure \@ref(fig:dist-fig). 
+
+```{r dist-fig, fig.cap = "Density plots of depth and velocity, colored by whether taken from the entire raster (All) or the sampled transects (Sampled), faceted by sinuosity category."}
+comp_df %>%
+  ggplot(aes(x = raster_val,
+             color = source,
+             fill = source)) +
+  geom_density(alpha = 0.3) +
+  scale_color_brewer(palette = 'Set1',
+                     name = 'Source') +
+  scale_fill_brewer(palette = 'Set1',
+                     name = 'Source') +
+  facet_grid(sin_class ~ metric,
+             scales = 'free') +
+  # facet_wrap(~ metric + sin_class, 
+  #            scales = 'free',
+  #            nrow = 2) +
+  theme(legend.position = "bottom") +
+  labs(x = 'Raster Value')
+
+```
+
+
+## Habitat Preference
+
+### Channel Unit Types
+
+```{r cu-fig, fig.cap = "Percent of channel unit types available in the entire Lemhi compared with percent where fish were using them, faceted by low, medium and high sinuosity classes."}
+# channel unit bar plot by sinuosity category
+cu_fig = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  ggplot(aes(x = source,
+             fill = channel_unit_type)) +
+  geom_bar(position = position_fill()) +
+  scale_fill_brewer(palette = "Set2",
+                    name = "CU Type") +
+  facet_wrap(~ sin_cat) +
+  labs(x = "Data Set",
+       y = "Percentage")
+cu_fig
+
+```
+
+```{r cu-test}
+cu_prop_test = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  group_by(sin_cat, 
+           source,
+           channel_unit_type) %>%
+  summarize(n_found = n(),
+            .groups = "drop") %>%
+  # fill in missing groups w/ NA
+  full_join(tidyr::expand(.,
+                          sin_cat,
+                          source,
+                          channel_unit_type),
+            by = c("sin_cat",
+                   "source",
+                   "channel_unit_type")) %>%
+  # replace NAs with 0s
+  mutate(across(n_found,
+                replace_na,
+                0)) %>%
+  # calculate proportions
+  group_by(sin_cat,
+           source) %>%
+  mutate(prop = n_found / sum(n_found)) %>%
+  ungroup() %>%
+  arrange(sin_cat,
+          source,
+          channel_unit_type) %>%
+  # nest data by sinuosity category
+  nest(data = -sin_cat) %>%
+  mutate(mn_test = map(data,
+                       .f = purrr::quietly(function(x) {
+                         obs_n = x %>%
+                           filter(source == "use") %>%
+                           pull(n_found)
+                         exp_prop = x %>%
+                           filter(source == "avail") %>%
+                           pull(prop)
+                         set.seed(6)
+                         mn_test = EMT::multinomial.test(observed = obs_n,
+                                                         prob = exp_prop,
+                                                         useChisq = F,
+                                                         MonteCarlo = T,
+                                                         ntrial = 1e5)
+                         return(mn_test)
+                       })),
+         mn_test = map(mn_test,
+                       "result"),
+         mn_test_stat = map_chr(mn_test, 
+                             "stat"),
+         mn_p_value = map_dbl(mn_test,
+                           "p.value")) %>%
+  mutate(g_test = map(data,
+                      .f = function(x) {
+                        obs_n = x %>%
+                          filter(source == "use") %>%
+                          pull(n_found)
+                        exp_prop = x %>%
+                          filter(source == "avail") %>%
+                          pull(prop)
+                        g_test = DescTools::GTest(x = obs_n,
+                                                  p = exp_prop,
+                                                  correct = "williams")
+                        return(g_test)
+                      }),
+         g_test_stat = map_chr(g_test,
+                               "method"),
+         g_p_value = map_dbl(g_test,
+                             "p.value"))
+
+```
+
+```{r cu-tab}
+# channel unit table
+cu_tab = cu_prop_test %>%
+  select(sin_cat,
+         mn_p_value,
+         g_p_value) %>%
+  rename(`Sinuosity Category` = sin_cat,
+         `Multinomial p-value` = mn_p_value,
+         `G-test p-value` = g_p_value) %>%
+  kable(caption = "P-values of multinomial and G-tests for differences in channel unit type proportions between available and selected habitat.") %>%
+  kable_styling(position = "center", 
+                full_width = F)
+cu_tab
+
+```
+
+There are statistically significant differences in the distribution of channel units selected by radio-tagged juvenile Chinook salmon during winter months and what is available in the lower Lemhi River, across all three sinuosity categories (Table \@ref(tab:cu-tab)). It appears that juvenile Chinook salmon tend to use pools and off-channel areas at a higher frequency than their availability, and riffles at a lower frequency compared to what is available (Figure \@ref(fig:cu-fig)).
+
+
+### Concealment
+
+```{r conceal-fig, fig.cap = "Percent of spots where concealment is available in the entire Lemhi compared with percent of where fish had selected, faceted by low, medium and high sinuosity classes."}
+# concealment figure
+conceal_fig = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  filter(substrate_concealment %in% c("N", "Y")) %>%
+  ggplot(aes(x = source,
+             fill = substrate_concealment)) +
+  geom_bar(position = position_fill()) +
+  scale_fill_brewer(palette = "Set2",
+                    name = "Concealment") +
+  facet_wrap(~ sin_cat) +
+  labs(x = "Data Set",
+       y = "Percentage")
+conceal_fig
+
+```
+
+```{r conceal-test}
+conceal_test = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  filter(substrate_concealment %in% c("N", "Y")) %>%
+  mutate(across(substrate_concealment,
+                fct_drop)) %>%
+  group_by(sin_cat,
+           source,
+           substrate_concealment) %>%
+  summarize(n_found = n(),
+            .groups = "drop") %>%
+  # fill in missing categories w/ NA
+  full_join(tidyr::expand(.,
+                          sin_cat,
+                          source,
+                          substrate_concealment),
+            by = c("sin_cat",
+                   "source",
+                   "substrate_concealment")) %>%
+  # fill in NAs
+  mutate(across(n_found,
+                replace_na,
+                0)) %>%
+  group_by(sin_cat, source) %>%
+  mutate(prop = n_found / sum(n_found)) %>%
+  ungroup() %>%
+  arrange(sin_cat,
+          source,
+          substrate_concealment) %>%
+  nest(data = -sin_cat) %>%
+  mutate(mn_test = map(data,
+                    .f = purrr::quietly(function(x) {
+                      obs_n = x %>%
+                        filter(source == "use") %>%
+                        pull(n_found)
+                      exp_prop = x %>%
+                        filter(source == "avail") %>%
+                        pull(prop)
+                      set.seed(6)
+                      mn_test = EMT::multinomial.test(observed = obs_n,
+                                                      prob = exp_prop,
+                                                      useChisq = F,
+                                                      MonteCarlo = T,
+                                                      ntrial = 1e5)
+                      return(mn_test)
+                    })),
+         mn_test = map(mn_test,
+                       "result"),
+         mn_test_stat = map_chr(mn_test, 
+                                "stat"),
+         mn_p_value = map_dbl(mn_test,
+                              "p.value")) %>%
+  mutate(g_test = map(data,
+                      .f = function(x) {
+                        # obs_n = x %>%
+                        #   filter(source == "Use") %>%
+                        #   pull(n_found)
+                        # exp_prop = x %>%
+                        #   filter(source == "Avail.") %>%
+                        #   pull(prop)
+                        # g_test = DescTools::GTest(x = obs_n, 
+                        #                           p = exp_prop,
+                        #                           correct = "williams")
+                        g_test = x %>%
+                          select(-prop) %>%
+                          pivot_wider(names_from = source,
+                                      values_from = n_found) %>%
+                          select(avail, use) %>%
+                          as.matrix() %>%
+                          DescTools::GTest(correct = "yates")
+                        return(g_test)
+                      }),
+         g_test_stat = map_chr(g_test,
+                               "method"),
+         g_p_value = map_dbl(g_test,
+                             "p.value")) %>%
+  mutate(chi2_test = map(data,
+                         .f = function(x) {
+                           obs_n = x %>%
+                             filter(source == "use") %>%
+                             pull(n_found)
+                           exp_prop = x %>%
+                             filter(source == "avail") %>%
+                             pull(prop)
+                           chi_test = stats::chisq.test(x = obs_n, 
+                                                        p = exp_prop)
+                           return(chi_test)
+                         }),
+         chi2_test_stat = map_chr(chi2_test,
+                                  "method"),
+         chi2_p_value = map_dbl(chi2_test,
+                                "p.value"))
+
+```
+
+```{r conceal-tab}
+conceal_tab = conceal_test %>%
+  select(sin_cat,
+         g_p_value,
+         chi2_p_value) %>%
+  rename(`Sinuosity Category` = sin_cat,
+         `G-test p-value` = g_p_value,
+         `Chi Squared p-value` = chi2_p_value) %>%
+  kable(digits = 5,
+        caption = "P-values of G- and Chi-squared tests for differences in availability of concealment between available and selected habitat.") %>%
+  kable_styling(position = "center", 
+                full_width = F)
+conceal_tab
+
+```
+
+There appears to be very little difference in the substrate concealment between what is available and what is selected by juvenile Chinook salmon for both the medium and high sinuosity categories. There is a difference in the little sinuosity category (Table \@ref(tab:conceal-tab); however, Figure \@ref(fig:conceal-fig) indicates that in low sinuosity reaches, fish are more likely to select habitat that does not contain substrate concealment, contrary to our suspicions.
+
+
+### Cover
+
+```{r cover-fig, fig.cap = "Percentage of points where cover is available in the entire lower Lemhi River compared to the percent where fish had selected, faceted by low, medium, and high sinuosity categories."}
+cover_fig = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  ggplot(aes(x = source,
+             fill = has_cover)) +
+  geom_bar(position = position_fill()) +
+  scale_fill_brewer(palette = "Set2",
+                    name = "Cover") +
+  facet_wrap(~ sin_cat) +
+  labs(x = "Data Set",
+       y = "Percentage")
+cover_fig
+   
+```
+
+```{r cover-test}
+cover_test = xs_all %>%
+  filter(source == "avail" | habitat_selected == "Selected") %>%
+  group_by(sin_cat,
+           source,
+           has_cover) %>%
+  summarize(n_found = n(),
+            .groups = "drop") %>%
+  # add missing categories
+  full_join(tidyr::expand(.,
+                          sin_cat,
+                          source,
+                          has_cover),
+            by = c("sin_cat",
+                   "source",
+                   "has_cover")) %>%
+  # fill in NAs with 0
+  mutate(across(n_found,
+                replace_na,
+                0)) %>%
+  group_by(sin_cat, source) %>%
+  mutate(prop = n_found / sum(n_found)) %>%
+  ungroup() %>%
+  arrange(sin_cat,
+          source,
+          has_cover) %>%
+  nest(data = -sin_cat) %>%
+  mutate(mn_test = map(data,
+                       .f = purrr::quietly(function(x) {
+                         obs_n = x %>%
+                           filter(source == "use") %>%
+                           pull(n_found)
+                         exp_prop = x %>%
+                           filter(source == "avail") %>%
+                           pull(prop)
+                         set.seed(6)
+                         mn_test = EMT::multinomial.test(observed = obs_n,
+                                                         prob = exp_prop,
+                                                         useChisq = F,
+                                                         MonteCarlo = T,
+                                                         ntrial = 1e5)
+                         return(mn_test)
+                         })),
+           mn_test = map(mn_test,
+                         "result"),
+           mn_test_stat = map_chr(mn_test, 
+                                  "stat"),
+           mn_p_value = map_dbl(mn_test,
+                                "p.value")) %>%
+  mutate(g_test = map(data,
+                      .f = function(x) {
+                        g_test = x %>%
+                          select(-prop) %>%
+                          pivot_wider(names_from = source,
+                                      values_from = n_found) %>%
+                          select(avail, use) %>%
+                          as.matrix() %>%
+                          DescTools::GTest(correct = "yates")
+                        
+                        return(g_test)
+                      }),
+         g_test_stat = map_chr(g_test,
+                               "method"),
+         g_p_value = map_dbl(g_test,
+                             "p.value")) %>%
+  mutate(chi2_test = map(data,
+                         .f = function(x) {
+                           obs_n = x %>%
+                             filter(source == "use") %>%
+                             pull(n_found)
+                           exp_prop = x %>%
+                             filter(source == "avail") %>%
+                             pull(prop)
+                           chi_test = stats::chisq.test(x = obs_n,
+                                                        p = exp_prop)
+                           return(chi_test)
+                           }),
+         chi2_test_stat = map_chr(chi2_test,
+                                  "method"),
+         chi2_p_value = map_dbl(chi2_test,
+                                "p.value"))
+
+  
+```
+
+```{r cover-tab}
+cover_tab = cover_test %>%
+  select(sin_cat,
+         g_p_value,
+         chi2_p_value) %>%
+  rename(`Sinuosity Category` = sin_cat,
+         `G-test p-value` = g_p_value,
+         `Chi Squared p-value` = chi2_p_value) %>%
+  kable(digits = 5,
+        caption = "P-values of G- and Chi-squared tests for differences in availability of cover within 1.5 m radius between available and selected habitat.") %>%
+  kable_styling(position = "center", 
+                full_width = F)
+cover_tab
+
+```
+
+Unlike concealment, it does appear that radio-tagged juvenile Chinook salmon are more likely to select habitat where some form of cover is available (within a 1.5 m radius), compared to what is available, across all three sinuosity categories (Table \@ref(tab:cover-tab), Figure \@ref(fig:cover-fig)).
+
+# Discussion
+
+## Habitat Availability Power Analysis
+
+The distributions of the depths and velocities from the sampled transects and the rasters covering the entirety of the lower Lemhi River are nearly identical within each sinuosity class. This suggest that the sampled transects are capturing the distribution of available habitat well, and did not need to be supplemented with additional transects. Certainly, we are interested in habitat metrics other than depth and velocity, but without somehow simulating the true distributions of those metrics (e.g., substrate class, fish cover, etc.)) it would be diffucult to conduct a worthwhile power analysis to evaluate whether our current dataset is sufficient to capture those distributions. Depth and velocity were used as proxies for everything elese, because we had model outputs for them across the entire Lemhi River, which we treated as the "truth". We feel that the habitat availability dataset available from line transects in the lower Lemhi River is sufficient to capture the true available habitat.
+
+## Habitat Preference
+
+Habitat preference discussion here...
+
+
+# Literature Cited
