@@ -27,17 +27,6 @@ institute:
   - biomark: Biomark, Inc., 705 South 8th Street, Boise, Idaho, 83702, USA
 date: "`r format(Sys.time(), '%d %B, %Y')`" 
 output:
-  bookdown::word_document2:
-    fig_caption: yes
-    reference_docx: "../templates/template.docx"
-    number_sections: FALSE
-    toc: no
-    always_allow_html: true
-    fig_width: 6
-    pandoc_args:
-    - --lua-filter=../templates/scholarly-metadata.lua
-    - --lua-filter=../templates/author-info-blocks.lua
-    - --lua-filter=../templates/pagebreak.lua
   bookdown::html_document2:
     theme: yeti
     toc: yes
@@ -46,6 +35,17 @@ output:
       collapsed: yes
       smooth_scroll: yes
     number_sections: yes
+    pandoc_args:
+    - --lua-filter=../templates/scholarly-metadata.lua
+    - --lua-filter=../templates/author-info-blocks.lua
+    - --lua-filter=../templates/pagebreak.lua
+  bookdown::word_document2:
+    fig_caption: yes
+    reference_docx: "../templates/template.docx"
+    number_sections: FALSE
+    toc: no
+    always_allow_html: true
+    fig_width: 6
     pandoc_args:
     - --lua-filter=../templates/scholarly-metadata.lua
     - --lua-filter=../templates/author-info-blocks.lua
@@ -194,7 +194,7 @@ We compiled a list of all PIT tags deployed within the Lemhi River using two PTA
 
 These two queries often resulted in tags showing up in both the mark and recapture lists. For tags recaptured within a week of marking, we used the mark date as the starting point, but for fish recaptured more than a week after marking (sometimes months later) we used the maximum recapture date to indicate when we believe that fish left the Lemhi River.
 
-We further filtered out tags that were less than 25 mm or greater than 200 mm as these seemed to be either fry, precocials, or errant sizes, and thus, were not assigned to the DSR or NRR strategies. Generally, parr and presmolts were classified as DSR whereas smolts were classified as NRR. Size and time of capture were used to differentiate smolts and parr as DSR or NRR during the spring period when both migratory types were captured concurrently (Figure \@ref(fig:lem-size-date-fig)). DSR fish were assigned a brood year on year prior to their emigration date in the fall, and NRR fish were assigned a brood year two years prior. The number of tags assigned to each brood year and emigrant strategy are shown in Table \@ref(tab:lh-tags-tab).
+We further filtered our fish that were less than 25 mm or greater than 200 mm as these seemed to be either fry, precocials, or errant sizes, and thus, were not assigned to the DSR or NRR strategies. Generally, parr and presmolts were classified as DSR whereas smolts were classified as NRR. Size and time of capture were used to differentiate smolts and parr as DSR or NRR during the spring period when both migratory types were captured concurrently (Figure \@ref(fig:lem-size-date-fig)). DSR fish were assigned a brood year on year prior to their emigration date in the fall, and NRR fish were assigned a brood year two years prior. The number of tags assigned to each brood year and emigrant strategy are shown in Table \@ref(tab:lh-tags-tab).
 
 ```{r lh-tags-tab}
 tags_tab = obs_df %>%
@@ -245,7 +245,7 @@ strategy_p = lem_tags %>%
   #                    values = c("orangered2", "dodgerblue2")) +
   scale_x_date(date_breaks = "months",
                date_labels = "%b") +
-  theme_classic() +
+  #theme_classic() +
   labs(x = "Date Tagged",
        y = "Fork Length (mm)",
        color = "Strategy") +
@@ -271,7 +271,7 @@ Estimates of emigrant abundance at the lower Lemhi River rotary screw trap (LLRT
 Emigrant abundance estimates from trap operations were estimated using the stratified Lincoln-Peterson estimator with Bailey's modification:
 
 $$
-\hat{N} = \sum\limits_{i=1}^k c_i(m_i + 1)(r_i + 1)
+\hat{N} = \sum\limits_{i-1}^k \frac{m_i(c_i + 1)}{(r_i + 1)}
 $$
 
 where $\hat{N}$ is the estimate of abundance in a given season or year, $i$ is season, $c_i$ is the number of all unique fish captures in season $i$, $m_i$ is the number of tagged fish released in season $i$, and $r_i$ is the number of recaptures in season $i$ [@Bailey1951]. The estimator is computed using an interative maximization of the log likelihood [@Steinhorst2004]. The method assumes that fish are captured independently with probability $p$ (equivalent to trap efficiency) and tagged fish mix thoroughly with untagged fish. The 95% confidence intervals were computed using 10,000 bootstraps [@Steinhorst2004]. Emigrant abundance estimates do not account for periods where the trap was not in operation. DSR abundance includes both parr and presmolt abundance whereas NRR abundance includes only smolts.
