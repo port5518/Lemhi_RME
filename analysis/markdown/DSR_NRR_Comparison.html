@@ -2078,8 +2078,7 @@ K = \frac{10^NW}{L^3}
 <li>GRA (adult detections at GRA)</li>
 <li>above_GRA (any adult detection upstream of GRA)</li>
 </ul>
-<p>We included “above_GRA” so we could estimate survival and detection to GRA, since the last survival and detection parameters are confounded in a CJS model.</p>
-<p>We now had a capture history for every tag consisting of 6 columns. We also had an assigned life-history (DSR or NRR) to each tag. We fit a CJS model to each brood year, independently, estimating separate survival (<span class="math inline">\(\phi\)</span>) and detection (<span class="math inline">\(p\)</span>) parameters for each life stage between or at each node. This resulted in <span class="math inline">\(4 \times 2 = 8\)</span> <span class="math inline">\(\phi\)</span>’s and <span class="math inline">\(p\)</span>’s, as the <em>GRA-to-above_GRA</em> <span class="math inline">\(\phi\)</span> and <em>above_GRA</em> <span class="math inline">\(p\)</span> are confounded, and the <span class="math inline">\(p\)</span> at <em>LLRTP</em> is essentially fixed at 100%.</p>
+<p>We included “above_GRA” so we could estimate survival and detection to GRA, since the last survival and detection parameters are confounded in a CJS model. We now had a capture history for every tag consisting of 6 columns, each representing a node. We also had an assigned life-history strategy (DSR or NRR) for each tag. A CJS model was then fit for each brood year and strategy combination independently using the <code>rstan</code> package <span class="citation">(Stan Development Team 2022)</span> in R <span class="citation">(R Core Team 2021)</span>. Each CJS model estimated separate survival (<span class="math inline">\(\phi\)</span>) and detection (<span class="math inline">\(p\)</span>) parameters for each life stage between or at each node. This resulted in <span class="math inline">\(4 \times 2 = 8\)</span> <span class="math inline">\(\phi\)</span>’s and <span class="math inline">\(p\)</span>’s, as the <em>GRA-to-above_GRA</em> <span class="math inline">\(\phi\)</span> and <em>above_GRA</em> <span class="math inline">\(p\)</span> are confounded, and the <span class="math inline">\(p\)</span> at <em>LLRTP</em> is essentially fixed at 100%.</p>
 <p>To examine the relative success of each life-history, we computed the log odds ratios of several combinations of <span class="math inline">\(\phi\)</span>’s, including:</p>
 <ul>
 <li>Survival between LLRTP and GRJ</li>
@@ -3259,6 +3258,9 @@ Poole, J. R., E. Felts, M. Dobos, B. Barnett, M. Davison, C. J. Roth, B. A. Knot
 </div>
 <div id="ref-RCoreTeam2021" class="csl-entry">
 R Core Team. 2021. R: <span>A</span> language and environment for statistical computing. R Foundation for Statistical Computing, <span>Vienna, Austria</span>.
+</div>
+<div id="ref-StanDevelopmentTeam2022" class="csl-entry">
+Stan Development Team. 2022. <span>RStan</span>: The <span>R</span> interface to <span>Stan</span>.
 </div>
 <div id="ref-Steinhorst2004" class="csl-entry">
 Steinhorst, K., Y. Wu, B. Dennis, and P. Kline. 2004. <a href="https://doi.org/10.1198/108571104X3325">Confidence intervals for fish out-migration estimates using stratified trap efficiency methods</a>. Journal of Agricultural, Biological, and Environmental Statistics 9(3):284–299.

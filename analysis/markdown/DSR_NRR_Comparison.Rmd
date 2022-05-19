@@ -27,6 +27,17 @@ institute:
   - biomark: Biomark, Inc., 705 South 8th Street, Boise, Idaho, 83702, USA
 date: "`r format(Sys.time(), '%d %B, %Y')`" 
 output:
+  bookdown::word_document2:
+    fig_caption: yes
+    reference_docx: "../templates/template.docx"
+    number_sections: FALSE
+    toc: no
+    always_allow_html: true
+    fig_width: 6
+    pandoc_args:
+    - --lua-filter=../templates/scholarly-metadata.lua
+    - --lua-filter=../templates/author-info-blocks.lua
+    - --lua-filter=../templates/pagebreak.lua
   bookdown::html_document2:
     theme: yeti
     toc: yes
@@ -35,17 +46,6 @@ output:
       collapsed: yes
       smooth_scroll: yes
     number_sections: yes
-    pandoc_args:
-    - --lua-filter=../templates/scholarly-metadata.lua
-    - --lua-filter=../templates/author-info-blocks.lua
-    - --lua-filter=../templates/pagebreak.lua
-  bookdown::word_document2:
-    fig_caption: yes
-    reference_docx: "../templates/template.docx"
-    number_sections: FALSE
-    toc: no
-    always_allow_html: true
-    fig_width: 6
     pandoc_args:
     - --lua-filter=../templates/scholarly-metadata.lua
     - --lua-filter=../templates/author-info-blocks.lua
@@ -304,9 +304,7 @@ We estimated survival with a Cormack-Jolly-Seber (CJS) model [@Lebreton1992]. We
 * GRA (adult detections at GRA)
 * above_GRA (any adult detection upstream of GRA)
 
-We included "above_GRA" so we could estimate survival and detection to GRA, since the last survival and detection parameters are confounded in a CJS model.
-
-We now had a capture history for every tag consisting of 6 columns. We also had an assigned life-history (DSR or NRR) to each tag. We fit a CJS model to each brood year, independently, estimating separate survival ($\phi$) and detection ($p$) parameters for each life stage between or at each node. This resulted in $4 \times 2 = 8$ $\phi$'s and $p$'s, as the *GRA-to-above_GRA* $\phi$ and *above_GRA* $p$ are confounded, and the $p$ at *LLRTP* is essentially fixed at 100%.
+We included "above_GRA" so we could estimate survival and detection to GRA, since the last survival and detection parameters are confounded in a CJS model. We now had a capture history for every tag consisting of 6 columns, each representing a node. We also had an assigned life-history strategy (DSR or NRR) for each tag. A CJS model was then fit for each brood year and strategy combination independently using the `rstan` package [@StanDevelopmentTeam2022] in R [@RCoreTeam2021]. Each CJS model estimated separate survival ($\phi$) and detection ($p$) parameters for each life stage between or at each node. This resulted in $4 \times 2 = 8$ $\phi$'s and $p$'s, as the *GRA-to-above_GRA* $\phi$ and *above_GRA* $p$ are confounded, and the $p$ at *LLRTP* is essentially fixed at 100%.
 
 To examine the relative success of each life-history, we computed the log odds ratios of several combinations of $\phi$'s, including:
 
