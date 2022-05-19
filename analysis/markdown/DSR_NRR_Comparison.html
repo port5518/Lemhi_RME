@@ -2069,7 +2069,7 @@ K = \frac{10^NW}{L^3}
 </div>
 <div id="survival" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Survival</h2>
-<p>We estimated survival with a Cormack-Jolly-Seber (CJS) model <span class="citation">(Lebreton et al. 1992)</span>. We consolidated all the detection sites from the lower Lemhi River RST (LLRTP) and downstream into 6 “nodes”:</p>
+<p>We estimated survival with a Cormack-Jolly-Seber (CJS) model <span class="citation">(Lebreton et al. 1992)</span>. We initially included some detections from dams between Lower Granite and Bonneville, but decided to drop them instead to ease the interpretation of results. We included detections from the floowing sites or “nodes”:</p>
 <ul>
 <li>LLRTP (lower Lemhi River screw trap)</li>
 <li>GRJ (juvenile detections at Lower Granite)</li>
@@ -2079,7 +2079,7 @@ K = \frac{10^NW}{L^3}
 <li>above_GRA (any adult detection upstream of GRA)</li>
 </ul>
 <p>We included “above_GRA” so we could estimate survival and detection to GRA, since the last survival and detection parameters are confounded in a CJS model.</p>
-<p>After consolidation, we had a capture history for every tag consisting of 6 columns. We also had an assigned life-history (DSR or NRR) to each tag. We fit a CJS model to each brood year, independently, estimating separate survival (<span class="math inline">\(\phi\)</span>) and detection (<span class="math inline">\(p\)</span>) parameters for each life stage between or at each node. This resulted in <span class="math inline">\(4 \times 2 = 8\)</span> <span class="math inline">\(\phi\)</span>’s and <span class="math inline">\(p\)</span>’s, as the <em>GRA-to-above_GRA</em> <span class="math inline">\(\phi\)</span> and <em>above_GRA</em> <span class="math inline">\(p\)</span> are confounded, and the <span class="math inline">\(p\)</span> at <em>LLRTP</em> is essentially fixed at 100%.</p>
+<p>We now had a capture history for every tag consisting of 6 columns. We also had an assigned life-history (DSR or NRR) to each tag. We fit a CJS model to each brood year, independently, estimating separate survival (<span class="math inline">\(\phi\)</span>) and detection (<span class="math inline">\(p\)</span>) parameters for each life stage between or at each node. This resulted in <span class="math inline">\(4 \times 2 = 8\)</span> <span class="math inline">\(\phi\)</span>’s and <span class="math inline">\(p\)</span>’s, as the <em>GRA-to-above_GRA</em> <span class="math inline">\(\phi\)</span> and <em>above_GRA</em> <span class="math inline">\(p\)</span> are confounded, and the <span class="math inline">\(p\)</span> at <em>LLRTP</em> is essentially fixed at 100%.</p>
 <p>To examine the relative success of each life-history, we computed the log odds ratios of several combinations of <span class="math inline">\(\phi\)</span>’s, including:</p>
 <ul>
 <li>Survival between LLRTP and GRJ</li>

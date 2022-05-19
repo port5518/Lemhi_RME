@@ -295,7 +295,7 @@ We also investigate the difference in arrival timing between DSR and NRR Chinook
 
 ## Survival
 
-We estimated survival with a Cormack-Jolly-Seber (CJS) model [@Lebreton1992]. We consolidated all the detection sites from the lower Lemhi River RST (LLRTP) and downstream into 6 "nodes":
+We estimated survival with a Cormack-Jolly-Seber (CJS) model [@Lebreton1992]. We initially included some detections from dams between Lower Granite and Bonneville, but decided to drop them instead to ease the interpretation of results. We included detections from the floowing sites or "nodes":
 
 * LLRTP (lower Lemhi River screw trap)
 * GRJ (juvenile detections at Lower Granite)
@@ -306,7 +306,7 @@ We estimated survival with a Cormack-Jolly-Seber (CJS) model [@Lebreton1992]. We
 
 We included "above_GRA" so we could estimate survival and detection to GRA, since the last survival and detection parameters are confounded in a CJS model.
 
-After consolidation, we had a capture history for every tag consisting of 6 columns. We also had an assigned life-history (DSR or NRR) to each tag. We fit a CJS model to each brood year, independently, estimating separate survival ($\phi$) and detection ($p$) parameters for each life stage between or at each node. This resulted in $4 \times 2 = 8$ $\phi$'s and $p$'s, as the *GRA-to-above_GRA* $\phi$ and *above_GRA* $p$ are confounded, and the $p$ at *LLRTP* is essentially fixed at 100%.
+We now had a capture history for every tag consisting of 6 columns. We also had an assigned life-history (DSR or NRR) to each tag. We fit a CJS model to each brood year, independently, estimating separate survival ($\phi$) and detection ($p$) parameters for each life stage between or at each node. This resulted in $4 \times 2 = 8$ $\phi$'s and $p$'s, as the *GRA-to-above_GRA* $\phi$ and *above_GRA* $p$ are confounded, and the $p$ at *LLRTP* is essentially fixed at 100%.
 
 To examine the relative success of each life-history, we computed the log odds ratios of several combinations of $\phi$'s, including:
 
